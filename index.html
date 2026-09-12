@@ -1,0 +1,1385 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Freeway Self-Drive | Drive Your Freedom</title>
+ <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="512x512"
+          href="./assets/images/favicon.png?v=2">
+    <link rel="shortcut icon" type="image/png"
+          href="./assets/images/favicon.png?v=2">
+    <!-- Bootstrap 5.3.3 CSS (LTR Standard) -->
+    <link
+        id="bootstrap-ltr"
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+
+    <!-- Bootstrap 5.3.3 RTL CSS -->
+    <link
+        id="bootstrap-rtl"
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
+        disabled
+    />
+
+    <!-- Bootstrap Icons 1.11.3 -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+  <body class="bg-body text-body">
+    <!-- =========================================================================
+       Top Utility Bar & Shared Navbar
+       ========================================================================= -->
+    <header class="sticky-top shadow-sm border-bottom border-body">
+      <!-- Top Micro Bar -->
+      <div
+        class="bg-body-tertiary border-bottom border-body py-1 small text-body-secondary"
+      >
+        <div
+          class="container d-flex justify-content-between align-items-center"
+        >
+          <div>
+            <i class="bi bi-shield-check text-success me-1"></i>
+            <span
+              >100% Contactless Smartphone Keyless Unlock • Zero Security
+              Deposit Options</span
+            >
+          </div>
+          <div class="d-flex align-items-center gap-3">
+            <span
+              ><i class="bi bi-telephone me-1"></i>24/7 Roadside Rescue:
+              1-800-FREEWAY</span
+            >
+            <span class="d-none d-md-inline text-body-tertiary">|</span>
+            <span class="d-none d-md-inline"
+              ><i class="bi bi-geo-alt me-1"></i>48 Smart Stations Open</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Navigation Bar -->
+      <nav class="navbar navbar-expand-lg bg-body">
+        <div class="container">
+          <!-- Brand Logo -->
+          <a
+            class="navbar-brand d-flex align-items-center fw-bold fs-4 text-body"
+            href="index.html"
+          >
+            <span class="badge bg-freeway me-2 p-2 rounded-3">
+              <i class="bi bi-car-front-fill fs-5"></i>
+            </span>
+            <span>FREEWAY<span class="text-freeway">.</span></span>
+          </a>
+
+          <!-- Mobile Toggler -->
+          <button
+            class="navbar-toggler border-0 shadow-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarMain"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Navbar Links & Controls -->
+          <div class="collapse navbar-collapse" id="navbarMain">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-medium">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html">
+                  <i class="bi bi-house-door me-1"></i>Home
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="fleet.html">
+                  <i class="bi bi-grid me-1"></i>Fleet
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pricing.html">
+                  <i class="bi bi-tags me-1"></i>Pricing & Plans
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="how-it-works.html">
+                  <i class="bi bi-compass me-1"></i>How It Works
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="locations.html">
+                  <i class="bi bi-pin-map me-1"></i>Locations
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-primary fw-bold" href="dashboard.html">
+                  <i class="bi bi-speedometer2 me-1"></i>Dashboard
+                </a>
+              </li>
+            </ul>
+
+            <!-- Nav Actions: RTL Toggle, Dark Mode Toggle, Account / Login -->
+            <div class="d-flex align-items-center gap-2 mt-2 mt-lg-0">
+              <!-- RTL Toggle Button -->
+              <button
+                id="rtlToggleBtn"
+                class="btn btn-outline-secondary btn-sm d-flex align-items-center"
+                title="Toggle Right-to-Left Layout"
+              >
+                <i class="bi bi-arrow-left-right me-1"></i>
+                <span id="rtlLabel" class="fw-semibold">RTL</span>
+              </button>
+
+              <!-- Dark Mode Toggle Button -->
+              <button
+                id="themeToggleBtn"
+                class="btn btn-outline-secondary btn-sm d-flex align-items-center"
+                title="Toggle Dark / Light Theme"
+              >
+                <i id="themeIcon" class="bi bi-sun-fill text-warning me-1"></i>
+                <span id="themeLabel" class="fw-semibold">Light</span>
+              </button>
+
+              <!-- Login / Account Dropdown -->
+           
+
+              <!-- Instant Book CTA -->
+              <a
+                href="login.html"
+                class="btn btn-freeway btn-sm px-3 shadow-sm d-none d-xl-inline-block"
+              >
+                <i class="bi bi-key-fill me-1"></i>Login
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- =========================================================================
+       HERO BANNER & INSTANT BOOKING ENGINE
+       ========================================================================= -->
+  <section class="hero-banner position-relative d-flex align-items-center">
+
+  <!-- BACKGROUND IMAGE -->
+  <img
+    src="assets/images/bg6.jpg"
+    alt="Self Drive Car Rental"
+    class="hero-bg"
+  >
+
+  <!-- DARK OVERLAY -->
+  <div class="hero-overlay"></div>
+
+
+  <!-- INTERNAL CSS -->
+  <style>
+
+    /* =========================================
+       HERO
+    ========================================= */
+
+    .hero-banner {
+      min-height: 650px;
+      position: relative;
+      overflow: hidden;
+      color: #ffffff;
+    }
+
+
+    /* BACKGROUND IMAGE */
+
+    .hero-banner .hero-bg {
+      position: absolute;
+      inset: 0;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      /* Change this if you want different image positioning */
+      object-position: center center;
+
+      z-index: 0;
+    }
+
+
+    /* OVERLAY */
+
+    .hero-banner .hero-overlay {
+      position: absolute;
+      inset: 0;
+
+      background: rgba(0, 0, 0, 0.58);
+
+      z-index: 1;
+    }
+
+
+    /* CONTENT */
+
+    .hero-banner .hero-content {
+      position: relative;
+      z-index: 2;
+
+      width: 100%;
+      max-width: 1000px;
+
+      margin: 0 auto;
+
+      text-align: center;
+    }
+
+
+    /* BADGE */
+
+    .hero-banner .bg-freeway {
+      background-color: #ffb800 !important;
+      color: #111111 !important;
+      border: 1px solid #ffb800 !important;
+    }
+
+
+    .hero-banner .bg-freeway i {
+      color: #111111 !important;
+    }
+
+
+    /* HEADING */
+
+    .hero-banner h1 {
+      color: #ffffff !important;
+      font-weight: 800;
+    }
+
+
+    .hero-banner h1 .text-warning {
+      color: #ffb800 !important;
+    }
+
+
+    /* DESCRIPTION */
+
+    .hero-banner .hero-description {
+      color: #f1f1f1 !important;
+      opacity: 1 !important;
+
+      max-width: 850px;
+
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+
+    /* BUTTON */
+
+    .hero-banner .btn-outline-light {
+      color: #ffffff !important;
+      border-color: #ffffff !important;
+      background: transparent !important;
+    }
+
+
+    .hero-banner .btn-outline-light:hover {
+      background: #ffffff !important;
+      color: #111111 !important;
+    }
+
+
+    .hero-banner .btn-outline-light i {
+      color: #ffffff !important;
+    }
+
+
+    .hero-banner .btn-outline-light:hover i {
+      color: #111111 !important;
+    }
+
+
+    /* TRUST BADGES */
+
+    .hero-banner .trust-badges {
+      color: #ffffff !important;
+
+      border-color: rgba(255,255,255,.35) !important;
+
+      justify-content: center !important;
+
+      max-width: 850px;
+
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+
+    .hero-banner .trust-badges i {
+      color: #ffb800 !important;
+    }
+/* =========================================
+   EXPLORE VEHICLES BUTTON - LIGHT MODE
+========================================= */
+
+.hero-banner .btn-freeway {
+    background-color: #ffb800 !important;
+    color: #111111 !important;
+    border: 1px solid #ffb800 !important;
+    font-weight: 700 !important;
+}
+
+.hero-banner .btn-freeway i {
+    color: #111111 !important;
+}
+
+.hero-banner .btn-freeway:hover {
+    background-color: #e5a600 !important;
+    border-color: #e5a600 !important;
+    color: #111111 !important;
+}
+
+.hero-banner .btn-freeway:hover i {
+    color: #111111 !important;
+}
+
+    /* =========================================
+       DARK MODE
+    ========================================= */
+
+    [data-bs-theme="dark"] .hero-banner .hero-overlay,
+    .dark-mode .hero-banner .hero-overlay,
+    body.dark .hero-banner .hero-overlay,
+    [data-theme="dark"] .hero-banner .hero-overlay {
+
+      background: rgba(0, 0, 0, 0.68);
+
+    }
+
+
+    /* =========================================
+       MOBILE
+    ========================================= */
+
+    @media (max-width: 991.98px) {
+
+      .hero-banner {
+        min-height: 600px;
+      }
+
+      .hero-banner h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero-banner .hero-description {
+        font-size: 1rem;
+      }
+
+      .hero-banner .trust-badges {
+        gap: 15px !important;
+      }
+
+    }
+
+
+    @media (max-width: 576px) {
+
+      .hero-banner {
+        min-height: 650px;
+      }
+
+      .hero-banner h1 {
+        font-size: 2.1rem;
+      }
+
+      .hero-banner .btn {
+        width: 100%;
+      }
+
+      .hero-banner .trust-badges {
+        flex-direction: column;
+        align-items: center;
+      }
+
+    }
+
+  </style>
+
+
+  <!-- CONTENT -->
+  <div class="container py-5">
+
+    <div class="hero-content">
+
+
+      <!-- BADGE -->
+
+      <span
+        class="badge bg-freeway px-3 py-2 rounded-pill mb-3 text-uppercase fw-bold letter-spacing"
+      >
+        <i class="bi bi-sun me-1"></i>
+        Zero Key Handoffs • Pure Freedom
+      </span>
+
+
+      <!-- HEADING -->
+
+      <h1 class="display-4 fw-bold lh-sm mb-3">
+
+        Drive Your Freedom.<br>
+
+        <span class="text-warning">
+          Anywhere. Anytime.
+        </span>
+
+      </h1>
+
+
+      <!-- DESCRIPTION -->
+
+      <p class="lead hero-description mb-4">
+
+        Experience truly frictionless self-drive car rentals.
+        Unlock premium SUVs, Electric vehicles, and sports convertibles
+        with your smartphone. No paper contracts, zero airport counter
+        queues, and guaranteed transparent pricing.
+
+      </p>
+
+
+      <!-- BUTTONS -->
+
+      <div
+        class="d-flex flex-wrap gap-3 justify-content-center"
+      >
+
+        <a
+          href="fleet.html"
+          class="btn btn-freeway btn-lg px-4 py-3 shadow"
+        >
+
+          <i class="bi bi-search me-2"></i>
+
+          Explore 250+ Vehicles
+
+        </a>
+
+
+        <a
+          href="how-it-works.html"
+          class="btn btn-outline-light btn-lg px-4 py-3"
+        >
+
+          <i class="bi bi-play-circle me-2"></i>
+
+          How It Works
+
+        </a>
+
+      </div>
+
+
+      <!-- TRUST BADGES -->
+
+      <div
+        class="trust-badges d-flex flex-wrap gap-4 mt-4 pt-3 border-top border-opacity-25 small"
+      >
+
+        <div>
+          <i class="bi bi-check-circle-fill me-1"></i>
+          Free 250 km/day included
+        </div>
+
+
+        <div>
+          <i class="bi bi-check-circle-fill me-1"></i>
+          24/7 Roadside Assistance
+        </div>
+
+
+        <div>
+          <i class="bi bi-check-circle-fill me-1"></i>
+          Zero Security Deposit with KYC
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+    <!-- =========================================================================
+       STATISTICS & TRUST COUNTERS
+       ========================================================================= -->
+    <section class="py-4 bg-body border-bottom border-body">
+      <div class="container">
+        <div class="row g-4 text-center">
+          <div class="col-6 col-md-3">
+            <div class="p-2">
+              <h2 class="display-6 fw-bold text-freeway mb-0">250,000+</h2>
+              <div class="text-body-secondary small fw-medium">
+                Trips Completed
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="p-2">
+              <h2 class="display-6 fw-bold text-body mb-0">99.8%</h2>
+              <div class="text-body-secondary small fw-medium">
+                Keyless Phone Unlocks
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="p-2">
+              <h2 class="display-6 fw-bold text-primary mb-0">48 Hubs</h2>
+              <div class="text-body-secondary small fw-medium">
+                24/7 Smart Stations
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="p-2">
+              <h2 class="display-6 fw-bold text-success mb-0">4.9 / 5</h2>
+              <div class="text-body-secondary small fw-medium">
+                Over 38,000 Verified Reviews
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+       BROWSE BY CAR CATEGORIES
+       ========================================================================= -->
+    <section class="py-5 bg-body-tertiary border-bottom border-body">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span
+            class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill fw-semibold mb-2"
+            >Designed For Every Journey</span
+          >
+          <h2 class="fw-bold text-body">Browse by Car Category</h2>
+          <p class="text-body-secondary">
+            From zero-emission EV cruisers to trail-rated 4x4 overland rigs.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Category 1: Electric -->
+          <div class="col-6 col-md-4 col-lg-2">
+            <a
+              href="fleet.html?category=Electric"
+              class="card h-100 text-center p-3 border-body bg-body shadow-sm text-decoration-none hover-lift"
+            >
+              <div
+                class="p-3 bg-primary bg-opacity-10 text-primary rounded-circle mx-auto mb-3"
+                style="
+                  width: 60px;
+                  height: 60px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <i class="bi bi-battery-charging fs-3"></i>
+              </div>
+              <h6 class="fw-bold text-body mb-1">Electric EV</h6>
+              <span class="small text-body-secondary">From $79/day</span>
+            </a>
+          </div>
+
+          <!-- Category 2: SUV & 4x4 -->
+          <div class="col-6 col-md-4 col-lg-2">
+            <a
+              href="fleet.html?category=SUV"
+              class="card h-100 text-center p-3 border-body bg-body shadow-sm text-decoration-none hover-lift"
+            >
+              <div
+                class="p-3 bg-warning bg-opacity-10 text-warning rounded-circle mx-auto mb-3"
+                style="
+                  width: 60px;
+                  height: 60px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <i class="bi bi-truck fs-3"></i>
+              </div>
+              <h6 class="fw-bold text-body mb-1">SUVs & 4x4</h6>
+              <span class="small text-body-secondary">From $68/day</span>
+            </a>
+          </div>
+
+          <!-- Category 3: Sedans -->
+          <div class="col-6 col-md-4 col-lg-2">
+            <a
+              href="fleet.html?category=Sedan"
+              class="card h-100 text-center p-3 border-body bg-body shadow-sm text-decoration-none hover-lift"
+            >
+              <div
+                class="p-3 bg-info bg-opacity-10 text-info rounded-circle mx-auto mb-3"
+                style="
+                  width: 60px;
+                  height: 60px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <i class="bi bi-car-front fs-3"></i>
+              </div>
+              <h6 class="fw-bold text-body mb-1">Sedans</h6>
+              <span class="small text-body-secondary">From $65/day</span>
+            </a>
+          </div>
+
+          <!-- Category 4: Convertibles -->
+          <div class="col-6 col-md-4 col-lg-2">
+            <a
+              href="fleet.html?category=Convertible"
+              class="card h-100 text-center p-3 border-body bg-body shadow-sm text-decoration-none hover-lift"
+            >
+              <div
+                class="p-3 bg-danger bg-opacity-10 text-danger rounded-circle mx-auto mb-3"
+                style="
+                  width: 60px;
+                  height: 60px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <i class="bi bi-brightness-high fs-3"></i>
+              </div>
+              <h6 class="fw-bold text-body mb-1">Convertible</h6>
+              <span class="small text-body-secondary">From $125/day</span>
+            </a>
+          </div>
+
+          <!-- Category 5: Hatchbacks -->
+          <div class="col-6 col-md-4 col-lg-2">
+            <a
+              href="fleet.html?category=Hatchback"
+              class="card h-100 text-center p-3 border-body bg-body shadow-sm text-decoration-none hover-lift"
+            >
+              <div
+                class="p-3 bg-success bg-opacity-10 text-success rounded-circle mx-auto mb-3"
+                style="
+                  width: 60px;
+                  height: 60px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <i class="bi bi-geo fs-3"></i>
+              </div>
+              <h6 class="fw-bold text-body mb-1">City Hatch</h6>
+              <span class="small text-body-secondary">From $59/day</span>
+            </a>
+          </div>
+
+          <!-- Category 6: Luxury VIP -->
+          <div class="col-6 col-md-4 col-lg-2">
+            <a
+              href="fleet.html"
+              class="card h-100 text-center p-3 border-body bg-body shadow-sm text-decoration-none hover-lift"
+            >
+              <div
+                class="p-3 bg-secondary bg-opacity-10 text-secondary rounded-circle mx-auto mb-3"
+                style="
+                  width: 60px;
+                  height: 60px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <i class="bi bi-gem fs-3"></i>
+              </div>
+              <h6 class="fw-bold text-body mb-1">Luxury VIP</h6>
+              <span class="small text-body-secondary">From $140/day</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+       FEATURED FREEDOM VEHICLES OF THE WEEK
+       ========================================================================= -->
+    <section class="py-5 bg-body">
+      <div class="container">
+        <div
+          class="d-flex flex-wrap justify-content-between align-items-end mb-4"
+        >
+          <div>
+            <span
+              class="badge bg-freeway bg-opacity-10 text-freeway px-3 py-2 rounded-pill fw-semibold mb-2"
+              >Hand-Picked Machines</span
+            >
+            <h2 class="fw-bold text-body mb-1">Featured Cars of the Week</h2>
+            <p class="text-body-secondary mb-0">
+              Our most requested models with instant smartphone unlock.
+            </p>
+          </div>
+          <div>
+            <a href="fleet.html" class="btn btn-outline-secondary">
+              View All 12 Fleet Models <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Car 1: Tesla Model 3 -->
+          <div class="col-md-4">
+            <div class="card h-100 border-body bg-body shadow-sm hover-lift">
+              <div class="position-relative">
+                <img
+                  src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=800&q=80"
+                  class="card-img-top object-fit-cover"
+                  style="height: 220px"
+                  alt="Tesla Model 3"
+                />
+                <span
+                  class="position-absolute top-0 start-0 m-3 badge bg-dark bg-opacity-75 text-white"
+                >
+                  <i class="bi bi-star-fill text-warning me-1"></i>4.92 (142
+                  trips)
+                </span>
+                <span class="position-absolute top-0 end-0 m-3 badge bg-freeway"
+                  >EV Sedan</span
+                >
+              </div>
+              <div class="card-body text-body d-flex flex-column">
+                <h5 class="fw-bold mb-1 text-body">Tesla Model 3 Long Range</h5>
+                <small class="text-body-secondary mb-3"
+                  ><i class="bi bi-geo-alt me-1"></i>Downtown Hub &
+                  Airport</small
+                >
+                <div
+                  class="row g-2 text-center py-2 border-top border-bottom border-body small text-body-secondary mb-3"
+                >
+                  <div class="col-4">
+                    <i class="bi bi-people me-1 text-primary"></i>5 Seats
+                  </div>
+                  <div class="col-4">
+                    <i class="bi bi-gear me-1 text-primary"></i>Auto
+                  </div>
+                  <div class="col-4">
+                    <i class="bi bi-battery-charging me-1 text-primary"></i>580
+                    km
+                  </div>
+                </div>
+                <div
+                  class="d-flex justify-content-between align-items-center mt-auto"
+                >
+                  <div>
+                    <span class="h4 fw-bold text-freeway mb-0">$85</span>
+                    <span class="text-body-secondary small">/day</span>
+                  </div>
+                  <a href="fleet.html" class="btn btn-freeway btn-sm px-3">
+                    <i class="bi bi-lightning-charge me-1"></i>Book Fast
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Car 2: Ford Bronco Wildtrak -->
+          <div class="col-md-4">
+            <div class="card h-100 border-body bg-body shadow-sm hover-lift">
+              <div class="position-relative">
+                <img
+                  src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80"
+                  class="card-img-top object-fit-cover"
+                  style="height: 220px"
+                  alt="Ford Bronco Wildtrak"
+                />
+                <span
+                  class="position-absolute top-0 start-0 m-3 badge bg-dark bg-opacity-75 text-white"
+                >
+                  <i class="bi bi-star-fill text-warning me-1"></i>4.96 (98
+                  trips)
+                </span>
+                <span class="position-absolute top-0 end-0 m-3 badge bg-freeway"
+                  >Adventure 4x4</span
+                >
+              </div>
+              <div class="card-body text-body d-flex flex-column">
+                <h5 class="fw-bold mb-1 text-body">Ford Bronco Wildtrak 4x4</h5>
+                <small class="text-body-secondary mb-3"
+                  ><i class="bi bi-geo-alt me-1"></i>Westside & Mountain
+                  Hub</small
+                >
+                <div
+                  class="row g-2 text-center py-2 border-top border-bottom border-body small text-body-secondary mb-3"
+                >
+                  <div class="col-4">
+                    <i class="bi bi-people me-1 text-primary"></i>5 Seats
+                  </div>
+                  <div class="col-4">
+                    <i class="bi bi-gear me-1 text-primary"></i>Auto
+                  </div>
+                  <div class="col-4">
+                    <i class="bi bi-fuel-pump me-1 text-primary"></i>Petrol V6
+                  </div>
+                </div>
+                <div
+                  class="d-flex justify-content-between align-items-center mt-auto"
+                >
+                  <div>
+                    <span class="h4 fw-bold text-freeway mb-0">$95</span>
+                    <span class="text-body-secondary small">/day</span>
+                  </div>
+                  <a href="fleet.html" class="btn btn-freeway btn-sm px-3">
+                    <i class="bi bi-lightning-charge me-1"></i>Book Fast
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Car 3: Mustang GT Convertible -->
+          <div class="col-md-4">
+            <div class="card h-100 border-body bg-body shadow-sm hover-lift">
+              <div class="position-relative">
+                <img
+                  src="https://images.unsplash.com/photo-1584345604476-8ec5e12e42dd?auto=format&fit=crop&w=800&q=80"
+                  class="card-img-top object-fit-cover"
+                  style="height: 220px"
+                  alt="Ford Mustang GT Convertible"
+                />
+                <span
+                  class="position-absolute top-0 start-0 m-3 badge bg-dark bg-opacity-75 text-white"
+                >
+                  <i class="bi bi-star-fill text-warning me-1"></i>4.98 (164
+                  trips)
+                </span>
+                <span class="position-absolute top-0 end-0 m-3 badge bg-freeway"
+                  >Open-Air Muscle</span
+                >
+              </div>
+              <div class="card-body text-body d-flex flex-column">
+                <h5 class="fw-bold mb-1 text-body">
+                  Ford Mustang GT Convertible
+                </h5>
+                <small class="text-body-secondary mb-3"
+                  ><i class="bi bi-geo-alt me-1"></i>Coastal Beach
+                  Station</small
+                >
+                <div
+                  class="row g-2 text-center py-2 border-top border-bottom border-body small text-body-secondary mb-3"
+                >
+                  <div class="col-4">
+                    <i class="bi bi-people me-1 text-primary"></i>4 Seats
+                  </div>
+                  <div class="col-4">
+                    <i class="bi bi-gear me-1 text-primary"></i>Auto
+                  </div>
+                  <div class="col-4">
+                    <i class="bi bi-fuel-pump me-1 text-primary"></i>5.0L V8
+                  </div>
+                </div>
+                <div
+                  class="d-flex justify-content-between align-items-center mt-auto"
+                >
+                  <div>
+                    <span class="h4 fw-bold text-freeway mb-0">$125</span>
+                    <span class="text-body-secondary small">/day</span>
+                  </div>
+                  <a href="fleet.html" class="btn btn-freeway btn-sm px-3">
+                    <i class="bi bi-lightning-charge me-1"></i>Book Fast
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+       SELF-DRIVE VS TRADITIONAL CAR RENTAL COMPARISON
+       ========================================================================= -->
+    <!-- <section class="py-5 bg-body-tertiary border-top border-bottom border-body">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span
+            class="badge bg-success bg-opacity-10 text-success px-3 py-2 rounded-pill fw-semibold mb-2"
+            >Why Switch?</span
+          >
+          <h2 class="fw-bold text-body">Freeway vs. Legacy Rental Counters</h2>
+          <p class="text-body-secondary">
+            See why modern drivers are leaving traditional rental desks behind.
+          </p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="table-responsive">
+              <table
+                class="table table-bordered table-hover border-body text-body align-middle shadow-sm bg-body"
+              >
+                <thead class="table-secondary">
+                  <tr>
+                    <th class="text-body py-3">Feature</th>
+                    <th class="text-center text-body py-3">
+                      Legacy Rental Companies
+                    </th>
+                    <th class="text-center text-white bg-freeway py-3">
+                      Freeway Self-Drive
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="fw-semibold text-body">Pickup Experience</td>
+                    <td class="text-center text-body-secondary">
+                      35-60 min airport counter queues
+                    </td>
+                    <td class="text-center text-success fw-bold">
+                      <i class="bi bi-check-circle-fill me-1"></i>Instant phone
+                      unlock at vehicle
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fw-semibold text-body">Car Keys</td>
+                    <td class="text-center text-body-secondary">
+                      Physical key handoff only
+                    </td>
+                    <td class="text-center text-success fw-bold">
+                      <i class="bi bi-check-circle-fill me-1"></i>100% Bluetooth
+                      Smart Key in app
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fw-semibold text-body">Security Deposit</td>
+                    <td class="text-center text-body-secondary">
+                      $500 - $1,500 credit card block
+                    </td>
+                    <td class="text-center text-success fw-bold">
+                      <i class="bi bi-check-circle-fill me-1"></i>$0 Zero
+                      Deposit with AI KYC
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fw-semibold text-body">Damage Inspection</td>
+                    <td class="text-center text-body-secondary">
+                      Vague paper sheet, easy to dispute
+                    </td>
+                    <td class="text-center text-success fw-bold">
+                      <i class="bi bi-check-circle-fill me-1"></i>Interactive
+                      360° photo diagram
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fw-semibold text-body">Fuel & Toll Billing</td>
+                    <td class="text-center text-body-secondary">
+                      Penalty charges up to $9/gallon
+                    </td>
+                    <td class="text-center text-success fw-bold">
+                      <i class="bi bi-check-circle-fill me-1"></i>Automated
+                      sensors, pump-rate refunds
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- =========================================================================
+       SCENIC ROAD TRIP ITINERARIES
+       ========================================================================= -->
+    <section class="py-5 bg-body">
+      <div class="container">
+        <div class="text-center mb-5">
+          <!-- <span
+            class="badge bg-warning bg-opacity-10 text-dark px-3 py-2 rounded-pill fw-semibold mb-2"
+            >Road Trip Inspiration</span
+          > -->
+          <h2 class="fw-bold text-body">Curated Freedom Getaways</h2>
+          <p class="text-body-secondary">
+            Pick up a Freeway car and explore the most breathtaking open roads.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100 border-body bg-body shadow-sm hover-lift">
+              <img
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80"
+                class="card-img-top object-fit-cover"
+                style="height: 200px"
+                alt="Pacific Coast Highway"
+              />
+              <div class="card-body text-body">
+                <span class="badge bg-info mb-2">3 Days • 480 km</span>
+                <h5 class="fw-bold text-body">
+                  Pacific Coast Highway Coastal Spin
+                </h5>
+                <p class="small text-body-secondary">
+                  Winding sea cliffs, Big Sur bridges, and beachfront sunsets.
+                  Best paired with the Ford Mustang GT Convertible.
+                </p>
+                <a
+                  href="fleet.html?category=Convertible"
+                  class="btn btn-sm btn-outline-freeway"
+                  >View Recommended Cars</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100 border-body bg-body shadow-sm hover-lift">
+              <img
+                src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80"
+                class="card-img-top object-fit-cover"
+                style="height: 200px"
+                alt="Sierra Mountain Loop"
+              />
+              <div class="card-body text-body">
+                <span class="badge bg-warning text-dark mb-2"
+                  >4 Days • 720 km</span
+                >
+                <h5 class="fw-bold text-body">
+                  High Sierra & Yosemite Alpine Loop
+                </h5>
+                <p class="small text-body-secondary">
+                  Towering granite monoliths, mountain passes, and stargazing
+                  campsites. Best paired with the Ford Bronco 4x4.
+                </p>
+                <a
+                  href="fleet.html?category=SUV"
+                  class="btn btn-sm btn-outline-freeway"
+                  >View Recommended Cars</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100 border-body bg-body shadow-sm hover-lift">
+              <img
+                src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=600&q=80"
+                class="card-img-top object-fit-cover"
+                style="height: 200px"
+                alt="Desert Stargazing Trail"
+              />
+              <div class="card-body text-body">
+                <span class="badge bg-primary mb-2">2 Days • 340 km</span>
+                <h5 class="fw-bold text-body">
+                  Joshua Tree & Desert Oasis Circuit
+                </h5>
+                <p class="small text-body-secondary">
+                  Surreal desert landscapes, dark sky reserves, and quiet
+                  electric highways. Best paired with the Tesla Model 3 EV.
+                </p>
+                <a
+                  href="fleet.html?category=Electric"
+                  class="btn btn-sm btn-outline-freeway"
+                  >View Recommended Cars</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+       CUSTOMER REVIEWS & STORIES
+       ========================================================================= -->
+    <section class="py-5 bg-body-tertiary border-top border-body">
+      <div class="container">
+        <div class="text-center mb-5">
+          <!-- <span
+            class="badge bg-secondary bg-opacity-10 text-secondary px-3 py-2 rounded-pill fw-semibold mb-2"
+            >Real Stories</span
+          > -->
+          <h2 class="fw-bold text-body">Loved by Over 45,000 Adventurers</h2>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card border-body bg-body p-4 h-100 shadow-sm">
+              <div class="d-flex text-warning mb-3">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+                ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+                ><i class="bi bi-star-fill"></i>
+              </div>
+              <p class="text-body-secondary mb-4">
+                "Rented a Bronco for our Yosemite weekend. Unlocking straight
+                from my phone at 6 AM with zero counter lines was incredible.
+                The transparent damage inspection report gives total peace of
+                mind."
+              </p>
+              <div class="d-flex align-items-center gap-3 mt-auto">
+                <img
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80"
+                  class="rounded-circle"
+                  width="46"
+                  height="46"
+                  alt="Marcus Chen"
+                />
+                <div>
+                  <h6 class="fw-bold text-body mb-0">Marcus Chen</h6>
+                  <small class="text-body-secondary"
+                    >San Francisco • 6 Trips</small
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card border-body bg-body p-4 h-100 shadow-sm">
+              <div class="d-flex text-warning mb-3">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+                ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+                ><i class="bi bi-star-fill"></i>
+              </div>
+              <p class="text-body-secondary mb-4">
+                "The dark mode on the app looks slick at night, and having fuel
+                credits auto-refunded to my card within 10 minutes of drop-off
+                is unrivaled. Freeway is miles ahead of legacy rentals."
+              </p>
+              <div class="d-flex align-items-center gap-3 mt-auto">
+                <img
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80"
+                  class="rounded-circle"
+                  width="46"
+                  height="46"
+                  alt="Elena Rostova"
+                />
+                <div>
+                  <h6 class="fw-bold text-body mb-0">Elena Rostova</h6>
+                  <small class="text-body-secondary"
+                    >Los Angeles • 14 Trips</small
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card border-body bg-body p-4 h-100 shadow-sm">
+              <div class="d-flex text-warning mb-3">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+                ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+                ><i class="bi bi-star-fill"></i>
+              </div>
+              <p class="text-body-secondary mb-4">
+                "We picked up the Tesla Model 3 at LAX terminal hub. The car was
+                100% charged, pristine, and the interactive damage inspector
+                highlighted an existing rim scuff so we weren't charged a cent."
+              </p>
+              <div class="d-flex align-items-center gap-3 mt-auto">
+                <img
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80"
+                  class="rounded-circle"
+                  width="46"
+                  height="46"
+                  alt="David Miller"
+                />
+                <div>
+                  <h6 class="fw-bold text-body mb-0">David Miller</h6>
+                  <small class="text-body-secondary">Austin • 3 Trips</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+       Shared Modern Freedom Footer
+       ========================================================================= -->
+    <footer class="bg-body-tertiary text-body border-top border-body py-5 mt-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <a
+              class="d-flex align-items-center fw-bold fs-4 text-body text-decoration-none mb-3"
+              href="index.html"
+            >
+              <span class="badge bg-freeway me-2 p-2 rounded-3">
+                <i class="bi bi-car-front-fill fs-5"></i>
+              </span>
+              <span>FREEWAY<span class="text-freeway">.</span></span>
+            </a>
+            <p class="small text-body-secondary pe-lg-4">
+              Drive your freedom with 100% contactless self-drive rentals.
+              Instant AI license checks, phone-based smart door unlocks, and
+              guaranteed zero surprise fees.
+            </p>
+            <div class="d-flex gap-3">
+              <a
+                href="#"
+                class="btn btn-sm btn-outline-secondary rounded-circle"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a
+                href="#"
+                class="btn btn-sm btn-outline-secondary rounded-circle"
+                ><i class="bi bi-twitter-x"></i
+              ></a>
+              <a
+                href="#"
+                class="btn btn-sm btn-outline-secondary rounded-circle"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a
+                href="#"
+                class="btn btn-sm btn-outline-secondary rounded-circle"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3 col-lg-2">
+            <h6 class="fw-bold text-body mb-3">Vehicle Fleet</h6>
+            <ul
+              class="list-unstyled small text-body-secondary d-flex flex-column gap-2"
+            >
+              <li>
+                <a
+                  href="fleet.html?category=Electric"
+                  class="text-body-secondary text-decoration-none"
+                  >Electric EVs</a
+                >
+              </li>
+              <li>
+                <a
+                  href="fleet.html?category=SUV"
+                  class="text-body-secondary text-decoration-none"
+                  >SUVs & 4x4 Offroad</a
+                >
+              </li>
+              <li>
+                <a
+                  href="fleet.html?category=Sedan"
+                  class="text-body-secondary text-decoration-none"
+                  >Executive Sedans</a
+                >
+              </li>
+              <li>
+                <a
+                  href="fleet.html?category=Convertible"
+                  class="text-body-secondary text-decoration-none"
+                  >Convertibles</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-3 col-lg-2">
+            <h6 class="fw-bold text-body mb-3">Company & Hubs</h6>
+            <ul
+              class="list-unstyled small text-body-secondary d-flex flex-column gap-2"
+            >
+              <li>
+                <a
+                  href="how-it-works.html"
+                  class="text-body-secondary text-decoration-none"
+                  >How It Works</a
+                >
+              </li>
+              <li>
+                <a
+                  href="pricing.html"
+                  class="text-body-secondary text-decoration-none"
+                  >Pricing & Shield</a
+                >
+              </li>
+              <li>
+                <a
+                  href="locations.html"
+                  class="text-body-secondary text-decoration-none"
+                  >Airport & City Hubs</a
+                >
+              </li>
+              <li>
+                <a
+                  href="dashboard.html"
+                  class="text-body-secondary text-decoration-none"
+                  >Customer Portal</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <h6 class="fw-bold text-body mb-3">
+              Get Freedom Perks & Promo Codes
+            </h6>
+            <p class="small text-body-secondary">
+              Subscribe for $25 off your first weekend trip, zero-deposit
+              waivers, and seasonal coastal route guides.
+            </p>
+            <form
+              class="d-flex gap-2"
+              onsubmit="
+                event.preventDefault();
+                showToast(
+                  'Subscribed! $25 promo code sent to your email.',
+                  'success',
+                );
+              "
+            >
+              <input
+                type="email"
+                class="form-control form-control-sm bg-body text-body border-body"
+                placeholder="Enter your email"
+                required
+              />
+              <button type="submit" class="btn btn-freeway btn-sm px-3">
+                Join
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div
+          class="d-flex flex-wrap justify-content-between align-items-center pt-4 mt-4 border-top border-body small text-body-secondary"
+        >
+          <div>
+            &copy; 2026 Freeway Self-Drive Technologies Inc. All rights
+            reserved.
+          </div>
+          <div class="d-flex gap-3 mt-2 mt-sm-0">
+            <a href="#" class="text-body-secondary text-decoration-none"
+              >Terms of Service</a
+            >
+            <a href="#" class="text-body-secondary text-decoration-none"
+              >Privacy Policy</a
+            >
+            <a href="#" class="text-body-secondary text-decoration-none"
+              >Insurance Disclosure</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5.3.3 Bundle JS with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Application Logic JS -->
+    <script src="app.js"></script>
+  </body>
+</html>

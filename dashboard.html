@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Dashboard | Freeway Self-Drive</title>
+   <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="512x512"
+          href="./assets/images/favicon.png?v=2">
+    <link rel="shortcut icon" type="image/png"
+          href="./assets/images/favicon.png?v=2">
+  <link id="bootstrap-ltr" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link id="bootstrap-rtl" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" disabled>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-body text-body">
+
+  <!-- =========================================================================
+       Navbar
+       ========================================================================= -->
+  <header class="sticky-top shadow-sm border-bottom border-body">
+    <div class="bg-body-tertiary border-bottom border-body py-1 small text-body-secondary">
+      <div class="container d-flex justify-content-between align-items-center">
+        <div><i class="bi bi-broadcast text-danger me-1"></i>Active Telemetry Connected • Bluetooth Beacon Active</div>
+        <div class="d-flex align-items-center gap-3">
+          <span><i class="bi bi-telephone me-1"></i>Priority Roadside: 1-800-FREEWAY</span>
+          <span class="d-none d-md-inline text-body-tertiary">|</span>
+          <span class="d-none d-md-inline"><i class="bi bi-shield-check me-1"></i>KYC Verified</span>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg bg-body">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center fw-bold fs-4 text-body" href="index.html">
+          <span class="badge bg-freeway me-2 p-2 rounded-3"><i class="bi bi-car-front-fill fs-5"></i></span>
+          <span>FREEWAY<span class="text-freeway">.</span></span>
+        </a>
+
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMain">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-medium">
+            <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door me-1"></i>Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="fleet.html"><i class="bi bi-grid me-1"></i>Fleet</a></li>
+            <li class="nav-item"><a class="nav-link" href="pricing.html"><i class="bi bi-tags me-1"></i>Pricing & Plans</a></li>
+            <li class="nav-item"><a class="nav-link" href="how-it-works.html"><i class="bi bi-compass me-1"></i>How It Works</a></li>
+            <li class="nav-item"><a class="nav-link" href="locations.html"><i class="bi bi-pin-map me-1"></i>Locations</a></li>
+            <li class="nav-item"><a class="nav-link active text-primary fw-bold" href="dashboard.html"><i class="bi bi-speedometer2 me-1"></i>Dashboard</a></li>
+          </ul>
+
+          <div class="d-flex align-items-center gap-2 mt-2 mt-lg-0">
+            <button id="rtlToggleBtn" class="btn btn-outline-secondary btn-sm d-flex align-items-center">
+              <i class="bi bi-arrow-left-right me-1"></i><span id="rtlLabel" class="fw-semibold">RTL</span>
+            </button>
+            <button id="themeToggleBtn" class="btn btn-outline-secondary btn-sm d-flex align-items-center">
+              <i id="themeIcon" class="bi bi-sun-fill text-warning me-1"></i><span id="themeLabel" class="fw-semibold">Light</span>
+            </button>
+
+            <a
+                href="login.html"
+                class="btn btn-freeway btn-sm px-3 shadow-sm d-none d-xl-inline-block"
+              >
+                <i class="bi bi-key-fill me-1"></i>Login
+              </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- =========================================================================
+       USER PROFILE HEADER & KPI SUMMARY
+       ========================================================================= -->
+  <section class="bg-body-tertiary border-bottom border-body py-4">
+    <div class="container">
+      <div class="row align-items-center g-3">
+        <div class="col-md-7 d-flex align-items-center gap-3">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" class="rounded-circle border border-2 border-primary shadow-sm" width="68" height="68" alt="Alex Walker">
+          <div>
+            <div class="d-flex align-items-center gap-2">
+              <h3 class="fw-bold mb-0 text-body">Alex Walker</h3>
+              <span class="badge bg-success"><i class="bi bi-patch-check-fill me-1"></i>KYC Verified</span>
+              <span class="badge bg-warning text-dark fw-bold"><i class="bi bi-gem me-1"></i>Gold VIP Tier</span>
+            </div>
+            <p class="small text-body-secondary mb-0">Driver's License: DL-9824-CAL-2027 • 1,450 Freedom Points Available</p>
+          </div>
+        </div>
+        <div class="col-md-5 d-flex justify-content-md-end gap-2">
+          <button class="btn btn-outline-secondary btn-sm" onclick="showToast('Profile and KYC documents are in good standing.', 'info')">
+            <i class="bi bi-person-gear me-1"></i>Manage KYC
+          </button>
+          <a href="fleet.html" class="btn btn-freeway btn-sm shadow-sm">
+            <i class="bi bi-plus-circle me-1"></i>Book Another Car
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick KPI Counters -->
+      <div class="row g-3 mt-3">
+        <div class="col-6 col-md-3">
+          <div class="card border-body bg-body p-3 shadow-sm">
+            <div class="small text-body-secondary">Active Live Trip</div>
+            <div class="h4 fw-bold text-freeway mb-0">1 Active</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="card border-body bg-body p-3 shadow-sm">
+            <div class="small text-body-secondary">Distance Driven</div>
+            <div class="h4 fw-bold text-body mb-0">1,248 km</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="card border-body bg-body p-3 shadow-sm">
+            <div class="small text-body-secondary">Fuel Credits Balance</div>
+            <div class="h4 fw-bold text-success mb-0">+$48.00</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="card border-body bg-body p-3 shadow-sm">
+            <div class="small text-body-secondary">Damage Claims</div>
+            <div class="h4 fw-bold text-body mb-0">0 (Clean Pass)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       DASHBOARD NAVIGATION TABS
+       ========================================================================= -->
+  <section class="py-4 bg-body">
+    <div class="container">
+      <ul class="nav nav-pills mb-4 border-bottom border-body pb-3 gap-2" id="dashboardTabs" role="tablist">
+        <li class="nav-item">
+          <button class="nav-link active fw-semibold" id="tab-live-link" data-bs-toggle="pill" data-bs-target="#tab-live" type="button">
+            <i class="bi bi-broadcast text-danger me-1"></i>Active Live Trip
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link fw-semibold" id="tab-upcoming-link" data-bs-toggle="pill" data-bs-target="#tab-upcoming" type="button">
+            <i class="bi bi-calendar-event me-1"></i>Upcoming Bookings
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link fw-semibold" id="tab-inspection-link" data-bs-toggle="pill" data-bs-target="#tab-inspection" type="button">
+            <i class="bi bi-shield-check me-1 text-warning"></i>Damage Inspection Report
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link fw-semibold" id="tab-fuel-link" data-bs-toggle="pill" data-bs-target="#tab-fuel" type="button">
+            <i class="bi bi-fuel-pump me-1"></i>Trip & Fuel History
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link fw-semibold" id="tab-invoices-link" data-bs-toggle="pill" data-bs-target="#tab-invoices" type="button">
+            <i class="bi bi-receipt me-1 text-success"></i>Payments & Invoices
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link fw-semibold" id="tab-profile-link" data-bs-toggle="pill" data-bs-target="#tab-profile" type="button">
+            <i class="bi bi-person-badge me-1 text-primary"></i>KYC Profile & License
+          </button>
+        </li>
+      </ul>
+
+      <div class="tab-content" id="dashboardTabContent">
+        <!-- ===================================================================
+             TAB 1: ACTIVE LIVE TRIP WITH REMOTE SMART KEY CONTROLS
+             =================================================================== -->
+        <div class="tab-pane fade show active" id="tab-live">
+          <div class="row g-4">
+            <!-- Left: Telemetry & Smart Remote Control -->
+            <div class="col-lg-7">
+              <div class="card border-body bg-body shadow-sm mb-4">
+                <div class="card-header bg-body-tertiary border-body d-flex justify-content-between align-items-center">
+                  <span class="fw-bold text-body"><i class="bi bi-broadcast text-danger me-2"></i>Live Telemetry & Smart Key Control</span>
+                  <span id="carLockBadge" class="badge bg-secondary"><i class="bi bi-lock-fill me-1"></i>Doors Locked</span>
+                </div>
+                <div class="card-body text-body">
+                  <div class="d-flex flex-wrap align-items-center gap-3 mb-3">
+                    <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80" class="rounded-3 border border-body object-fit-cover" width="120" height="85" alt="Ford Bronco">
+                    <div>
+                      <h4 class="fw-bold mb-1 text-body">Ford Bronco Wildtrak 4x4</h4>
+                      <div class="text-body-secondary small"><i class="bi bi-card-text me-1"></i>Plate: 7XYZ892 • Trip Ref: #TRIP-84920</div>
+                      <span class="badge bg-info bg-opacity-10 text-info mt-1">Trail-Rated 4WD</span>
+                    </div>
+                  </div>
+
+                  <!-- Remote Keyless Buttons -->
+                  <div class="bg-body-tertiary p-3 rounded-3 border border-body mb-3">
+                    <div class="small fw-bold text-body-secondary mb-2">SMARTPHONE REMOTE CONTROLS</div>
+                    <div class="d-flex flex-wrap gap-2">
+                      <button id="smartLockBtn" class="btn btn-sm btn-success fw-bold" onclick="toggleCarLock()">
+                        <i class="bi bi-unlock-fill me-1"></i>Unlock Doors
+                      </button>
+                      <button class="btn btn-sm btn-outline-secondary" onclick="triggerCarBeep()">
+                        <i class="bi bi-volume-up-fill me-1"></i>Honk & Flash
+                      </button>
+                      <button class="btn btn-sm btn-outline-secondary" onclick="showToast('Immobilizer check: Engine starter enabled.', 'success')">
+                        <i class="bi bi-power me-1"></i>Start Engine
+                      </button>
+                      <button class="btn btn-sm btn-outline-secondary" onclick="showToast('Cabin AC preset to 21°C / 70°F.', 'info')">
+                        <i class="bi bi-fan me-1"></i>Pre-Cool AC
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Telemetry Meters -->
+                  <div class="row g-3 text-center">
+                    <div class="col-4">
+                      <div class="border border-body rounded p-2 bg-body-tertiary">
+                        <div class="small text-body-secondary">Fuel Level</div>
+                        <div class="fw-bold fs-5 text-warning"><i class="bi bi-fuel-pump me-1"></i>78%</div>
+                        <div class="progress mt-1" style="height: 5px;">
+                          <div class="progress-bar bg-warning" style="width: 78%;"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="border border-body rounded p-2 bg-body-tertiary">
+                        <div class="small text-body-secondary">Odometer</div>
+                        <div class="fw-bold fs-5 text-body"><i class="bi bi-speedometer me-1"></i>14,385</div>
+                        <small class="text-body-secondary">165 km driven</small>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="border border-body rounded p-2 bg-body-tertiary">
+                        <div class="small text-body-secondary">Time Remaining</div>
+                        <div class="fw-bold fs-5 text-primary"><i class="bi bi-hourglass-split me-1"></i>4h 45m</div>
+                        <small class="text-body-secondary">Due 08:30 PM</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Route & Drop-off -->
+            <div class="col-lg-5">
+              <div class="card border-body bg-body shadow-sm">
+                <div class="card-header bg-body-tertiary border-body">
+                  <h6 class="fw-bold mb-0 text-body"><i class="bi bi-geo-alt-fill text-danger me-2"></i>Trip Route & Drop-off Station</h6>
+                </div>
+                <div class="card-body text-body">
+                  <ul class="list-unstyled mb-3">
+                    <li class="mb-3 d-flex align-items-start gap-2">
+                      <i class="bi bi-record-circle-fill text-success mt-1"></i>
+                      <div>
+                        <strong class="text-body">Pickup Station (08:30 AM)</strong>
+                        <div class="small text-body-secondary">Downtown Freedom Station - Bay 4</div>
+                      </div>
+                    </li>
+                    <li class="d-flex align-items-start gap-2">
+                      <i class="bi bi-geo-alt-fill text-danger mt-1"></i>
+                      <div>
+                        <strong class="text-body">Drop-off Station (Due 08:30 PM)</strong>
+                        <div class="small text-body-secondary">LAX International Airport Terminal 2 Hub</div>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <div class="alert alert-info py-2 px-3 small border-0 mb-3">
+                    <i class="bi bi-info-circle me-1"></i>Need more time? Extend up to 6 extra hours at standard $16/hr with zero penalty fee.
+                  </div>
+
+                  <div class="d-flex gap-2">
+                    <button class="btn btn-sm btn-outline-primary flex-grow-1" onclick="showToast('Your reservation has been extended by 2 hours!', 'success')">
+                      <i class="bi bi-plus-circle me-1"></i>Extend Trip (+2 hrs)
+                    </button>
+                    <button class="btn btn-sm btn-outline-danger flex-grow-1" onclick="showToast('Ending trip: drop-off scanner activated.', 'warning')">
+                      <i class="bi bi-check2-circle me-1"></i>End & Return Car
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===================================================================
+             TAB 2: UPCOMING BOOKINGS
+             =================================================================== -->
+        <div class="tab-pane fade" id="tab-upcoming">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="fw-bold text-body mb-0">Upcoming Reservations</h5>
+            <a href="fleet.html" class="btn btn-sm btn-freeway">
+              <i class="bi bi-plus me-1"></i>Book New Vehicle
+            </a>
+          </div>
+          <div id="upcomingTripsContainer" class="row">
+            <!-- Injected via app.js -->
+          </div>
+        </div>
+
+        <!-- ===================================================================
+             TAB 3: INTERACTIVE DAMAGE INSPECTION REPORT
+             =================================================================== -->
+        <div class="tab-pane fade" id="tab-inspection">
+          <div class="row g-4">
+            <div class="col-lg-7">
+              <div class="card border-body bg-body shadow-sm">
+                <div class="card-header bg-body-tertiary border-body d-flex justify-content-between align-items-center">
+                  <span class="fw-bold text-body"><i class="bi bi-shield-check text-warning me-2"></i>Interactive Vehicle Inspection Schematic</span>
+                  <span class="small text-body-secondary">Click pins (1-5) to inspect spot</span>
+                </div>
+                <div class="card-body text-center p-3 text-body">
+                  <div class="car-inspection-diagram">
+                    <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=900&q=80" class="car-schematic-img border border-body" alt="Vehicle Top View Schematic">
+                    <div id="damagePinsContainer"></div>
+                  </div>
+                  
+                  <div class="d-flex justify-content-center gap-3 mt-3 small text-body-secondary">
+                    <div><span class="badge bg-success me-1">●</span> Clean Pass</div>
+                    <div><span class="badge bg-warning text-dark me-1">●</span> Pre-Existing Scuff</div>
+                    <div><span class="badge bg-danger me-1">●</span> Newly Reported Spot</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Inspection Pin Details -->
+            <div class="col-lg-5">
+              <div id="inspectionDetailBox">
+                <!-- Rendered by app.js inspectPoint() -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===================================================================
+             TAB 4: TRIP & FUEL HISTORY
+             =================================================================== -->
+        <div class="tab-pane fade" id="tab-fuel">
+          <div class="card border-body bg-body shadow-sm">
+            <div class="card-header bg-body-tertiary border-body d-flex justify-content-between align-items-center">
+              <span class="fw-bold text-body"><i class="bi bi-fuel-pump text-primary me-2"></i>Trip Odometer & Fuel Telemetry Log</span>
+              <span class="badge bg-primary">Automated Sensor Sync</span>
+            </div>
+            <div class="card-body p-0">
+              <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0 text-body border-body">
+                  <thead class="table-body-tertiary">
+                    <tr>
+                      <th class="text-body">Trip Ref & Vehicle</th>
+                      <th class="text-body">Dates</th>
+                      <th class="text-body">Distance</th>
+                      <th class="text-body">Fuel / Battery Consumed</th>
+                      <th class="text-body">Inspection Status</th>
+                      <th class="text-end text-body">Invoice & Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-body">
+                        <div class="fw-bold">#TRIP-76512</div>
+                        <small class="text-body-secondary">BMW 330i M Sport</small>
+                      </td>
+                      <td class="text-body">Sep 24 - Sep 27, 2026</td>
+                      <td class="text-body"><span class="badge bg-secondary">482 km</span></td>
+                      <td class="text-body">
+                        <div>38 Litres (Returned 100% full)</div>
+                        <small class="text-success fw-bold">+$48.00 Fuel Credit Refund</small>
+                      </td>
+                      <td><span class="badge bg-success">Clean Pass • 0 Claims</span></td>
+                      <td class="text-end">
+                        <button class="btn btn-sm btn-outline-primary" onclick="openInvoiceModal('INV-2026-0927')">
+                          <i class="bi bi-receipt me-1"></i>View Invoice
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="text-body">
+                        <div class="fw-bold">#TRIP-71109</div>
+                        <small class="text-body-secondary">Toyota RAV4 Hybrid AWD</small>
+                      </td>
+                      <td class="text-body">Aug 12 - Aug 15, 2026</td>
+                      <td class="text-body"><span class="badge bg-secondary">610 km</span></td>
+                      <td class="text-body">
+                        <div>32 Litres (Hybrid efficiency)</div>
+                        <small class="text-body-secondary">Standard Return</small>
+                      </td>
+                      <td><span class="badge bg-success">Clean Pass • 0 Claims</span></td>
+                      <td class="text-end">
+                        <button class="btn btn-sm btn-outline-primary" onclick="openInvoiceModal('INV-2026-0815')">
+                          <i class="bi bi-receipt me-1"></i>View Invoice
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===================================================================
+             TAB 5: PAYMENTS & INVOICES
+             =================================================================== -->
+        <div class="tab-pane fade" id="tab-invoices">
+          <div class="card border-body bg-body shadow-sm">
+            <div class="card-header bg-body-tertiary border-body d-flex justify-content-between align-items-center">
+              <span class="fw-bold text-body"><i class="bi bi-wallet2 text-success me-2"></i>Billing, Invoices & Deposits</span>
+              <span class="badge bg-success">All Settled</span>
+            </div>
+            <div class="card-body p-0">
+              <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0 text-body border-body">
+                  <thead class="table-body-tertiary">
+                    <tr>
+                      <th class="text-body">Invoice No</th>
+                      <th class="text-body">Date</th>
+                      <th class="text-body">Vehicle</th>
+                      <th class="text-body">Payment Method</th>
+                      <th class="text-body">Security Deposit</th>
+                      <th class="text-end text-body">Total Amount</th>
+                      <th class="text-end text-body">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="fw-bold text-body">INV-2026-0927</td>
+                      <td class="text-body">Sep 27, 2026</td>
+                      <td class="text-body">BMW 330i M Sport</td>
+                      <td class="text-body"><i class="bi bi-credit-card me-1"></i>Mastercard ending 4921</td>
+                      <td><span class="badge bg-success">Zero Deposit Held</span></td>
+                      <td class="text-end fw-bold text-freeway">$364.50</td>
+                      <td class="text-end">
+                        <button class="btn btn-sm btn-outline-secondary" onclick="openInvoiceModal('INV-2026-0927')">
+                          <i class="bi bi-printer me-1"></i>Print Receipt
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fw-bold text-body">INV-2026-0815</td>
+                      <td class="text-body">Aug 15, 2026</td>
+                      <td class="text-body">Toyota RAV4 Hybrid</td>
+                      <td class="text-body"><i class="bi bi-credit-card me-1"></i>Mastercard ending 4921</td>
+                      <td><span class="badge bg-success">Zero Deposit Held</span></td>
+                      <td class="text-end fw-bold text-freeway">$238.20</td>
+                      <td class="text-end">
+                        <button class="btn btn-sm btn-outline-secondary" onclick="openInvoiceModal('INV-2026-0815')">
+                          <i class="bi bi-printer me-1"></i>Print Receipt
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===================================================================
+             TAB 6: DRIVER KYC PROFILE & LICENSE STATUS
+             =================================================================== -->
+        <div class="tab-pane fade" id="tab-profile">
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="card border-body bg-body shadow-sm">
+                <div class="card-header bg-body-tertiary border-body">
+                  <h6 class="fw-bold mb-0 text-body"><i class="bi bi-shield-check text-success me-2"></i>Verified Driver Credentials</h6>
+                </div>
+                <div class="card-body text-body">
+                  <div class="mb-3">
+                    <label class="form-label small fw-semibold text-body-secondary">Full Name</label>
+                    <input type="text" class="form-control bg-body text-body border-body" value="Alex Walker" readonly>
+                  </div>
+                  <div class="row g-2 mb-3">
+                    <div class="col-6">
+                      <label class="form-label small fw-semibold text-body-secondary">Driver's License No.</label>
+                      <input type="text" class="form-control bg-body text-body border-body" value="DL-9824-CAL-2027" readonly>
+                    </div>
+                    <div class="col-6">
+                      <label class="form-label small fw-semibold text-body-secondary">Expiry Date</label>
+                      <input type="text" class="form-control bg-body text-body border-body" value="12/2027" readonly>
+                    </div>
+                  </div>
+                  <div class="alert alert-success py-2 px-3 small">
+                    <i class="bi bi-check-circle-fill me-1"></i>AI Identity verification: 100% matched. Zero security deposit privilege active.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="card border-body bg-body shadow-sm">
+                <div class="card-header bg-body-tertiary border-body">
+                  <h6 class="fw-bold mb-0 text-body"><i class="bi bi-credit-card text-primary me-2"></i>Payment Cards & Auto-Billing</h6>
+                </div>
+                <div class="card-body text-body">
+                  <div class="d-flex align-items-center justify-content-between p-3 border border-body rounded-3 mb-3 bg-body-tertiary">
+                    <div class="d-flex align-items-center gap-3">
+                      <i class="bi bi-credit-card-2-front-fill fs-2 text-primary"></i>
+                      <div>
+                        <div class="fw-bold text-body">Mastercard ending in 4921</div>
+                        <small class="text-body-secondary">Expires 09/2028 • Primary Payment Method</small>
+                      </div>
+                    </div>
+                    <span class="badge bg-success">Default</span>
+                  </div>
+                  <button class="btn btn-outline-secondary btn-sm w-100" onclick="showToast('Secure card update link sent to your phone.', 'info')">
+                    <i class="bi bi-plus me-1"></i>Add Another Card
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       MODALS
+       ========================================================================= -->
+  <!-- Damage Report Modal -->
+  <div class="modal fade" id="reportDamageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-body text-body border-body shadow-lg">
+        <div class="modal-header border-body bg-body-tertiary">
+          <h5 class="modal-title fw-bold text-body">
+            <i class="bi bi-camera-fill text-warning me-2"></i>Report Pre-Existing / Post-Trip Spot
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <form id="damageReportForm">
+            <div class="mb-3">
+              <label class="form-label small fw-semibold text-body-secondary">Inspected Area / Component</label>
+              <input type="text" id="reportDamageArea" class="form-control bg-body text-body border-body" readonly>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-semibold text-body-secondary">Damage Severity</label>
+              <select class="form-select bg-body text-body border-body">
+                <option>Minor Clearcoat Scuff (< 2 cm)</option>
+                <option>Stone Chip on Paint</option>
+                <option>Small Door Ding / Dent</option>
+                <option>Wheel Rim Curb Rash</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-semibold text-body-secondary">Description / Note</label>
+              <textarea id="reportDamageDesc" class="form-control bg-body text-body border-body" rows="3" placeholder="E.g., spotted minor paint scratch near passenger front wheel arch." required></textarea>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-semibold text-body-secondary">Upload Verification Photo</label>
+              <input type="file" class="form-control bg-body text-body border-body" accept="image/*">
+              <div class="form-text small text-body-secondary">AI photo classifier will timestamp and match this to your pre-trip log.</div>
+            </div>
+            <button type="submit" class="btn btn-warning w-100 fw-bold text-dark">
+              <i class="bi bi-check-circle me-1"></i>Save Inspection Spot
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Official Tax Invoice Modal -->
+  <div class="modal fade" id="invoiceModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-body text-body border-body shadow-lg">
+        <div class="modal-header border-body bg-body-tertiary no-print">
+          <h5 class="modal-title fw-bold text-body">
+            <i class="bi bi-receipt text-freeway me-2"></i>Official Tax Invoice
+          </h5>
+          <div class="d-flex gap-2">
+            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.print()">
+              <i class="bi bi-printer me-1"></i>Print / Save PDF
+            </button>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="modal-body p-4 p-md-5">
+          <div class="d-flex justify-content-between align-items-start border-bottom border-body pb-3 mb-4">
+            <div>
+              <h3 class="fw-bold mb-0 text-body">FREEWAY SELF-DRIVE INC.</h3>
+              <p class="small text-body-secondary mb-0">Contactless Mobility Network • VAT ID: US-92810482-B</p>
+              <p class="small text-body-secondary mb-0">100 Coastal Boulevard, Suite 400, Los Angeles, CA</p>
+            </div>
+            <div class="text-end">
+              <span class="badge bg-success fs-6 mb-1">PAID IN FULL</span>
+              <div class="fw-bold text-body" id="invModalId">INV-2026-0927</div>
+              <small class="text-body-secondary">Date: <span id="invModalDate">Sep 27, 2026</span></small>
+            </div>
+          </div>
+
+          <div class="row g-3 mb-4">
+            <div class="col-sm-6">
+              <h6 class="text-body-secondary small fw-bold">BILLED TO CUSTOMER:</h6>
+              <div class="fw-bold text-body" id="invModalCustomer">Alex Walker</div>
+              <div class="small text-body-secondary">Driver License: <span id="invModalLicense">DL-9824-CAL-2027</span></div>
+              <div class="small text-body-secondary">Tier: Freedom Gold VIP</div>
+            </div>
+            <div class="col-sm-6 text-sm-end">
+              <h6 class="text-body-secondary small fw-bold">RENTAL SUMMARY:</h6>
+              <div class="fw-bold text-body" id="invModalCar">BMW 330i M Sport</div>
+              <div class="small text-body-secondary" id="invModalPeriod">Sep 24, 2026 to Sep 27, 2026</div>
+              <div class="small text-success fw-semibold">Zero Deposit • 100% Released</div>
+            </div>
+          </div>
+
+          <div class="table-responsive mb-4">
+            <table class="table table-bordered border-body text-body">
+              <thead class="table-body-tertiary">
+                <tr>
+                  <th class="text-body">Description & Service Items</th>
+                  <th class="text-end text-body" style="width: 140px;">Amount ($)</th>
+                </tr>
+              </thead>
+              <tbody id="invModalTableBody">
+                <!-- Injected via app.js -->
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th class="text-end text-body">Total Paid (Inclusive of all taxes):</th>
+                  <th class="text-end text-freeway fs-5" id="invModalTotal">$364.50</th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+
+          <div class="p-3 bg-body-tertiary rounded-3 border border-body small text-body-secondary d-flex justify-content-between align-items-center">
+            <div>
+              <i class="bi bi-shield-check text-success me-1"></i>
+              Payment Processed via: <strong class="text-body" id="invModalPaymentMethod">Mastercard ending in 4921</strong>
+            </div>
+            <div>
+              Auth Code: <strong>AUTH-829104</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="bg-body-tertiary text-body border-top border-body py-5 mt-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a class="d-flex align-items-center fw-bold fs-4 text-body text-decoration-none mb-3" href="index.html">
+            <span class="badge bg-freeway me-2 p-2 rounded-3"><i class="bi bi-car-front-fill fs-5"></i></span>
+            <span>FREEWAY<span class="text-freeway">.</span></span>
+          </a>
+          <p class="small text-body-secondary pe-lg-4">
+            Drive your freedom with 100% contactless self-drive rentals. Instant AI license checks, phone-based smart door unlocks, and guaranteed zero surprise fees.
+          </p>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h6 class="fw-bold text-body mb-3">Vehicle Fleet</h6>
+          <ul class="list-unstyled small text-body-secondary d-flex flex-column gap-2">
+            <li><a href="fleet.html?category=Electric" class="text-body-secondary text-decoration-none">Electric EVs</a></li>
+            <li><a href="fleet.html?category=SUV" class="text-body-secondary text-decoration-none">SUVs & 4x4 Offroad</a></li>
+            <li><a href="fleet.html?category=Sedan" class="text-body-secondary text-decoration-none">Executive Sedans</a></li>
+            <li><a href="fleet.html?category=Convertible" class="text-body-secondary text-decoration-none">Convertibles</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h6 class="fw-bold text-body mb-3">Company & Hubs</h6>
+          <ul class="list-unstyled small text-body-secondary d-flex flex-column gap-2">
+            <li><a href="how-it-works.html" class="text-body-secondary text-decoration-none">How It Works</a></li>
+            <li><a href="pricing.html" class="text-body-secondary text-decoration-none">Pricing & Shield</a></li>
+            <li><a href="locations.html" class="text-body-secondary text-decoration-none">Airport & City Hubs</a></li>
+            <li><a href="dashboard.html" class="text-body-secondary text-decoration-none">Customer Portal</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <h6 class="fw-bold text-body mb-3">Join Freedom Club</h6>
+          <p class="small text-body-secondary">Get exclusive weekend promo codes and zero deposit waivers.</p>
+          <form class="d-flex gap-2" onsubmit="event.preventDefault(); showToast('Subscribed!', 'success');">
+            <input type="email" class="form-control form-control-sm bg-body text-body border-body" placeholder="Your email" required>
+            <button type="submit" class="btn btn-freeway btn-sm px-3">Join</button>
+          </form>
+        </div>
+      </div>
+      <div class="pt-4 mt-4 border-top border-body small text-body-secondary">
+        &copy; 2026 Freeway Self-Drive Technologies Inc. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

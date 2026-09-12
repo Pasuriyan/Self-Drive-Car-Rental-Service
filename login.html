@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & KYC Portal | Freeway Self-Drive</title>
+ <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="512x512"
+          href="./assets/images/favicon.png?v=2">
+    <link rel="shortcut icon" type="image/png"
+          href="./assets/images/favicon.png?v=2">
+
+  <link id="bootstrap-ltr" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link id="bootstrap-rtl" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" disabled>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-body text-body">
+
+  <!-- =========================================================================
+       Navbar
+       ========================================================================= -->
+  <header class="sticky-top shadow-sm border-bottom border-body">
+    <div class="bg-body-tertiary border-bottom border-body py-1 small text-body-secondary">
+      <div class="container d-flex justify-content-between align-items-center">
+        <div><i class="bi bi-shield-lock text-success me-1"></i>256-bit Encrypted Driver Portal • Instant AI KYC Verification</div>
+        <div class="d-flex align-items-center gap-3">
+          <span><i class="bi bi-telephone me-1"></i>Need Help? 1-800-FREEWAY</span>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg bg-body">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center fw-bold fs-4 text-body" href="index.html">
+          <span class="badge bg-freeway me-2 p-2 rounded-3"><i class="bi bi-car-front-fill fs-5"></i></span>
+          <span>FREEWAY<span class="text-freeway">.</span></span>
+        </a>
+
+        <div class="d-flex align-items-center gap-2 ms-auto">
+          <button id="rtlToggleBtn" class="btn btn-outline-secondary btn-sm d-flex align-items-center">
+            <i class="bi bi-arrow-left-right me-1"></i><span id="rtlLabel" class="fw-semibold">RTL</span>
+          </button>
+          <button id="themeToggleBtn" class="btn btn-outline-secondary btn-sm d-flex align-items-center">
+            <i id="themeIcon" class="bi bi-sun-fill text-warning me-1"></i><span id="themeLabel" class="fw-semibold">Light</span>
+          </button>
+          <a href="index.html" class="btn btn-outline-secondary btn-sm">
+            <i class="bi bi-arrow-left me-1"></i>Back to Home
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- =========================================================================
+       LOGIN & REGISTER SPLIT CONTAINER
+       ========================================================================= -->
+  <main class="py-5 bg-body">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-xl-10">
+          <div class="card border-body bg-body shadow-lg rounded-4 overflow-hidden">
+            <div class="row g-0">
+              <!-- Left: Freedom Imagery & Perks -->
+              <div class="col-lg-6 d-none d-lg-flex flex-column justify-content-between p-5 text-white position-relative" style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.88) 0%, rgba(15, 23, 42, 0.82) 100%), url('https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;">
+                <div>
+                  <span class="badge bg-freeway px-3 py-2 rounded-pill fw-bold text-uppercase mb-3">Customer Portal</span>
+                  <h2 class="display-6 fw-bold mb-3">Your Digital Car Key Awaits.</h2>
+                  <p class="lead text-light text-opacity-90">
+                    Sign in to access your live active trips, unlock vehicle doors remotely via Bluetooth, review telemetry, and download tax invoices.
+                  </p>
+                </div>
+
+                <div class="d-flex flex-column gap-3">
+                  <div class="d-flex align-items-center gap-3">
+                    <i class="bi bi-phone-fill fs-3 text-warning"></i>
+                    <div>
+                      <h6 class="fw-bold mb-0 text-white">Contactless Keyless Entry</h6>
+                      <small class="text-light text-opacity-75">No paper counters or physical keys needed</small>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center gap-3">
+                    <i class="bi bi-shield-check fs-3 text-success"></i>
+                    <div>
+                      <h6 class="fw-bold mb-0 text-white">Zero Security Deposit Privilege</h6>
+                      <small class="text-light text-opacity-75">Verified drivers enjoy zero deposit holds</small>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center gap-3">
+                    <i class="bi bi-speedometer2 fs-3 text-info"></i>
+                    <div>
+                      <h6 class="fw-bold mb-0 text-white">Live Fuel & Odometer Sync</h6>
+                      <small class="text-light text-opacity-75">Transparent automated refund for extra fuel</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right: Authentication Card -->
+              <div class="col-lg-6 p-4 p-md-5">
+                <!-- One-Click Demo Login Banner -->
+                <div class="alert alert-info py-2 px-3 small border-0 mb-4 d-flex justify-content-between align-items-center">
+                  <div>
+                    <i class="bi bi-info-circle-fill me-1"></i>
+                    <strong>Demo Mode:</strong> Instant VIP access available.
+                  </div>
+                  <a href="dashboard.html" class="btn btn-sm btn-primary fw-bold">
+                    Quick Log In as Alex (VIP)
+                  </a>
+                </div>
+
+                <!-- Tabs: Sign In vs Register -->
+                <ul class="nav nav-pills nav-fill mb-4 border-bottom border-body pb-3" id="authTabs" role="tablist">
+                  <li class="nav-item">
+                    <button class="nav-link active fw-bold" id="tab-login-btn" data-bs-toggle="pill" data-bs-target="#tab-login" type="button">
+                      Sign In
+                    </button>
+                  </li>
+                  <li class="nav-item">
+                    <button class="nav-link fw-bold" id="tab-register-btn" data-bs-toggle="pill" data-bs-target="#tab-register" type="button">
+                      Register & Fast KYC
+                    </button>
+                  </li>
+                </ul>
+
+                <div class="tab-content" id="authTabsContent">
+                  <!-- SIGN IN FORM -->
+                  <div class="tab-pane fade show active" id="tab-login">
+                    <form onsubmit="event.preventDefault(); window.location.href = 'dashboard.html';">
+                      <div class="mb-3">
+                        <label class="form-label small fw-semibold text-body-secondary">Email Address</label>
+                        <input type="email" class="form-control bg-body text-body border-body" value="alex.walker@freedomdrive.io" required>
+                      </div>
+
+                      <div class="mb-3">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <label class="form-label small fw-semibold text-body-secondary mb-0">Password</label>
+                          <a href="#" class="small text-freeway text-decoration-none" onclick="showToast('Password reset link sent to email.', 'info')">Forgot?</a>
+                        </div>
+                        <input type="password" class="form-control bg-body text-body border-body" value="••••••••••••" required>
+                      </div>
+
+                      <div class="form-check mb-4">
+                        <input class="form-check-input" type="checkbox" id="rememberMe" checked>
+                        <label class="form-check-label small text-body" for="rememberMe">
+                          Keep me signed in on this browser
+                        </label>
+                      </div>
+
+                      <button type="submit" class="btn btn-freeway w-100 py-2 fw-bold mb-3">
+                        <i class="bi bi-box-arrow-in-right me-1"></i>Sign In to Dashboard
+                      </button>
+
+                      <div class="text-center small text-body-secondary">
+                        Or continue with single sign-on:
+                      </div>
+
+                      <div class="d-flex gap-2 mt-3">
+                        <button type="button" class="btn btn-outline-secondary btn-sm flex-grow-1" onclick="window.location.href='dashboard.html'">
+                          <i class="bi bi-google me-1"></i>Google
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary btn-sm flex-grow-1" onclick="window.location.href='dashboard.html'">
+                          <i class="bi bi-apple me-1"></i>Apple
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+
+                  <!-- REGISTER FORM -->
+                  <div class="tab-pane fade" id="tab-register">
+                    <form onsubmit="event.preventDefault(); showToast('Account created & KYC submitted! Redirecting...', 'success'); setTimeout(() => { window.location.href = 'dashboard.html'; }, 1500);">
+                      <div class="mb-3">
+                        <label class="form-label small fw-semibold text-body-secondary">Full Name (As on Driver's License)</label>
+                        <input type="text" class="form-control bg-body text-body border-body" placeholder="John Doe" required>
+                      </div>
+
+                      <div class="mb-3">
+                        <label class="form-label small fw-semibold text-body-secondary">Email Address</label>
+                        <input type="email" class="form-control bg-body text-body border-body" placeholder="john@example.com" required>
+                      </div>
+
+                      <div class="mb-3">
+                        <label class="form-label small fw-semibold text-body-secondary">Driver's License Photo (Front)</label>
+                        <input type="file" class="form-control bg-body text-body border-body" accept="image/*" required>
+                        <div class="form-text small text-body-secondary">AI verification takes 60 seconds.</div>
+                      </div>
+
+                      <button type="submit" class="btn btn-freeway w-100 py-2 fw-bold mb-3">
+                        <i class="bi bi-person-check me-1"></i>Create Account & Verify KYC
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="bg-body-tertiary text-body border-top border-body py-4 mt-auto">
+    <div class="container text-center small text-body-secondary">
+      <div>&copy; 2026 Freeway Self-Drive Technologies Inc. All rights reserved.</div>
+      <div class="d-flex justify-content-center gap-3 mt-2">
+        <a href="index.html" class="text-body-secondary text-decoration-none">Home</a>
+        <a href="fleet.html" class="text-body-secondary text-decoration-none">Fleet</a>
+        <a href="pricing.html" class="text-body-secondary text-decoration-none">Pricing</a>
+        <a href="how-it-works.html" class="text-body-secondary text-decoration-none">How It Works</a>
+        <a href="locations.html" class="text-body-secondary text-decoration-none">Locations</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

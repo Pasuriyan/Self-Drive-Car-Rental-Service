@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing & Plans | Freeway Self-Drive</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="512x512"
+          href="./assets/images/favicon.png?v=2">
+    <link rel="shortcut icon" type="image/png"
+          href="./assets/images/favicon.png?v=2">
+
+  <link id="bootstrap-ltr" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link id="bootstrap-rtl" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" disabled>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-body text-body">
+
+  <!-- =========================================================================
+       Navbar
+       ========================================================================= -->
+  <header class="sticky-top shadow-sm border-bottom border-body">
+    <div class="bg-body-tertiary border-bottom border-body py-1 small text-body-secondary">
+      <div class="container d-flex justify-content-between align-items-center">
+        <div><i class="bi bi-shield-check text-success me-1"></i>Guaranteed transparent pricing • No hidden counter surcharges</div>
+        <div class="d-flex align-items-center gap-3">
+          <span><i class="bi bi-telephone me-1"></i>24/7 Support: 1-800-FREEWAY</span>
+          <span class="d-none d-md-inline text-body-tertiary">|</span>
+          <span class="d-none d-md-inline"><i class="bi bi-geo-alt me-1"></i>48 Hubs Open</span>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg bg-body">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center fw-bold fs-4 text-body" href="index.html">
+          <span class="badge bg-freeway me-2 p-2 rounded-3"><i class="bi bi-car-front-fill fs-5"></i></span>
+          <span>FREEWAY<span class="text-freeway">.</span></span>
+        </a>
+
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMain">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-medium">
+            <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door me-1"></i>Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="fleet.html"><i class="bi bi-grid me-1"></i>Fleet</a></li>
+            <li class="nav-item"><a class="nav-link active" href="pricing.html"><i class="bi bi-tags me-1"></i>Pricing & Plans</a></li>
+            <li class="nav-item"><a class="nav-link" href="how-it-works.html"><i class="bi bi-compass me-1"></i>How It Works</a></li>
+            <li class="nav-item"><a class="nav-link" href="locations.html"><i class="bi bi-pin-map me-1"></i>Locations</a></li>
+            <li class="nav-item"><a class="nav-link text-primary fw-bold" href="dashboard.html"><i class="bi bi-speedometer2 me-1"></i>Dashboard</a></li>
+          </ul>
+
+          <div class="d-flex align-items-center gap-2 mt-2 mt-lg-0">
+            <button id="rtlToggleBtn" class="btn btn-outline-secondary btn-sm d-flex align-items-center">
+              <i class="bi bi-arrow-left-right me-1"></i><span id="rtlLabel" class="fw-semibold">RTL</span>
+            </button>
+            <button id="themeToggleBtn" class="btn btn-outline-secondary btn-sm d-flex align-items-center">
+              <i id="themeIcon" class="bi bi-sun-fill text-warning me-1"></i><span id="themeLabel" class="fw-semibold">Light</span>
+            </button>
+ <a
+                href="login.html"
+                class="btn btn-freeway btn-sm px-3 shadow-sm d-none d-xl-inline-block"
+              >
+                <i class="bi bi-key-fill me-1"></i>Login
+              </a>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- =========================================================================
+       PAGE HEADER
+       ========================================================================= -->
+  <section class="page-header-banner pricing-hero py-5 text-center">
+<style>
+    .pricing-hero {
+        position: relative;
+        height: 450px;
+        overflow: hidden;
+    }
+
+    /* BACKGROUND IMAGE */
+    .pricing-hero .hero-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+
+        /* Adjust image position */
+        object-position: center center;
+
+        z-index: 0;
+    }
+
+    /* DARK OVERLAY */
+    .pricing-hero .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.50);
+        z-index: 1;
+    }
+
+    /* CONTENT */
+    .pricing-hero .container {
+        position: relative;
+        z-index: 2;
+    }
+
+
+    /* DESKTOP */
+    @media (min-width: 1200px) {
+        .pricing-hero .hero-bg {
+            object-position: center 58%;
+        }
+    }
+
+
+    /* TABLET */
+    @media (max-width: 1199px) {
+        .pricing-hero {
+            height: 400px;
+        }
+
+        .pricing-hero .hero-bg {
+            object-position: center center;
+        }
+    }
+
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+        .pricing-hero {
+            height: 360px;
+        }
+
+        .pricing-hero .hero-bg {
+            object-position: center center;
+        }
+    }
+</style>
+    <!-- HERO BACKGROUND IMAGE -->
+   <img src="assets/images/bg8 (1).jpg"
+     alt="Self Drive Car Rental"
+     class="hero-bg">
+
+    <!-- DARK OVERLAY -->
+    <div class="hero-overlay"></div>
+
+    <!-- CONTENT -->
+    <div class="container py-4 hero-content">
+
+        <span class="badge bg-freeway px-3 py-2 rounded-pill fw-bold text-uppercase mb-2">
+            No Hidden Fees • Ever
+        </span>
+
+        <h1 class="display-5 fw-bold mb-2">
+            Honest, Flexible Self-Drive Pricing
+        </h1>
+
+        <p class="lead header-description mx-auto mb-0">
+            Choose by the hour, day, weekend, or month. All plans feature
+            contactless smart unlocks, roadside protection, and zero security
+            deposit with verified KYC.
+        </p>
+
+    </div>
+
+    <style>
+        .pricing-hero {
+            position: relative;
+            min-height: 360px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* BACKGROUND IMAGE */
+        .pricing-hero .hero-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        /* OVERLAY */
+        .pricing-hero .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.50);
+            z-index: 1;
+        }
+
+        /* CONTENT */
+        .pricing-hero .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* BADGE */
+        .pricing-hero .bg-freeway {
+            background-color: #ffb800 !important;
+            color: #111 !important;
+        }
+
+        /* HEADING */
+        .pricing-hero h1 {
+            color: #fff !important;
+        }
+
+        /* DESCRIPTION */
+        .pricing-hero .header-description {
+            color: #f1f1f1 !important;
+            opacity: 1 !important;
+        }
+
+        /* DARK MODE */
+        [data-bs-theme="dark"] .pricing-hero .hero-overlay,
+        .dark-mode .pricing-hero .hero-overlay,
+        body.dark .pricing-hero .hero-overlay,
+        [data-theme="dark"] .pricing-hero .hero-overlay {
+            background: rgba(0, 0, 0, 0.68);
+        }
+
+        [data-bs-theme="dark"] .pricing-hero h1,
+        .dark-mode .pricing-hero h1,
+        body.dark .pricing-hero h1,
+        [data-theme="dark"] .pricing-hero h1 {
+            color: #fff !important;
+        }
+
+        [data-bs-theme="dark"] .pricing-hero .header-description,
+        .dark-mode .pricing-hero .header-description,
+        body.dark .pricing-hero .header-description,
+        [data-theme="dark"] .pricing-hero .header-description {
+            color: #f5f5f5 !important;
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+            .pricing-hero {
+                min-height: 320px;
+            }
+
+            .pricing-hero h1 {
+                font-size: 2rem;
+            }
+
+            .pricing-hero .header-description {
+                font-size: 1rem;
+            }
+        }
+    </style>
+
+</section>
+
+  <!-- =========================================================================
+       PRICING TIERS
+       ========================================================================= -->
+  <section class="py-5 bg-body">
+    <div class="container">
+      <div class="row g-4 align-items-stretch">
+        <!-- Tier 1: Hourly Flex -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100 border-body bg-body shadow-sm p-4 d-flex flex-column hover-lift">
+            <div class="mb-3">
+              <span class="badge bg-secondary">Urban Errands & Quick Meetings</span>
+              <h4 class="fw-bold text-body mt-2">Hourly Flex</h4>
+              <div class="d-flex align-items-baseline my-3">
+                <span class="display-5 fw-bold text-body">$10</span>
+                <span class="text-body-secondary ms-1">/hour</span>
+              </div>
+              <p class="small text-body-secondary">Ideal for 2 to 6-hour quick errands, lunch meetings, or quick shopping runs.</p>
+            </div>
+            <ul class="list-unstyled small text-body-secondary d-flex flex-column gap-2 mb-4">
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i>25 km per hour included</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i>Fuel included in trip price</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i>Smart phone Bluetooth unlock</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i>Free cancellation up to 1 hr prior</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i>Pay only for hours driven</li>
+            </ul>
+            <a href="fleet.html" class="btn btn-outline-freeway mt-auto w-100 py-2">
+              Book Hourly Vehicle
+            </a>
+          </div>
+        </div>
+
+        <!-- Tier 2: Daily Explorer (Highlighted) -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100 border-primary border-2 bg-body shadow-lg p-4 d-flex flex-column position-relative hover-lift">
+            <span class="position-absolute top-0 start-50 translate-middle badge bg-freeway px-3 py-2 rounded-pill shadow-sm">
+              MOST POPULAR
+            </span>
+            <div class="mb-3 mt-2">
+              <span class="badge bg-primary">Weekend & Road Trips</span>
+              <h4 class="fw-bold text-body mt-2">Daily Explorer</h4>
+              <div class="d-flex align-items-baseline my-3">
+                <span class="display-5 fw-bold text-freeway">$68</span>
+                <span class="text-body-secondary ms-1">/day</span>
+              </div>
+              <p class="small text-body-secondary">Our flagship option for day excursions, coastal loops, and weekend getaways.</p>
+            </div>
+            <ul class="list-unstyled small text-body-secondary d-flex flex-column gap-2 mb-4">
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i>Includes 250 km/day (Roll-over)</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i>Zero Security Deposit with KYC</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i>Airport & City hub pickup options</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i>100% Pre-Trip Inspected guarantee</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i>Complimentary 2nd Driver</li>
+            </ul>
+            <a href="fleet.html" class="btn btn-freeway mt-auto w-100 py-2 fw-bold">
+              Rent by the Day
+            </a>
+          </div>
+        </div>
+
+        <!-- Tier 3: Weekend Escape 72h -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100 border-body bg-body shadow-sm p-4 d-flex flex-column hover-lift">
+            <div class="mb-3">
+              <span class="badge bg-warning text-dark">Friday 3PM to Monday 3PM</span>
+              <h4 class="fw-bold text-body mt-2">Weekend Escape (72h)</h4>
+              <div class="d-flex align-items-baseline my-3">
+                <span class="display-5 fw-bold text-body">$189</span>
+                <span class="text-body-secondary ms-1">/weekend flat</span>
+              </div>
+              <p class="small text-body-secondary">Lock in your car for the entire weekend at a bundled flat discount.</p>
+            </div>
+            <ul class="list-unstyled small text-body-secondary d-flex flex-column gap-2 mb-4">
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i>800 km weekend mileage included</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i>Guaranteed preferred model hold</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i>National park pass included in glovebox</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i>Zero Deposit with verified profile</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i>Free wash voucher upon return</li>
+            </ul>
+            <a href="fleet.html" class="btn btn-outline-freeway mt-auto w-100 py-2">
+              Book Weekend Escape
+            </a>
+          </div>
+        </div>
+
+       
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       FREEDOM SHIELD INSURANCE TABLE
+       ========================================================================= -->
+  <section class="py-5 protection-section border-top border-bottom">
+
+  <!-- INTERNAL CSS -->
+  <style>
+    /* =========================================
+       PROTECTION SECTION - LIGHT MODE
+    ========================================= */
+
+    .protection-section {
+      background-color: #f8f9fa !important;
+      color: #172033;
+      border-color: #dee2e6 !important;
+    }
+
+    /* Badge */
+    .protection-section .protection-badge {
+      background-color: rgba(13, 110, 253, 0.10) !important;
+      color: #0d6efd !important;
+    }
+
+    /* Heading */
+    .protection-section h3 {
+      color: #172033 !important;
+    }
+
+    /* Description */
+    .protection-section .section-description {
+      color: #5f6875 !important;
+    }
+
+    /* =========================================
+       TABLE - LIGHT MODE
+    ========================================= */
+
+    .protection-section .protection-table {
+      background-color: #ffffff !important;
+      color: #172033 !important;
+      border-color: #dee2e6 !important;
+    }
+
+    .protection-section .protection-table thead {
+      background-color: #e9ecef !important;
+    }
+
+    .protection-section .protection-table th {
+      color: #172033 !important;
+      background-color: #e9ecef !important;
+      border-color: #dee2e6 !important;
+    }
+
+    .protection-section .protection-table td {
+      color: #172033 !important;
+      background-color: #ffffff !important;
+      border-color: #dee2e6 !important;
+    }
+
+    /* Green text */
+    .protection-section .text-success {
+      color: #198754 !important;
+    }
+
+    /* Freedom Shield header */
+    .protection-section .shield-header {
+      background-color: #0d6efd !important;
+      color: #ffffff !important;
+    }
+
+
+    /* =========================================
+       DARK MODE
+    ========================================= */
+
+    [data-bs-theme="dark"] .protection-section,
+    .dark-mode .protection-section,
+    body.dark .protection-section,
+    [data-theme="dark"] .protection-section {
+      background-color: #0b0f14 !important;
+      color: #ffffff !important;
+      border-color: #343a40 !important;
+    }
+
+    /* Badge */
+    [data-bs-theme="dark"] .protection-section .protection-badge,
+    .dark-mode .protection-section .protection-badge,
+    body.dark .protection-section .protection-badge,
+    [data-theme="dark"] .protection-section .protection-badge {
+      background-color: rgba(13, 110, 253, 0.18) !important;
+      color: #6ea8fe !important;
+      border: 1px solid rgba(110, 168, 254, 0.25);
+    }
+
+    /* Heading */
+    [data-bs-theme="dark"] .protection-section h3,
+    .dark-mode .protection-section h3,
+    body.dark .protection-section h3,
+    [data-theme="dark"] .protection-section h3 {
+      color: #ffffff !important;
+    }
+
+    /* Description */
+    [data-bs-theme="dark"] .protection-section .section-description,
+    .dark-mode .protection-section .section-description,
+    body.dark .protection-section .section-description,
+    [data-theme="dark"] .protection-section .section-description {
+      color: #b8c0ca !important;
+    }
+
+
+    /* =========================================
+       TABLE - DARK MODE
+    ========================================= */
+
+    [data-bs-theme="dark"] .protection-section .protection-table,
+    .dark-mode .protection-section .protection-table,
+    body.dark .protection-section .protection-table,
+    [data-theme="dark"] .protection-section .protection-table {
+      background-color: #171c23 !important;
+      color: #ffffff !important;
+      border-color: #3a424c !important;
+    }
+
+    /* Table header */
+    [data-bs-theme="dark"] .protection-section .protection-table thead,
+    .dark-mode .protection-section .protection-table thead,
+    body.dark .protection-section .protection-table thead,
+    [data-theme="dark"] .protection-section .protection-table thead {
+      background-color: #242b34 !important;
+    }
+
+    [data-bs-theme="dark"] .protection-section .protection-table th,
+    .dark-mode .protection-section .protection-table th,
+    body.dark .protection-section .protection-table th,
+    [data-theme="dark"] .protection-section .protection-table th {
+      background-color: #242b34 !important;
+      color: #ffffff !important;
+      border-color: #3a424c !important;
+    }
+
+    /* Table cells */
+    [data-bs-theme="dark"] .protection-section .protection-table td,
+    .dark-mode .protection-section .protection-table td,
+    body.dark .protection-section .protection-table td,
+    [data-theme="dark"] .protection-section .protection-table td {
+      background-color: #171c23 !important;
+      color: #f1f3f5 !important;
+      border-color: #3a424c !important;
+    }
+
+    /* Feature names */
+    [data-bs-theme="dark"] .protection-section .protection-table .fw-semibold,
+    .dark-mode .protection-section .protection-table .fw-semibold,
+    body.dark .protection-section .protection-table .fw-semibold,
+    [data-theme="dark"] .protection-section .protection-table .fw-semibold {
+      color: #ffffff !important;
+    }
+
+    /* Green text */
+    [data-bs-theme="dark"] .protection-section .protection-table .text-success,
+    .dark-mode .protection-section .protection-table .text-success,
+    body.dark .protection-section .protection-table .text-success,
+    [data-theme="dark"] .protection-section .protection-table .text-success {
+      color: #4ade80 !important;
+    }
+
+    /* Freedom Shield header */
+    [data-bs-theme="dark"] .protection-section .shield-header,
+    .dark-mode .protection-section .shield-header,
+    body.dark .protection-section .shield-header,
+    [data-theme="dark"] .protection-section .shield-header {
+      background-color: #0d6efd !important;
+      color: #ffffff !important;
+    }
+
+    /* Hover */
+    [data-bs-theme="dark"] .protection-section .protection-table tbody tr:hover td,
+    .dark-mode .protection-section .protection-table tbody tr:hover td,
+    body.dark .protection-section .protection-table tbody tr:hover td,
+    [data-theme="dark"] .protection-section .protection-table tbody tr:hover td {
+      background-color: #202730 !important;
+      color: #ffffff !important;
+    }
+
+  </style>
+
+
+  <div class="container">
+
+    <!-- SECTION TITLE -->
+    <div class="text-center mb-5">
+
+      <span
+        class="badge protection-badge px-3 py-2 rounded-pill fw-semibold mb-2"
+      >
+        Zero Worry Driving
+      </span>
+
+      <h3 class="fw-bold">
+        Protection Packages & Insurance Tiers
+      </h3>
+
+      <p class="section-description">
+        Transparent coverage so you are never left with surprise repair bills.
+      </p>
+
+    </div>
+
+
+    <!-- TABLE -->
+    <div class="row justify-content-center">
+
+      <div class="col-lg-10">
+
+        <div class="table-responsive">
+
+          <table
+            class="table table-bordered table-hover protection-table align-middle shadow-sm"
+          >
+
+            <thead>
+
+              <tr>
+
+                <th class="py-3">
+                  Coverage Feature
+                </th>
+
+                <th class="text-center py-3">
+                  Standard Cover (Included)
+                </th>
+
+                <th class="text-center py-3 shield-header">
+                  Freedom Shield (+$15/day)
+                </th>
+
+                <th class="text-center py-3">
+                  VIP Total Shield (+$28/day)
+                </th>
+
+              </tr>
+
+            </thead>
+
+
+            <tbody>
+
+              <tr>
+
+                <td class="fw-semibold">
+                  Customer Max Collision Liability
+                </td>
+
+                <td class="text-center">
+                  $500 max deductible
+                </td>
+
+                <td class="text-center text-success fw-bold">
+                  $0 ZERO Deductible
+                </td>
+
+                <td class="text-center text-success fw-bold">
+                  $0 ZERO Deductible
+                </td>
+
+              </tr>
+
+
+              <tr>
+
+                <td class="fw-semibold">
+                  Windshield & Window Glass Cracks
+                </td>
+
+                <td class="text-center">
+                  50% Covered
+                </td>
+
+                <td class="text-center text-success fw-bold">
+                  100% Fully Covered
+                </td>
+
+                <td class="text-center text-success fw-bold">
+                  100% Fully Covered
+                </td>
+
+              </tr>
+
+
+              <tr>
+
+                <td class="fw-semibold">
+                  Tire Punctures & Rim Scratches
+                </td>
+
+                <td class="text-center">
+                  User pays replacement
+                </td>
+
+                <td class="text-center text-success fw-bold">
+                  100% Free Replacement
+                </td>
+
+                <td class="text-center text-success fw-bold">
+                  100% Free Replacement
+                </td>
+
+              </tr>
+
+
+              <tr>
+
+                <td class="fw-semibold">
+                  24/7 Roadside Emergency Towing
+                </td>
+
+                <td class="text-center">
+                  Within 50 km
+                </td>
+
+                <td class="text-center text-success fw-bold">
+                  Unlimited Distance
+                </td>
+
+                <td class="text-center text-success fw-bold">
+                  Unlimited Distance + Taxi Credit
+                </td>
+
+              </tr>
+
+
+              <tr>
+
+                <td class="fw-semibold">
+                  Personal Effects & Luggage Theft
+                </td>
+
+                <td class="text-center">
+                  Not covered
+                </td>
+
+                <td class="text-center">
+                  Up to $1,000
+                </td>
+
+                <td class="text-center text-success fw-bold">
+                  Up to $3,500 replacement
+                </td>
+
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- =========================================================================
+       ADD-ONS & GEAR RENTALS
+       ========================================================================= -->
+  <section class="py-5 bg-body">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h3 class="fw-bold text-body">Optional Road Trip Gear & Add-ons</h3>
+        <p class="text-body-secondary">Add during booking checkout to have your vehicle pre-equipped upon arrival.</p>
+      </div>
+
+      <div class="row g-4 text-center">
+        <div class="col-6 col-md-3">
+          <div class="card h-100 border-body bg-body p-3 shadow-sm">
+            <i class="bi bi-shield-shaded display-6 text-primary mb-2"></i>
+            <h6 class="fw-bold text-body mb-1">Child Safety Seat</h6>
+            <div class="text-freeway fw-bold mb-1">$8 / day</div>
+            <small class="text-body-secondary">Rear-facing, toddler, or booster seats sanitized and installed.</small>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <div class="card h-100 border-body bg-body p-3 shadow-sm">
+            <i class="bi bi-box display-6 text-warning mb-2"></i>
+            <h6 class="fw-bold text-body mb-1">Aerodynamic Roof Cargo Box</h6>
+            <div class="text-freeway fw-bold mb-1">$14 / day</div>
+            <small class="text-body-secondary">Extra 450L weatherproof storage for skis, boards, or family luggage.</small>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <div class="card h-100 border-body bg-body p-3 shadow-sm">
+            <i class="bi bi-wifi display-6 text-success mb-2"></i>
+            <h6 class="fw-bold text-body mb-1">Starlink Mobile Satellite Wi-Fi</h6>
+            <div class="text-freeway fw-bold mb-1">$15 / day</div>
+            <small class="text-body-secondary">High-speed internet anywhere, even deep inside remote national parks.</small>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <div class="card h-100 border-body bg-body p-3 shadow-sm">
+            <i class="bi bi-tree display-6 text-info mb-2"></i>
+            <h6 class="fw-bold text-body mb-1">Overland Camp Pack</h6>
+            <div class="text-freeway fw-bold mb-1">$25 / day</div>
+            <small class="text-body-secondary">4-person tent, sleeping bags, camp stove, and LED lanterns.</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="bg-body-tertiary text-body border-top border-body py-5 mt-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a class="d-flex align-items-center fw-bold fs-4 text-body text-decoration-none mb-3" href="index.html">
+            <span class="badge bg-freeway me-2 p-2 rounded-3"><i class="bi bi-car-front-fill fs-5"></i></span>
+            <span>FREEWAY<span class="text-freeway">.</span></span>
+          </a>
+          <p class="small text-body-secondary pe-lg-4">
+            Drive your freedom with 100% contactless self-drive rentals. Instant AI license checks, phone-based smart door unlocks, and guaranteed zero surprise fees.
+          </p>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h6 class="fw-bold text-body mb-3">Vehicle Fleet</h6>
+          <ul class="list-unstyled small text-body-secondary d-flex flex-column gap-2">
+            <li><a href="fleet.html?category=Electric" class="text-body-secondary text-decoration-none">Electric EVs</a></li>
+            <li><a href="fleet.html?category=SUV" class="text-body-secondary text-decoration-none">SUVs & 4x4 Offroad</a></li>
+            <li><a href="fleet.html?category=Sedan" class="text-body-secondary text-decoration-none">Executive Sedans</a></li>
+            <li><a href="fleet.html?category=Convertible" class="text-body-secondary text-decoration-none">Convertibles</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h6 class="fw-bold text-body mb-3">Company & Hubs</h6>
+          <ul class="list-unstyled small text-body-secondary d-flex flex-column gap-2">
+            <li><a href="how-it-works.html" class="text-body-secondary text-decoration-none">How It Works</a></li>
+            <li><a href="pricing.html" class="text-body-secondary text-decoration-none">Pricing & Shield</a></li>
+            <li><a href="locations.html" class="text-body-secondary text-decoration-none">Airport & City Hubs</a></li>
+            <li><a href="dashboard.html" class="text-body-secondary text-decoration-none">Customer Portal</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <h6 class="fw-bold text-body mb-3">Join Freedom Club</h6>
+          <p class="small text-body-secondary">Get exclusive weekend promo codes and zero deposit waivers.</p>
+          <form class="d-flex gap-2" onsubmit="event.preventDefault(); showToast('Subscribed to pricing alerts!', 'success');">
+            <input type="email" class="form-control form-control-sm bg-body text-body border-body" placeholder="Your email" required>
+            <button type="submit" class="btn btn-freeway btn-sm px-3">Join</button>
+          </form>
+        </div>
+      </div>
+      <div class="pt-4 mt-4 border-top border-body small text-body-secondary">
+        &copy; 2026 Freeway Self-Drive Technologies Inc. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
