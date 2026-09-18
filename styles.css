@@ -589,3 +589,147 @@ body.dark .table,
 
 }
 
+/* =========================================
+   FLEET GRID - 360px RESPONSIVE FIX
+========================================= */
+
+@media (max-width: 400px) {
+
+  /* Grid row spacing */
+  .fleet-grid,
+  .fleet-grid .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* Make each vehicle card full width */
+  .fleet-grid .col,
+  .fleet-grid [class*="col-"] {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  /* Card alignment */
+  .fleet-grid .card {
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+}
+/* =====================================================
+   FREEWAY - COMMON PAGE LEFT ALIGNMENT
+   Keeps all pages aligned to the same container edge
+===================================================== */
+
+/* Main Bootstrap container alignment */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Keep consistent horizontal spacing */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+section > .container,
+main > .container,
+.page-header-banner > .container {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+
+/* =====================================================
+   ROW ALIGNMENT
+===================================================== */
+
+.container > .row {
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+
+/* =====================================================
+   REMOVE UNNECESSARY LEFT OFFSETS
+===================================================== */
+
+section .container .row {
+  transform: none !important;
+}
+
+
+/* =====================================================
+   COMMON CONTENT BLOCKS
+===================================================== */
+
+.page-header-banner .container,
+.services-hero .container,
+.fleet-hero .container,
+.contact-section .container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  section > .container,
+  main > .container,
+  .page-header-banner > .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE - 360px
+===================================================== */
+
+@media (max-width: 400px) {
+
+  .container {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  section > .container,
+  main > .container,
+  .page-header-banner > .container {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+}
+
+
+

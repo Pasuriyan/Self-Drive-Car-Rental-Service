@@ -48,9 +48,53 @@
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-medium">
             <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door me-1"></i>Home</a></li>
             <li class="nav-item"><a class="nav-link active" href="fleet.html"><i class="bi bi-grid me-1"></i>Fleet</a></li>
+                  <!-- SERVICES -->
+          <li class="nav-item">
+
+            <a
+              class="nav-link active"
+              href="services.html"
+            >
+              <i class="bi bi-gear me-1"></i>
+              Services
+            </a>
+
+          </li>
             <li class="nav-item"><a class="nav-link" href="pricing.html"><i class="bi bi-tags me-1"></i>Pricing & Plans</a></li>
             <li class="nav-item"><a class="nav-link" href="how-it-works.html"><i class="bi bi-compass me-1"></i>How It Works</a></li>
-            <li class="nav-item"><a class="nav-link" href="locations.html"><i class="bi bi-pin-map me-1"></i>Locations</a></li>
+                         <!-- BLOG -->
+
+          <li class="nav-item">
+
+            <a
+              class="nav-link active"
+              href="blog.html"
+            >
+
+              <i class="bi bi-journal-text me-1"></i>
+
+              Blog
+
+            </a>
+
+          </li>
+              
+             <!-- CONTACT -->
+
+          <li class="nav-item">
+
+            <a
+              class="nav-link active"
+              href="contact.html"
+            >
+
+              <i class="bi bi-envelope me-1"></i>
+
+              Contact
+
+            </a>
+
+          </li>
             <li class="nav-item"><a class="nav-link text-primary fw-bold" href="dashboard.html"><i class="bi bi-speedometer2 me-1"></i>Dashboard</a></li>
           </ul>
 
@@ -76,6 +120,7 @@
   <!-- =========================================================================
        PAGE HEADER
        ========================================================================= -->
+
 <section class="page-header-banner fleet-hero py-5">
 
   <!-- INTERNAL CSS -->
@@ -94,6 +139,7 @@
     }
 
     /* BACKGROUND IMAGE */
+
     .fleet-hero .hero-bg {
       position: absolute;
       inset: 0;
@@ -104,6 +150,7 @@
     }
 
     /* IMAGE OVERLAY */
+
     .fleet-hero .hero-overlay {
       position: absolute;
       inset: 0;
@@ -112,10 +159,28 @@
     }
 
     /* CONTENT ABOVE IMAGE */
+
     .fleet-hero .container {
       position: relative;
       z-index: 2;
     }
+
+
+    /* =========================================
+       CENTER CONTENT
+    ========================================= */
+
+    .fleet-hero .fleet-content {
+      width: 100%;
+      text-align: center;
+    }
+
+    .fleet-hero .fleet-description {
+      max-width: 650px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
 
     /* =========================================
        TEXT
@@ -130,6 +195,7 @@
       opacity: 1 !important;
     }
 
+
     /* =========================================
        FREEWAY BADGE
     ========================================= */
@@ -140,6 +206,7 @@
       border: 1px solid #ffb800 !important;
     }
 
+
     /* =========================================
        SUCCESS BADGE
     ========================================= */
@@ -147,11 +214,26 @@
     .fleet-hero .bg-success {
       background-color: #198754 !important;
       color: #ffffff !important;
+
+      /* Prevent truncation */
+      white-space: normal !important;
+      overflow: visible !important;
+      text-overflow: unset !important;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+      max-width: 100%;
+      line-height: 1.4;
     }
 
     .fleet-hero .bg-success i {
       color: #ffffff !important;
+      flex-shrink: 0;
     }
+
 
     /* =========================================
        DARK MODE
@@ -194,6 +276,7 @@
       color: #ffffff !important;
     }
 
+
     /* =========================================
        MOBILE
     ========================================= */
@@ -212,37 +295,89 @@
         font-size: 1rem;
       }
 
+      .fleet-hero .fleet-content {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .fleet-hero .bg-success {
+        font-size: 0.85rem !important;
+        padding: 8px 12px !important;
+        max-width: 100%;
+      }
+
+    }
+
+
+    /* =========================================
+       SMALL MOBILE - 360px
+    ========================================= */
+
+    @media (max-width: 400px) {
+
+      .fleet-hero {
+        min-height: 350px;
+      }
+
+      .fleet-hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .fleet-hero p {
+        font-size: 0.95rem;
+      }
+
+      .fleet-hero .bg-success {
+        display: flex;
+        width: 100%;
+        font-size: 0.78rem !important;
+        padding: 8px 10px !important;
+        white-space: normal !important;
+        line-height: 1.35;
+      }
+
     }
 
   </style>
 
 
   <!-- BACKGROUND IMAGE -->
- <img src="assets/images/car bg1.jpg"
-     alt="Self Drive Car Rental"
-     class="hero-bg">
+
+  <img
+    src="assets/images/car bg1.jpg"
+    alt="Self Drive Car Rental"
+    class="hero-bg"
+  >
 
 
   <!-- DARK OVERLAY -->
+
   <div class="hero-overlay"></div>
 
 
+  <!-- CONTENT -->
+
   <div class="container py-3">
 
-    <div class="d-flex flex-wrap justify-content-between align-items-end gap-3">
+    <div class="fleet-content">
 
       <!-- LEFT CONTENT -->
+
       <div>
 
-        <span class="badge bg-freeway px-3 py-2 rounded-pill fw-bold text-uppercase mb-2">
+        <span
+          class="badge bg-freeway px-3 py-2 rounded-pill fw-bold text-uppercase mb-2"
+        >
           Our Entire Lineup
         </span>
+
 
         <h1 class="display-5 fw-bold mb-2">
           The Freedom Fleet
         </h1>
 
-        <p class="lead mb-0" style="max-width: 650px;">
+
+        <p class="lead fleet-description mb-4">
           Every vehicle is thoroughly inspected, sanitized, and enabled for
           100% contactless smartphone unlock.
         </p>
@@ -250,12 +385,16 @@
       </div>
 
 
-      <!-- RIGHT BADGE -->
+      <!-- READY BADGE -->
+
       <div>
 
         <span class="badge bg-success px-3 py-2 fs-6 shadow">
+
           <i class="bi bi-broadcast me-1"></i>
+
           34 Cars Ready for Instant Unlock Right Now
+
         </span>
 
       </div>
@@ -265,6 +404,7 @@
   </div>
 
 </section>
+
 
   <!-- =========================================================================
        FILTER & SEARCH CONTROL PANEL

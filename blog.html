@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Blog - Freeway Self-Drive</title>
+
+  <!-- Bootstrap 5.3.3 -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+<link
+  rel="icon"
+  type="image/png"
+  href="assets/images/favicon.png"
+>
+  <!-- Bootstrap Icons -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    rel="stylesheet"
+  >
+
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Same CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* ================= BLOG HERO ================= */
+
+    .blog-hero {
+      min-height: 400px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .blog-hero img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .blog-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.62);
+    }
+
+    .blog-hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* ================= BLOG CARD ================= */
+
+    .blog-card {
+      border: 0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-7px);
+    }
+
+    .blog-card img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+    }
+
+    .blog-category {
+      color: #ffb800;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+    }
+
+    .blog-read {
+      color: #ffb800;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .blog-read:hover {
+      color: #d99c00;
+    }
+
+    /* ================= FEATURED ================= */
+
+    .featured-blog {
+      overflow: hidden;
+      border-radius: 20px;
+    }
+
+    .featured-blog img {
+      width: 100%;
+      height: 100%;
+      min-height: 380px;
+      object-fit: cover;
+    }
+
+    /* ================= NEWSLETTER ================= */
+
+    .blog-newsletter {
+      border-radius: 24px;
+      background: #171717;
+      overflow: hidden;
+    }
+
+    /* ================= DARK MODE ================= */
+
+    [data-bs-theme="dark"] .blog-card {
+      background-color: #1c1c1c;
+    }
+
+    [data-bs-theme="dark"] .blog-card .card-title {
+      color: #fff;
+    }
+
+    /* ================= RESPONSIVE ================= */
+
+    @media (max-width: 1024px) {
+
+      .navbar-expand-lg .navbar-toggler {
+        display: block !important;
+      }
+
+      .navbar-expand-lg .navbar-collapse {
+        display: none !important;
+      }
+
+      .navbar-expand-lg .navbar-collapse.show {
+        display: block !important;
+      }
+
+      .navbar-expand-lg .navbar-toggler-icon {
+        display: inline-block !important;
+      }
+
+    }
+
+    @media (max-width: 767px) {
+
+      .blog-hero {
+        min-height: 350px;
+      }
+
+      .blog-hero h1 {
+        font-size: 2.3rem;
+      }
+
+      .featured-blog img {
+        min-height: 250px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+ <header class="sticky-top shadow-sm border-bottom border-body">
+      <!-- Top Micro Bar -->
+      <div
+        class="bg-body-tertiary border-bottom border-body py-1 small text-body-secondary"
+      >
+        <div
+          class="container d-flex justify-content-between align-items-center"
+        >
+          <div>
+            <i class="bi bi-shield-check text-success me-1"></i>
+            <span
+              >100% Contactless Smartphone Keyless Unlock • Zero Security
+              Deposit Options</span
+            >
+          </div>
+          <div class="d-flex align-items-center gap-3">
+            <span
+              ><i class="bi bi-telephone me-1"></i>24/7 Roadside Rescue:
+              1-800-FREEWAY</span
+            >
+            <span class="d-none d-md-inline text-body-tertiary">|</span>
+            <span class="d-none d-md-inline"
+              ><i class="bi bi-geo-alt me-1"></i>48 Smart Stations Open</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Navigation Bar -->
+      <nav class="navbar navbar-expand-lg bg-body">
+        <div class="container">
+          <!-- Brand Logo -->
+          <a
+            class="navbar-brand d-flex align-items-center fw-bold fs-4 text-body"
+            href="index.html"
+          >
+            <span class="badge bg-freeway me-2 p-2 rounded-3">
+              <i class="bi bi-car-front-fill fs-5"></i>
+            </span>
+            <span>FREEWAY<span class="text-freeway">.</span></span>
+          </a>
+
+          <!-- Mobile Toggler -->
+          <button
+            class="navbar-toggler border-0 shadow-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarMain"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Navbar Links & Controls -->
+          <div class="collapse navbar-collapse" id="navbarMain">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-medium">
+              <li class="nav-item dropdown">
+  <a
+    class="nav-link dropdown-toggle active"
+    href="#"
+    id="homeDropdown"
+    role="button"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+  >
+    <i class="bi bi-house-door me-1"></i>
+    Home
+  </a>
+
+  <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="homeDropdown">
+
+    <li>
+      <a class="dropdown-item active" href="index.html">
+        <i class="bi bi-house-door me-2"></i>
+        Home 1
+      </a>
+    </li>
+
+    <li>
+      <a class="dropdown-item" href="index2.html">
+        <i class="bi bi-house-door-fill me-2"></i>
+        Home 2
+      </a>
+    </li>
+
+  </ul>
+</li>
+              <li class="nav-item">
+                <a class="nav-link" href="fleet.html">
+                  <i class="bi bi-grid me-1"></i>Fleet
+                </a>
+              </li>
+              <!-- SERVICES -->
+          <li class="nav-item">
+
+            <a
+              class="nav-link active"
+              href="services.html"
+            >
+              <i class="bi bi-gear me-1"></i>
+              Services
+            </a>
+
+          </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pricing.html">
+                  <i class="bi bi-tags me-1"></i>Pricing & Plans
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="how-it-works.html">
+                  <i class="bi bi-compass me-1"></i>How It Works
+                </a>
+              </li>
+                         <!-- BLOG -->
+
+          <li class="nav-item">
+
+            <a
+              class="nav-link active"
+              href="blog.html"
+            >
+
+              <i class="bi bi-journal-text me-1"></i>
+
+              Blog
+
+            </a>
+
+          </li>
+              
+             <!-- CONTACT -->
+
+          <li class="nav-item">
+
+            <a
+              class="nav-link active"
+              href="contact.html"
+            >
+
+              <i class="bi bi-envelope me-1"></i>
+
+              Contact
+
+            </a>
+
+          </li>
+           
+              <li class="nav-item">
+                <a class="nav-link text-primary fw-bold" href="dashboard.html">
+                  <i class="bi bi-speedometer2 me-1"></i>Dashboard
+                </a>
+              </li>
+            </ul>
+
+            <!-- Nav Actions: RTL Toggle, Dark Mode Toggle, Account / Login -->
+            <div class="d-flex align-items-center gap-2 mt-2 mt-lg-0">
+              <!-- RTL Toggle Button -->
+              <button
+                id="rtlToggleBtn"
+                class="btn btn-outline-secondary btn-sm d-flex align-items-center"
+                title="Toggle Right-to-Left Layout"
+              >
+                <i class="bi bi-arrow-left-right me-1"></i>
+                <span id="rtlLabel" class="fw-semibold">RTL</span>
+              </button>
+
+              <!-- Dark Mode Toggle Button -->
+              <button
+                id="themeToggleBtn"
+                class="btn btn-outline-secondary btn-sm d-flex align-items-center"
+                title="Toggle Dark / Light Theme"
+              >
+                <i id="themeIcon" class="bi bi-sun-fill text-warning me-1"></i>
+                <span id="themeLabel" class="fw-semibold">Light</span>
+              </button>
+
+              <!-- Login / Account Dropdown -->
+           
+
+              <!-- Instant Book CTA -->
+              <a
+                href="login.html"
+                class="btn btn-freeway btn-sm px-3 shadow-sm d-none d-xl-inline-block"
+              >
+                <i class="bi bi-key-fill me-1"></i>Login
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+
+
+<!-- =====================================================
+     BLOG HERO
+===================================================== -->
+
+<section class="blog-hero">
+
+  <img
+    src="assets/images/ki (1).jpg"
+    alt="Freeway road trip"
+  >
+
+  <div class="blog-hero-overlay"></div>
+
+
+  <div class="container blog-hero-content">
+
+    <div class="row justify-content-center text-center">
+
+      <div class="col-lg-8">
+
+
+        <span
+          class="badge px-3 py-2 rounded-pill fw-semibold mb-3"
+          style="
+            background:rgba(255,184,0,0.15);
+            color:#ffb800;
+          "
+        >
+
+          FREEWAY STORIES
+
+        </span>
+
+
+        <h1 class="display-3 fw-bold text-white mb-3">
+
+          Road Trips,
+          <br>
+
+          <span style="color:#ffb800;">
+            Tips & Inspiration.
+          </span>
+
+        </h1>
+
+
+        <p class="lead text-white-50 mb-0">
+
+          Discover road trip ideas, driving tips,
+          travel inspiration and everything you need
+          to make your next journey better.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FEATURED ARTICLE
+===================================================== -->
+
+<section class="py-5 bg-body">
+
+  <div class="container">
+
+    <div class="text-center mb-5">
+
+      <span class="blog-category">
+        FEATURED STORY
+      </span>
+
+      <h2 class="fw-bold mt-2">
+        Inspiration For Your Next Drive
+      </h2>
+
+    </div>
+
+
+    <div class="featured-blog shadow-sm bg-body-tertiary">
+
+      <div class="row g-0 align-items-center">
+
+
+        <div class="col-lg-6">
+
+          <img
+            src="assets/images/blog (3).jpg"
+            alt="Road trip"
+          >
+
+        </div>
+
+
+        <div class="col-lg-6">
+
+          <div class="p-4 p-md-5">
+
+            <span class="blog-category">
+              ROAD TRIPS
+            </span>
+
+
+            <h2 class="fw-bold mt-2 mb-3">
+
+              How To Plan The Perfect
+              Weekend Road Trip
+
+            </h2>
+
+
+            <p class="text-body-secondary mb-4">
+
+              From choosing the right vehicle to planning
+              your route, discover simple tips that can help
+              you enjoy a stress-free weekend adventure.
+
+            </p>
+
+
+            <div class="d-flex align-items-center gap-3 mb-4">
+
+              <span class="text-body-secondary small">
+                <i class="bi bi-calendar3 me-1"></i>
+                September 2026
+              </span>
+
+              <span class="text-body-secondary small">
+                <i class="bi bi-clock me-1"></i>
+                5 min read
+              </span>
+
+            </div>
+
+
+           
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     BLOG ARTICLES
+===================================================== -->
+
+<section class="py-5 bg-body-tertiary">
+  <div class="container">
+
+    <div class="d-flex justify-content-between align-items-end mb-4">
+      <div>
+        <span class="blog-category">
+          LATEST ARTICLES
+        </span>
+        <h2 class="fw-bold mt-2 mb-0">
+          From The Freeway Blog
+        </h2>
+      </div>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- ARTICLE 1: Road Trip Ideas -->
+      <div class="col-md-6 col-lg-4">
+        <article class="card blog-card shadow-sm h-100 border-0">
+          <img
+            src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=800&h=500&q=80"
+            alt="Scenic road trip destination"
+            class="card-img-top"
+            style="height: 220px; object-fit: cover;"
+          >
+          <div class="card-body p-4 d-flex flex-column">
+            <span class="blog-category">
+              TRAVEL
+            </span>
+            <h4 class="card-title fw-bold mt-2">
+              7 Road Trip Ideas For Your Next Escape
+            </h4>
+            <p class="text-body-secondary flex-grow-1">
+              Discover exciting ideas for short weekend drives and longer adventures.
+            </p>
+            <!-- <a href="#" class="blog-read">
+              Read Article
+              <i class="bi bi-arrow-right ms-1"></i>
+            </a> -->
+          </div>
+        </article>
+      </div>
+
+      <!-- ARTICLE 2: Driving Tips -->
+      <div class="col-md-6 col-lg-4">
+        <article class="card blog-card shadow-sm h-100 border-0">
+          <img
+            src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=800&h=500&q=80"
+            alt="Hands on steering wheel driving on a highway"
+            class="card-img-top"
+            style="height: 220px; object-fit: cover;"
+          >
+          <div class="card-body p-4 d-flex flex-column">
+            <span class="blog-category">
+              DRIVING TIPS
+            </span>
+            <h4 class="card-title fw-bold mt-2">
+              Essential Tips For A Smooth Self-Drive Trip
+            </h4>
+            <p class="text-body-secondary flex-grow-1">
+              A simple checklist to help you prepare before starting your next journey.
+            </p>
+           
+          </div>
+        </article>
+      </div>
+
+      <!-- ARTICLE 3: Car Rental Checklist -->
+      <div class="col-md-6 col-lg-4">
+        <article class="card blog-card shadow-sm h-100 border-0">
+          <img
+            src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&h=500&q=80"
+            alt="Inspecting a car before rental"
+            class="card-img-top"
+            style="height: 220px; object-fit: cover;"
+          >
+          <div class="card-body p-4 d-flex flex-column">
+            <span class="blog-category">
+              CAR RENTAL
+            </span>
+            <h4 class="card-title fw-bold mt-2">
+              What To Check Before Renting A Car
+            </h4>
+            <p class="text-body-secondary flex-grow-1">
+              Learn what to look for when choosing a rental vehicle for your trip.
+            </p>
+           
+          </div>
+        </article>
+      </div>
+
+      <!-- ARTICLE 4: Long Drive Comfort -->
+      <div class="col-md-6 col-lg-4">
+        <article class="card blog-card shadow-sm h-100 border-0">
+          <img
+            src="https://images.unsplash.com/photo-1506015391300-4802dc74de2e?auto=format&fit=crop&w=800&h=500&q=80"
+            alt="Comfortable long distance car journey"
+            class="card-img-top"
+            style="height: 220px; object-fit: cover;"
+          >
+          <div class="card-body p-4 d-flex flex-column">
+            <span class="blog-category">
+              ROAD TRIPS
+            </span>
+            <h4 class="card-title fw-bold mt-2">
+              How To Stay Comfortable On Long Drives
+            </h4>
+            <p class="text-body-secondary flex-grow-1">
+              Simple ways to make longer journeys more comfortable and enjoyable.
+            </p>
+           
+          </div>
+        </article>
+      </div>
+
+      <!-- ARTICLE 5: Weekend Adventure Prep -->
+      <div class="col-md-6 col-lg-4">
+        <article class="card blog-card shadow-sm h-100 border-0">
+          <img
+            src="assets/images/car pre (2).jpg"
+            alt="Preparing and packing car for road trip"
+            class="card-img-top"
+            style="height: 220px; object-fit: cover;"
+          >
+          <div class="card-body p-4 d-flex flex-column">
+            <span class="blog-category">
+              GUIDE
+            </span>
+            <h4 class="card-title fw-bold mt-2">
+              Preparing Your Car For A Weekend Adventure
+            </h4>
+            <p class="text-body-secondary flex-grow-1">
+              Things you should check before heading out on your road trip.
+            </p>
+            
+          </div>
+        </article>
+      </div>
+
+      <!-- ARTICLE 6: Keyless Smartphone Unlock -->
+      <div class="col-md-6 col-lg-4">
+        <article class="card blog-card shadow-sm h-100 border-0">
+          <img
+            src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=800&h=500&q=80"
+            alt="Modern keyless connected car technology"
+            class="card-img-top"
+            style="height: 220px; object-fit: cover;"
+          >
+          <div class="card-body p-4 d-flex flex-column">
+            <span class="blog-category">
+              FREEWAY
+            </span>
+            <h4 class="card-title fw-bold mt-2">
+              The Future Of Keyless Car Rentals
+            </h4>
+            <p class="text-body-secondary flex-grow-1">
+              See how smartphone access can make the self-drive experience easier.
+            </p>
+          
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- =====================================================
+     NEWSLETTER
+===================================================== -->
+
+<section class="py-5 bg-body">
+
+  <div class="container">
+
+    <div class="blog-newsletter p-4 p-md-5 text-center">
+
+      <span
+        class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-semibold mb-3"
+      >
+        STAY IN THE LOOP
+      </span>
+
+
+      <h2 class="fw-bold text-white mb-3">
+
+        Get The Latest Road Trip Ideas
+
+      </h2>
+
+
+      <p class="text-white-50 mx-auto mb-4"
+         style="max-width:650px;">
+
+        Subscribe for travel inspiration, driving tips,
+        new vehicle updates and Freeway news.
+
+      </p>
+
+
+      <form
+        class="row g-2 justify-content-center"
+        style="max-width:650px; margin:auto;"
+      >
+
+        <div class="col-md">
+
+          <input
+            type="email"
+            class="form-control form-control-lg"
+            placeholder="Enter your email address"
+            required
+          >
+
+        </div>
+
+
+        <div class="col-md-auto">
+
+          <button
+            type="submit"
+            class="btn btn-freeway btn-lg w-100"
+          >
+
+            Subscribe
+
+            <i class="bi bi-send ms-1"></i>
+
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+ <footer class="bg-body-tertiary text-body border-top border-body py-5 mt-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <a
+              class="d-flex align-items-center fw-bold fs-4 text-body text-decoration-none mb-3"
+              href="index.html"
+            >
+              <span class="badge bg-freeway me-2 p-2 rounded-3">
+                <i class="bi bi-car-front-fill fs-5"></i>
+              </span>
+              <span>FREEWAY<span class="text-freeway">.</span></span>
+            </a>
+            <p class="small text-body-secondary pe-lg-4">
+              Drive your freedom with 100% contactless self-drive rentals.
+              Instant AI license checks, phone-based smart door unlocks, and
+              guaranteed zero surprise fees.
+            </p>
+            <div class="d-flex gap-3">
+              <a
+                href="#"
+                class="btn btn-sm btn-outline-secondary rounded-circle"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a
+                href="#"
+                class="btn btn-sm btn-outline-secondary rounded-circle"
+                ><i class="bi bi-twitter-x"></i
+              ></a>
+              <a
+                href="#"
+                class="btn btn-sm btn-outline-secondary rounded-circle"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a
+                href="#"
+                class="btn btn-sm btn-outline-secondary rounded-circle"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3 col-lg-2">
+            <h6 class="fw-bold text-body mb-3">Vehicle Fleet</h6>
+            <ul
+              class="list-unstyled small text-body-secondary d-flex flex-column gap-2"
+            >
+              <li>
+                <a
+                  href="fleet.html?category=Electric"
+                  class="text-body-secondary text-decoration-none"
+                  >Electric EVs</a
+                >
+              </li>
+              <li>
+                <a
+                  href="fleet.html?category=SUV"
+                  class="text-body-secondary text-decoration-none"
+                  >SUVs & 4x4 Offroad</a
+                >
+              </li>
+              <li>
+                <a
+                  href="fleet.html?category=Sedan"
+                  class="text-body-secondary text-decoration-none"
+                  >Executive Sedans</a
+                >
+              </li>
+              <li>
+                <a
+                  href="fleet.html?category=Convertible"
+                  class="text-body-secondary text-decoration-none"
+                  >Convertibles</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-3 col-lg-2">
+            <h6 class="fw-bold text-body mb-3">Company & Hubs</h6>
+            <ul
+              class="list-unstyled small text-body-secondary d-flex flex-column gap-2"
+            >
+              <li>
+                <a
+                  href="how-it-works.html"
+                  class="text-body-secondary text-decoration-none"
+                  >How It Works</a
+                >
+              </li>
+              <li>
+                <a
+                  href="pricing.html"
+                  class="text-body-secondary text-decoration-none"
+                  >Pricing & Shield</a
+                >
+              </li>
+              <li>
+                <a
+                  href="locations.html"
+                  class="text-body-secondary text-decoration-none"
+                  >Airport & City Hubs</a
+                >
+              </li>
+              <li>
+                <a
+                  href="dashboard.html"
+                  class="text-body-secondary text-decoration-none"
+                  >Customer Portal</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <h6 class="fw-bold text-body mb-3">
+              Get Freedom Perks & Promo Codes
+            </h6>
+            <p class="small text-body-secondary">
+              Subscribe for $25 off your first weekend trip, zero-deposit
+              waivers, and seasonal coastal route guides.
+            </p>
+            <form
+              class="d-flex gap-2"
+              onsubmit="
+                event.preventDefault();
+                showToast(
+                  'Subscribed! $25 promo code sent to your email.',
+                  'success',
+                );
+              "
+            >
+              <input
+                type="email"
+                class="form-control form-control-sm bg-body text-body border-body"
+                placeholder="Enter your email"
+                required
+              />
+              <button type="submit" class="btn btn-freeway btn-sm px-3">
+                Join
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div
+          class="d-flex flex-wrap justify-content-between align-items-center pt-4 mt-4 border-top border-body small text-body-secondary"
+        >
+          <div>
+            &copy; 2026 Freeway Self-Drive Technologies Inc. All rights
+            reserved.
+          </div>
+          <div class="d-flex gap-3 mt-2 mt-sm-0">
+            <a href="#" class="text-body-secondary text-decoration-none"
+              >Terms of Service</a
+            >
+            <a href="#" class="text-body-secondary text-decoration-none"
+              >Privacy Policy</a
+            >
+            <a href="#" class="text-body-secondary text-decoration-none"
+              >Insurance Disclosure</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+<!-- =====================================================
+     BOOTSTRAP JS
+===================================================== -->
+
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+></script>
+
+
+<!-- SAME JS -->
+
+<script src="app.js"></script>
+
+
+</body>
+
+</html>

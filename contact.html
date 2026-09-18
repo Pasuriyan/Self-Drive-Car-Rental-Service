@@ -1,0 +1,1594 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact - Freeway Self-Drive</title>
+
+  <!-- Bootstrap 5.3.3 -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+<link
+  rel="icon"
+  type="image/png"
+  href="assets/images/favicon.png"
+>
+  <!-- Bootstrap Icons -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    rel="stylesheet"
+  >
+
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- SAME CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+
+    body {
+      font-family: "Inter", sans-serif;
+    }
+
+    /* ================= CONTACT HERO ================= */
+
+    .contact-hero {
+      min-height: 400px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .contact-hero img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .contact-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.62);
+    }
+
+    .contact-hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* ================= CONTACT CARD ================= */
+
+    .contact-card {
+      border: 0;
+      border-radius: 18px;
+    }
+
+    .contact-icon {
+      width: 55px;
+      height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      background: rgba(255, 184, 0, 0.15);
+      color: #ffb800;
+      font-size: 23px;
+      flex-shrink: 0;
+    }
+
+    .contact-info-item {
+      transition: transform 0.3s ease;
+    }
+
+    .contact-info-item:hover {
+      transform: translateY(-3px);
+    }
+
+    .contact-form-control {
+      min-height: 50px;
+    }
+
+    .contact-textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    /* ================= FAQ ================= */
+
+    .accordion-button:not(.collapsed) {
+      color: #ffb800;
+      background-color: rgba(255, 184, 0, 0.08);
+      box-shadow: none;
+    }
+
+    .accordion-button:focus {
+      box-shadow: none;
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 1024px) {
+
+      .navbar-expand-lg .navbar-toggler {
+        display: block !important;
+      }
+
+      .navbar-expand-lg .navbar-collapse {
+        display: none !important;
+      }
+
+      .navbar-expand-lg .navbar-collapse.show {
+        display: block !important;
+      }
+
+    }
+
+    @media (max-width: 767px) {
+
+      .contact-hero {
+        min-height: 350px;
+      }
+
+      .contact-hero h1 {
+        font-size: 2.4rem;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="sticky-top shadow-sm border-bottom border-body">
+
+  <!-- Top Micro Bar -->
+
+  <div
+    class="bg-body-tertiary border-bottom border-body py-1 small text-body-secondary"
+  >
+
+    <div
+      class="container d-flex justify-content-between align-items-center"
+    >
+
+      <div>
+
+        <i class="bi bi-shield-check text-success me-1"></i>
+
+        <span>
+          100% Contactless Smartphone Keyless Unlock • Zero Security
+          Deposit Options
+        </span>
+
+      </div>
+
+
+      <div class="d-flex align-items-center gap-3">
+
+        <span>
+          <i class="bi bi-telephone me-1"></i>
+          24/7 Roadside Rescue:
+          1-800-FREEWAY
+        </span>
+
+        <span class="d-none d-md-inline text-body-tertiary">
+          |
+        </span>
+
+        <span class="d-none d-md-inline">
+
+          <i class="bi bi-geo-alt me-1"></i>
+          48 Smart Stations Open
+
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- Main Navigation Bar -->
+
+  <nav class="navbar navbar-expand-lg bg-body">
+
+    <div class="container">
+
+
+      <!-- Brand Logo -->
+
+      <a
+        class="navbar-brand d-flex align-items-center fw-bold fs-4 text-body"
+        href="index.html"
+      >
+
+        <span class="badge bg-freeway me-2 p-2 rounded-3">
+
+          <i class="bi bi-car-front-fill fs-5"></i>
+
+        </span>
+
+        <span>
+          FREEWAY<span class="text-freeway">.</span>
+        </span>
+
+      </a>
+
+
+      <!-- Mobile Toggler -->
+
+      <button
+        class="navbar-toggler border-0 shadow-none"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarMain"
+        aria-controls="navbarMain"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+
+
+      <!-- Navbar Links & Controls -->
+
+      <div
+        class="collapse navbar-collapse"
+        id="navbarMain"
+      >
+
+
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-medium">
+
+
+          <!-- HOME -->
+
+          <li class="nav-item dropdown">
+
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="homeDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+
+              <i class="bi bi-house-door me-1"></i>
+
+              Home
+
+            </a>
+
+
+            <ul
+              class="dropdown-menu border-0 shadow-sm"
+              aria-labelledby="homeDropdown"
+            >
+
+              <li>
+
+                <a
+                  class="dropdown-item"
+                  href="index.html"
+                >
+
+                  <i class="bi bi-house-door me-2"></i>
+
+                  Home 1
+
+                </a>
+
+              </li>
+
+
+              <li>
+
+                <a
+                  class="dropdown-item"
+                  href="index2.html"
+                >
+
+                  <i class="bi bi-house-door-fill me-2"></i>
+
+                  Home 2
+
+                </a>
+
+              </li>
+
+            </ul>
+
+          </li>
+
+
+          <!-- FLEET -->
+
+          <li class="nav-item">
+
+            <a
+              class="nav-link"
+              href="fleet.html"
+            >
+
+              <i class="bi bi-grid me-1"></i>
+
+              Fleet
+
+            </a>
+
+          </li>
+
+
+          <!-- SERVICES -->
+
+          <li class="nav-item">
+
+            <a
+              class="nav-link"
+              href="services.html"
+            >
+
+              <i class="bi bi-gear me-1"></i>
+
+              Services
+
+            </a>
+
+          </li>
+
+
+          <!-- PRICING -->
+
+          <li class="nav-item">
+
+            <a
+              class="nav-link"
+              href="pricing.html"
+            >
+
+              <i class="bi bi-tags me-1"></i>
+
+              Pricing & Plans
+
+            </a>
+
+          </li>
+
+
+          <!-- HOW IT WORKS -->
+
+          <li class="nav-item">
+
+            <a
+              class="nav-link"
+              href="how-it-works.html"
+            >
+
+              <i class="bi bi-compass me-1"></i>
+
+              How It Works
+
+            </a>
+
+          </li>
+
+
+          <!-- BLOG -->
+
+          <li class="nav-item">
+
+            <a
+              class="nav-link"
+              href="blog.html"
+            >
+
+              <i class="bi bi-journal-text me-1"></i>
+
+              Blog
+
+            </a>
+
+          </li>
+
+
+
+
+          <!-- CONTACT -->
+
+          <li class="nav-item">
+
+            <a
+              class="nav-link active"
+              href="contact.html"
+            >
+
+              <i class="bi bi-envelope me-1"></i>
+
+              Contact
+
+            </a>
+
+          </li>
+
+
+          <!-- DASHBOARD -->
+
+          <li class="nav-item">
+
+            <a
+              class="nav-link text-primary fw-bold"
+              href="dashboard.html"
+            >
+
+              <i class="bi bi-speedometer2 me-1"></i>
+
+              Dashboard
+
+            </a>
+
+          </li>
+
+        </ul>
+
+
+        <!-- Nav Actions -->
+
+        <div class="d-flex align-items-center gap-2 mt-2 mt-lg-0">
+
+
+          <!-- RTL -->
+
+          <button
+            id="rtlToggleBtn"
+            class="btn btn-outline-secondary btn-sm d-flex align-items-center"
+            title="Toggle Right-to-Left Layout"
+          >
+
+            <i class="bi bi-arrow-left-right me-1"></i>
+
+            <span
+              id="rtlLabel"
+              class="fw-semibold"
+            >
+              RTL
+            </span>
+
+          </button>
+
+
+          <!-- DARK MODE -->
+
+          <button
+            id="themeToggleBtn"
+            class="btn btn-outline-secondary btn-sm d-flex align-items-center"
+            title="Toggle Dark / Light Theme"
+          >
+
+            <i
+              id="themeIcon"
+              class="bi bi-sun-fill text-warning me-1"
+            ></i>
+
+            <span
+              id="themeLabel"
+              class="fw-semibold"
+            >
+              Light
+            </span>
+
+          </button>
+
+
+          <!-- LOGIN -->
+
+          <a
+            href="login.html"
+            class="btn btn-freeway btn-sm px-3 shadow-sm d-none d-xl-inline-block"
+          >
+
+            <i class="bi bi-key-fill me-1"></i>
+
+            Login
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     CONTACT HERO
+===================================================== -->
+
+<section class="contact-hero">
+
+  <img
+    src="assets/images/for bg (1).jpg"
+    alt="Freeway road"
+  >
+
+  <div class="contact-hero-overlay"></div>
+
+
+  <div class="container contact-hero-content">
+
+    <div class="row justify-content-center text-center">
+
+      <div class="col-lg-8">
+
+
+        <span
+          class="badge px-3 py-2 rounded-pill fw-semibold mb-3"
+          style="
+            background:rgba(255,184,0,0.15);
+            color:#ffb800;
+          "
+        >
+
+          GET IN TOUCH
+
+        </span>
+
+
+        <h1 class="display-3 fw-bold text-white mb-3">
+
+          We're Here To
+          <br>
+
+          <span style="color:#ffb800;">
+            Help You Move.
+          </span>
+
+        </h1>
+
+
+        <p class="lead text-white-50 mb-0">
+
+          Have a question about your booking, vehicle,
+          account or journey? Our team is ready to help.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT INFORMATION + FORM
+===================================================== -->
+
+<section class="py-5 bg-body">
+
+  <div class="container">
+
+    <div class="row g-4 g-lg-5">
+
+      <!-- CONTACT INFO -->
+
+      <div class="col-lg-5">
+
+        <span class="text-freeway fw-bold small">
+          CONTACT FREEWAY
+        </span>
+
+        <h2 class="fw-bold mt-2 mb-3">
+          Let's Talk About
+          Your Next Journey.
+        </h2>
+
+        <p class="text-body-secondary mb-4">
+          Whether you need help with a booking, want to know
+          more about our vehicles, or need roadside support,
+          we're always ready to assist.
+        </p>
+
+
+        <!-- PHONE -->
+
+        <div class="contact-info-item d-flex gap-3 mb-4">
+
+          <div class="contact-icon">
+            <i class="bi bi-telephone-fill"></i>
+          </div>
+
+          <div>
+
+            <h6 class="fw-bold mb-1">
+              Call Us
+            </h6>
+
+            <p class="text-body-secondary mb-0">
+              1-800-FREEWAY
+            </p>
+
+            <small class="text-body-secondary">
+              Available 24/7
+            </small>
+
+          </div>
+
+        </div>
+
+
+        <!-- EMAIL -->
+
+        <div class="contact-info-item d-flex gap-3 mb-4">
+
+          <div class="contact-icon">
+            <i class="bi bi-envelope-fill"></i>
+          </div>
+
+          <div>
+
+            <h6 class="fw-bold mb-1">
+              Email Us
+            </h6>
+
+            <p class="text-body-secondary mb-0">
+              support@freeway.com
+            </p>
+
+            <small class="text-body-secondary">
+              We reply within one business day
+            </small>
+
+          </div>
+
+        </div>
+
+
+        <!-- LOCATION -->
+
+        <div class="contact-info-item d-flex gap-3 mb-4">
+
+          <div class="contact-icon">
+            <i class="bi bi-geo-alt-fill"></i>
+          </div>
+
+          <div>
+
+            <h6 class="fw-bold mb-1">
+              Visit Us
+            </h6>
+
+            <p class="text-body-secondary mb-0">
+              Freeway Smart Mobility Hub
+            </p>
+
+            <small class="text-body-secondary">
+              48 locations across the city
+            </small>
+
+          </div>
+
+        </div>
+
+
+        <!-- HOURS -->
+
+        <div class="contact-info-item d-flex gap-3">
+
+          <div class="contact-icon">
+            <i class="bi bi-clock-fill"></i>
+          </div>
+
+          <div>
+
+            <h6 class="fw-bold mb-1">
+              Support Hours
+            </h6>
+
+            <p class="text-body-secondary mb-0">
+              24 hours a day
+            </p>
+
+            <small class="text-body-secondary">
+              Every day of the year
+            </small>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- CONTACT FORM -->
+
+      <div class="col-lg-7">
+
+        <div class="card contact-card shadow-sm">
+
+          <div class="card-body p-4 p-md-5">
+
+            <h3 class="fw-bold mb-2">
+              Send Us A Message
+            </h3>
+
+            <p class="text-body-secondary mb-4">
+              Fill in the form and our team will get back to you.
+            </p>
+
+
+            <form
+              onsubmit="
+                event.preventDefault();
+                if (typeof showToast === 'function') {
+                  showToast(
+                    'Your message has been sent successfully!',
+                    'success'
+                  );
+                } else {
+                  alert('Your message has been sent successfully!');
+                }
+              "
+            >
+
+              <div class="row g-3">
+
+
+                <!-- NAME -->
+
+                <div class="col-md-6">
+
+                  <label class="form-label fw-semibold">
+                    Full Name
+                  </label>
+
+                  <input
+                    type="text"
+                    class="form-control contact-form-control"
+                    placeholder="Enter your name"
+                    minlength="2"
+                    pattern="[A-Za-z ]{2,}"
+                    title="Please enter a valid name with at least 2 letters."
+                    required
+                  >
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="col-md-6">
+
+                  <label class="form-label fw-semibold">
+                    Email Address
+                  </label>
+
+                  <input
+                    type="email"
+                    class="form-control contact-form-control"
+                    placeholder="Enter your email"
+                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                    title="Please enter a valid email address, for example: name@gmail.com"
+                    required
+                  >
+
+                </div>
+
+
+                <!-- PHONE -->
+
+                <div class="col-md-6">
+
+                  <label class="form-label fw-semibold">
+                    Phone Number
+                  </label>
+
+                  <input
+                    type="tel"
+                    class="form-control contact-form-control"
+                    placeholder="Enter your phone number"
+                    pattern="[0-9]{10}"
+                    minlength="10"
+                    maxlength="10"
+                    inputmode="numeric"
+                    title="Please enter exactly 10 digits."
+                    required
+                  >
+
+                </div>
+
+
+                <!-- SUBJECT -->
+
+                <div class="col-md-6">
+
+                  <label class="form-label fw-semibold">
+                    Subject
+                  </label>
+
+                  <select
+                    class="form-select contact-form-control"
+                    required
+                  >
+
+                    <option value="">
+                      Select a subject
+                    </option>
+
+                    <option>
+                      Booking Assistance
+                    </option>
+
+                    <option>
+                      Vehicle Information
+                    </option>
+
+                    <option>
+                      Payment & Invoice
+                    </option>
+
+                    <option>
+                      Roadside Assistance
+                    </option>
+
+                    <option>
+                      General Enquiry
+                    </option>
+
+                  </select>
+
+                </div>
+
+
+                <!-- MESSAGE -->
+
+                <div class="col-12">
+
+                  <label class="form-label fw-semibold">
+                    Message
+                  </label>
+
+                  <textarea
+                    class="form-control contact-textarea"
+                    placeholder="How can we help you?"
+                    required
+                  ></textarea>
+
+                </div>
+
+
+                <!-- SUBMIT -->
+
+                <div class="col-12">
+
+                  <button
+                    type="submit"
+                    class="btn btn-freeway btn-lg px-4"
+                  >
+
+                    <i class="bi bi-send-fill me-2"></i>
+
+                    Send Message
+
+                  </button>
+
+                </div>
+
+              </div>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+<!-- =====================================================
+     QUICK SUPPORT
+===================================================== -->
+
+<section class="py-5 bg-body-tertiary">
+
+  <div class="container">
+
+    <div class="text-center mb-5">
+
+      <span class="text-freeway fw-bold small">
+        QUICK SUPPORT
+      </span>
+
+      <h2 class="fw-bold mt-2">
+        Need Help Right Now?
+      </h2>
+
+      <p class="text-body-secondary">
+        Choose the support option that best matches your needs.
+      </p>
+
+    </div>
+
+
+    <div class="row g-4">
+
+
+      <div class="col-md-4">
+
+        <div class="card border-0 shadow-sm h-100 text-center">
+
+          <div class="card-body p-4">
+
+            <div class="contact-icon mx-auto mb-3">
+
+              <i class="bi bi-car-front-fill"></i>
+
+            </div>
+
+            <h5 class="fw-bold">
+              Booking Help
+            </h5>
+
+            <p class="text-body-secondary small">
+              Need help choosing a vehicle or managing
+              your upcoming trip?
+            </p>
+
+            <a
+              href="dashboard.html"
+              class="btn btn-outline-secondary btn-sm"
+            >
+              Manage Booking
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-md-4">
+
+        <div class="card border-0 shadow-sm h-100 text-center">
+
+          <div class="card-body p-4">
+
+            <div class="contact-icon mx-auto mb-3">
+
+              <i class="bi bi-headset"></i>
+
+            </div>
+
+            <h5 class="fw-bold">
+              Roadside Assistance
+            </h5>
+
+            <p class="text-body-secondary small">
+              Vehicle trouble during your journey?
+              Our roadside team is available 24/7.
+            </p>
+
+            <a
+              href="tel:18003793392"
+              class="btn btn-outline-secondary btn-sm"
+            >
+              Call Support
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-md-4">
+
+        <div class="card border-0 shadow-sm h-100 text-center">
+
+          <div class="card-body p-4">
+
+            <div class="contact-icon mx-auto mb-3">
+
+              <i class="bi bi-question-circle-fill"></i>
+
+            </div>
+
+            <h5 class="fw-bold">
+              Common Questions
+            </h5>
+
+            <p class="text-body-secondary small">
+              Find answers to frequently asked questions
+              about Freeway rentals.
+            </p>
+
+            <a
+              href="#faq"
+              class="btn btn-outline-secondary btn-sm"
+            >
+              View FAQ
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FAQ
+===================================================== -->
+
+<section
+  id="faq"
+  class="py-5 bg-body"
+>
+
+  <div class="container">
+
+    <div class="row justify-content-center">
+
+      <div class="col-lg-9">
+
+
+        <div class="text-center mb-5">
+
+          <span class="text-freeway fw-bold small">
+            FAQ
+          </span>
+
+          <h2 class="fw-bold mt-2">
+            Frequently Asked Questions
+          </h2>
+
+        </div>
+
+
+        <div
+          class="accordion"
+          id="contactFaq"
+        >
+
+
+          <!-- FAQ 1 -->
+
+          <div class="accordion-item border mb-2 rounded-3 overflow-hidden">
+
+            <h2 class="accordion-header">
+
+              <button
+                class="accordion-button fw-semibold"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faqOne"
+              >
+
+                How can I book a Freeway vehicle?
+
+              </button>
+
+            </h2>
+
+
+            <div
+              id="faqOne"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#contactFaq"
+            >
+
+              <div class="accordion-body text-body-secondary">
+
+                Browse the available vehicles in our fleet,
+                select your preferred dates and complete
+                your booking online.
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- FAQ 2 -->
+
+          <div class="accordion-item border mb-2 rounded-3 overflow-hidden">
+
+            <h2 class="accordion-header">
+
+              <button
+                class="accordion-button collapsed fw-semibold"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faqTwo"
+              >
+
+                How does smartphone unlocking work?
+
+              </button>
+
+            </h2>
+
+
+            <div
+              id="faqTwo"
+              class="accordion-collapse collapse"
+              data-bs-parent="#contactFaq"
+            >
+
+              <div class="accordion-body text-body-secondary">
+
+                Once your booking is confirmed, your smartphone
+                can be used to access the vehicle through the
+                Freeway keyless system.
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- FAQ 3 -->
+
+          <div class="accordion-item border mb-2 rounded-3 overflow-hidden">
+
+            <h2 class="accordion-header">
+
+              <button
+                class="accordion-button collapsed fw-semibold"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faqThree"
+              >
+
+                Is roadside assistance available?
+
+              </button>
+
+            </h2>
+
+
+            <div
+              id="faqThree"
+              class="accordion-collapse collapse"
+              data-bs-parent="#contactFaq"
+            >
+
+              <div class="accordion-body text-body-secondary">
+
+                Yes. Roadside assistance is available 24/7
+                for customers during their rental journey.
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- FAQ 4 -->
+
+          <div class="accordion-item border rounded-3 overflow-hidden">
+
+            <h2 class="accordion-header">
+
+              <button
+                class="accordion-button collapsed fw-semibold"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faqFour"
+              >
+
+                Where can I find my booking details?
+
+              </button>
+
+            </h2>
+
+
+            <div
+              id="faqFour"
+              class="accordion-collapse collapse"
+              data-bs-parent="#contactFaq"
+            >
+
+              <div class="accordion-body text-body-secondary">
+
+                Your booking details, trip information and
+                invoices can be accessed from your Freeway
+                customer dashboard.
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="bg-body-tertiary text-body border-top border-body py-5 mt-5">
+
+  <div class="container">
+
+    <div class="row g-4">
+
+
+      <!-- BRAND -->
+
+      <div class="col-lg-4">
+
+        <a
+          class="d-flex align-items-center fw-bold fs-4 text-body text-decoration-none mb-3"
+          href="index.html"
+        >
+
+          <span class="badge bg-freeway me-2 p-2 rounded-3">
+
+            <i class="bi bi-car-front-fill fs-5"></i>
+
+          </span>
+
+          <span>
+            FREEWAY<span class="text-freeway">.</span>
+          </span>
+
+        </a>
+
+
+        <p class="small text-body-secondary pe-lg-4">
+
+          Drive your freedom with 100% contactless self-drive rentals.
+          Instant AI license checks, phone-based smart door unlocks,
+          and guaranteed zero surprise fees.
+
+        </p>
+
+
+        <div class="d-flex gap-3">
+
+          <a
+            href="#"
+            class="btn btn-sm btn-outline-secondary rounded-circle"
+          >
+            <i class="bi bi-facebook"></i>
+          </a>
+
+
+          <a
+            href="#"
+            class="btn btn-sm btn-outline-secondary rounded-circle"
+          >
+            <i class="bi bi-twitter-x"></i>
+          </a>
+
+
+          <a
+            href="#"
+            class="btn btn-sm btn-outline-secondary rounded-circle"
+          >
+            <i class="bi bi-instagram"></i>
+          </a>
+
+
+          <a
+            href="#"
+            class="btn btn-sm btn-outline-secondary rounded-circle"
+          >
+            <i class="bi bi-linkedin"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- VEHICLE FLEET -->
+
+      <div class="col-6 col-md-3 col-lg-2">
+
+        <h6 class="fw-bold text-body mb-3">
+          Vehicle Fleet
+        </h6>
+
+
+        <ul
+          class="list-unstyled small text-body-secondary d-flex flex-column gap-2"
+        >
+
+          <li>
+
+            <a
+              href="fleet.html?category=Electric"
+              class="text-body-secondary text-decoration-none"
+            >
+              Electric EVs
+            </a>
+
+          </li>
+
+
+          <li>
+
+            <a
+              href="fleet.html?category=SUV"
+              class="text-body-secondary text-decoration-none"
+            >
+              SUVs & 4x4 Offroad
+            </a>
+
+          </li>
+
+
+          <li>
+
+            <a
+              href="fleet.html?category=Sedan"
+              class="text-body-secondary text-decoration-none"
+            >
+              Executive Sedans
+            </a>
+
+          </li>
+
+
+          <li>
+
+            <a
+              href="fleet.html?category=Convertible"
+              class="text-body-secondary text-decoration-none"
+            >
+              Convertibles
+            </a>
+
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- COMPANY & HUBS -->
+
+      <div class="col-6 col-md-3 col-lg-2">
+
+        <h6 class="fw-bold text-body mb-3">
+          Company & Hubs
+        </h6>
+
+
+        <ul
+          class="list-unstyled small text-body-secondary d-flex flex-column gap-2"
+        >
+
+          <li>
+
+            <a
+              href="how-it-works.html"
+              class="text-body-secondary text-decoration-none"
+            >
+              How It Works
+            </a>
+
+          </li>
+
+
+          <li>
+
+            <a
+              href="pricing.html"
+              class="text-body-secondary text-decoration-none"
+            >
+              Pricing & Shield
+            </a>
+
+          </li>
+
+
+          <li>
+
+            <a
+              href="locations.html"
+              class="text-body-secondary text-decoration-none"
+            >
+              Airport & City Hubs
+            </a>
+
+          </li>
+
+
+          <li>
+
+            <a
+              href="dashboard.html"
+              class="text-body-secondary text-decoration-none"
+            >
+              Customer Portal
+            </a>
+
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- NEWSLETTER -->
+
+      <div class="col-md-6 col-lg-4">
+
+        <h6 class="fw-bold text-body mb-3">
+          Get Freedom Perks & Promo Codes
+        </h6>
+
+
+        <p class="small text-body-secondary">
+
+          Subscribe for $25 off your first weekend trip,
+          zero-deposit waivers, and seasonal coastal route guides.
+
+        </p>
+
+
+        <form
+          class="d-flex gap-2"
+          onsubmit="
+            event.preventDefault();
+            showToast(
+              'Subscribed! $25 promo code sent to your email.',
+              'success',
+            );
+          "
+        >
+
+          <input
+            type="email"
+            class="form-control form-control-sm bg-body text-body border-body"
+            placeholder="Enter your email"
+            required
+          />
+
+
+          <button
+            type="submit"
+            class="btn btn-freeway btn-sm px-3"
+          >
+
+            Join
+
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+
+    <!-- FOOTER BOTTOM -->
+
+    <div
+      class="d-flex flex-wrap justify-content-between align-items-center pt-4 mt-4 border-top border-body small text-body-secondary"
+    >
+
+      <div>
+
+        &copy; 2026 Freeway Self-Drive Technologies Inc.
+        All rights reserved.
+
+      </div>
+
+
+      <div class="d-flex gap-3 mt-2 mt-sm-0">
+
+        <a
+          href="#"
+          class="text-body-secondary text-decoration-none"
+        >
+          Terms of Service
+        </a>
+
+
+        <a
+          href="#"
+          class="text-body-secondary text-decoration-none"
+        >
+          Privacy Policy
+        </a>
+
+
+        <a
+          href="#"
+          class="text-body-secondary text-decoration-none"
+        >
+          Insurance Disclosure
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+
+<!-- Bootstrap JS -->
+
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+></script>
+
+
+<!-- SAME JS -->
+
+<script src="app.js"></script>
+
+
+</body>
+
+</html>
