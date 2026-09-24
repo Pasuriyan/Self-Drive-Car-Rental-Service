@@ -731,137 +731,147 @@ section .container .row {
 
 }
 /* =====================================================
-   DASHBOARD NAVBAR - LIGHT & DARK MODE
+   FREEWAY NAVBAR - SMALL TEXT & COMPACT SPACING
 ===================================================== */
 
-/* Default Dashboard */
-.dashboard-nav-link {
-    color: #333 !important;
-    font-weight: 500 !important;
-    transition: all 0.3s ease;
+.navbar {
+    min-height: 72px;
+    padding: 8px 0 !important;
 }
 
-/* Dashboard icon */
-.dashboard-nav-link i {
-    color: inherit !important;
+/* Main container */
+.navbar .container {
+    max-width: 100%;
+    padding-left: 4rem;
+    padding-right: 4rem;
 }
 
-/* Hover */
-.dashboard-nav-link:hover {
-    color: #ffb900 !important;
+/* Logo */
+.navbar-brand {
+    font-size: 26px !important;
+    margin-right: 35px !important;
+    white-space: nowrap;
 }
 
-/* Active Dashboard */
-body.dashboard-page .dashboard-nav-link {
-    color: #ffb900 !important;
-    font-weight: 600 !important;
-    position: relative;
+/* Logo icon */
+.navbar-brand .badge {
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Active underline */
-body.dashboard-page .dashboard-nav-link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -9px;
-    height: 2px;
-    background: #ffb900;
-    border-radius: 2px;
+/* Navigation */
+.navbar-nav {
+    align-items: center;
+    gap: 0 !important;
 }
 
-
-/* =====================================================
-   DARK MODE
-===================================================== */
-
-.dark-mode .dashboard-nav-link,
-[data-theme="dark"] .dashboard-nav-link {
-    color: #d6d6d6 !important;
-}
-
-.dark-mode .dashboard-nav-link:hover,
-[data-theme="dark"] .dashboard-nav-link:hover {
-    color: #ffb900 !important;
-}
-
-.dark-mode body.dashboard-page .dashboard-nav-link,
-[data-theme="dark"] body.dashboard-page .dashboard-nav-link {
-    color: #ffb900 !important;
-}
-/* =====================================================
-   DASHBOARD NAVBAR FIX
-===================================================== */
-
-/* LIGHT MODE */
-.navbar .dashboard-nav-link {
-    color: #333333 !important;
-    opacity: 1 !important;
-    visibility: visible !important;
+/* Menu text */
+.navbar-nav .nav-link {
+    font-size: 16px !important;
     font-weight: 400 !important;
+    padding: 8px 9px !important;
+    white-space: nowrap;
+    line-height: 1.2;
 }
 
-.navbar .dashboard-nav-link i {
-    color: #333333 !important;
+/* Menu icons */
+.navbar-nav .nav-link i {
+    font-size: 16px !important;
+    margin-right: 4px !important;
 }
 
-/* Hover */
-.navbar .dashboard-nav-link:hover {
-    color: #ffb900 !important;
+/* Dropdown arrow */
+.navbar-nav .dropdown-toggle::after {
+    margin-left: 3px;
 }
 
-.navbar .dashboard-nav-link:hover i {
-    color: #ffb900 !important;
+/* Right-side controls */
+.navbar .d-flex.align-items-center.gap-2 {
+    gap: 6px !important;
 }
 
-/* =====================================================
-   ACTIVE DASHBOARD
-===================================================== */
-
-body.dashboard-page .navbar .dashboard-nav-link {
-    color: #ffb900 !important;
-    font-weight: 500 !important;
+/* RTL + Light buttons */
+#rtlToggleBtn,
+#themeToggleBtn {
+    font-size: 14px !important;
+    padding: 7px 10px !important;
+    min-height: 38px;
 }
 
-body.dashboard-page .navbar .dashboard-nav-link i {
-    color: #ffb900 !important;
-}
-
-/* Active underline */
-body.dashboard-page .navbar .dashboard-nav-link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -8px;
-    height: 2px;
-    background: #ffb900;
-    border-radius: 2px;
+/* Login */
+.navbar .btn-freeway {
+    font-size: 14px !important;
+    padding: 8px 16px !important;
+    min-height: 38px;
 }
 
 
 /* =====================================================
-   DARK MODE
+   1200px AND BELOW
 ===================================================== */
 
-.dark-mode .navbar .dashboard-nav-link,
-[data-theme="dark"] .navbar .dashboard-nav-link {
-    color: #d8d8d8 !important;
-    opacity: 1 !important;
+@media (max-width: 1200px) {
+
+    .navbar .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .navbar-brand {
+        font-size: 24px !important;
+        margin-right: 20px !important;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 15px !important;
+        padding-left: 6px !important;
+        padding-right: 6px !important;
+    }
+
+    .navbar-nav .nav-link i {
+        font-size: 15px !important;
+    }
+
 }
 
-.dark-mode .navbar .dashboard-nav-link i,
-[data-theme="dark"] .navbar .dashboard-nav-link i {
-    color: #d8d8d8 !important;
+
+/* =====================================================
+   TABLET / MOBILE
+===================================================== */
+
+@media (max-width: 991.98px) {
+
+    .navbar {
+        min-height: 68px;
+    }
+
+    .navbar .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .navbar-brand {
+        font-size: 23px !important;
+        margin-right: 0 !important;
+    }
+
+    .navbar-brand .badge {
+        width: 40px;
+        height: 40px;
+    }
+
+    .navbar-collapse {
+        margin-top: 10px;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 16px !important;
+        padding: 9px 10px !important;
+    }
+
 }
 
-.dark-mode .navbar .dashboard-nav-link:hover,
-[data-theme="dark"] .navbar .dashboard-nav-link:hover {
-    color: #ffb900 !important;
-}
-
-.dark-mode .navbar .dashboard-nav-link:hover i,
-[data-theme="dark"] .navbar .dashboard-nav-link:hover i {
-    color: #ffb900 !important;
-}
 
