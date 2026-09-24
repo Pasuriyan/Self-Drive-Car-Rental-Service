@@ -730,6 +730,138 @@ section .container .row {
   }
 
 }
+/* =====================================================
+   DASHBOARD NAVBAR - LIGHT & DARK MODE
+===================================================== */
+
+/* Default Dashboard */
+.dashboard-nav-link {
+    color: #333 !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease;
+}
+
+/* Dashboard icon */
+.dashboard-nav-link i {
+    color: inherit !important;
+}
+
+/* Hover */
+.dashboard-nav-link:hover {
+    color: #ffb900 !important;
+}
+
+/* Active Dashboard */
+body.dashboard-page .dashboard-nav-link {
+    color: #ffb900 !important;
+    font-weight: 600 !important;
+    position: relative;
+}
+
+/* Active underline */
+body.dashboard-page .dashboard-nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -9px;
+    height: 2px;
+    background: #ffb900;
+    border-radius: 2px;
+}
 
 
+/* =====================================================
+   DARK MODE
+===================================================== */
+
+.dark-mode .dashboard-nav-link,
+[data-theme="dark"] .dashboard-nav-link {
+    color: #d6d6d6 !important;
+}
+
+.dark-mode .dashboard-nav-link:hover,
+[data-theme="dark"] .dashboard-nav-link:hover {
+    color: #ffb900 !important;
+}
+
+.dark-mode body.dashboard-page .dashboard-nav-link,
+[data-theme="dark"] body.dashboard-page .dashboard-nav-link {
+    color: #ffb900 !important;
+}
+/* =====================================================
+   DASHBOARD NAVBAR FIX
+===================================================== */
+
+/* LIGHT MODE */
+.navbar .dashboard-nav-link {
+    color: #333333 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    font-weight: 400 !important;
+}
+
+.navbar .dashboard-nav-link i {
+    color: #333333 !important;
+}
+
+/* Hover */
+.navbar .dashboard-nav-link:hover {
+    color: #ffb900 !important;
+}
+
+.navbar .dashboard-nav-link:hover i {
+    color: #ffb900 !important;
+}
+
+/* =====================================================
+   ACTIVE DASHBOARD
+===================================================== */
+
+body.dashboard-page .navbar .dashboard-nav-link {
+    color: #ffb900 !important;
+    font-weight: 500 !important;
+}
+
+body.dashboard-page .navbar .dashboard-nav-link i {
+    color: #ffb900 !important;
+}
+
+/* Active underline */
+body.dashboard-page .navbar .dashboard-nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -8px;
+    height: 2px;
+    background: #ffb900;
+    border-radius: 2px;
+}
+
+
+/* =====================================================
+   DARK MODE
+===================================================== */
+
+.dark-mode .navbar .dashboard-nav-link,
+[data-theme="dark"] .navbar .dashboard-nav-link {
+    color: #d8d8d8 !important;
+    opacity: 1 !important;
+}
+
+.dark-mode .navbar .dashboard-nav-link i,
+[data-theme="dark"] .navbar .dashboard-nav-link i {
+    color: #d8d8d8 !important;
+}
+
+.dark-mode .navbar .dashboard-nav-link:hover,
+[data-theme="dark"] .navbar .dashboard-nav-link:hover {
+    color: #ffb900 !important;
+}
+
+.dark-mode .navbar .dashboard-nav-link:hover i,
+[data-theme="dark"] .navbar .dashboard-nav-link:hover i {
+    color: #ffb900 !important;
+}
 
