@@ -45,8 +45,8 @@
 
         <div class="collapse navbar-collapse" id="navbarMain">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-medium">
-            <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door me-1"></i>Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="fleet.html"><i class="bi bi-grid me-1"></i>Fleet</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html"></i>Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="fleet.html"></i>Fleet</a></li>
                   <!-- SERVICES -->
           <li class="nav-item">
 
@@ -54,13 +54,12 @@
               class="nav-link active"
               href="services.html"
             >
-              <i class="bi bi-gear me-1"></i>
               Services
             </a>
 
           </li>
-            <li class="nav-item"><a class="nav-link" href="pricing.html"><i class="bi bi-tags me-1"></i>Pricing & Plans</a></li>
-            <li class="nav-item"><a class="nav-link active" href="how-it-works.html"><i class="bi bi-compass me-1"></i>How It Works</a></li>
+            <li class="nav-item"><a class="nav-link" href="pricing.html"></i>Pricing & Plans</a></li>
+            <li class="nav-item"><a class="nav-link active" href="how-it-works.html"></i>How It Works</a></li>
                          <!-- BLOG -->
 
           <li class="nav-item">
@@ -70,7 +69,6 @@
               href="blog.html"
             >
 
-              <i class="bi bi-journal-text me-1"></i>
 
               Blog
 
@@ -87,7 +85,6 @@
               href="contact.html"
             >
 
-              <i class="bi bi-envelope me-1"></i>
 
               Contact
 
@@ -96,25 +93,45 @@
           </li>
       <li class="nav-item">
     <a class="nav-link dashboard-nav-link" href="dashboard.html">
-        <i class="bi bi-speedometer2 me-1"></i>Dashboard
+        Dashboard
     </a>
 </li>
           </ul>
 
-          <div class="d-flex align-items-center gap-2 mt-2 mt-lg-0">
-            <button id="rtlToggleBtn" class="btn btn-outline-secondary btn-sm d-flex align-items-center">
-              <i class="bi bi-arrow-left-right me-1"></i><span id="rtlLabel" class="fw-semibold">RTL</span>
-            </button>
-            <button id="themeToggleBtn" class="btn btn-outline-secondary btn-sm d-flex align-items-center">
-              <i id="themeIcon" class="bi bi-sun-fill text-warning me-1"></i><span id="themeLabel" class="fw-semibold">Light</span>
-            </button>
- <a
-                href="login.html"
-                class="btn btn-freeway btn-sm px-3 shadow-sm d-none d-xl-inline-block"
-              >
-                <i class="bi bi-key-fill me-1"></i>Login
-              </a>
-          </div>
+          <div class="nav-actions d-flex align-items-center gap-3 ms-auto mt-2 mt-lg-0">
+
+    <!-- RTL Toggle -->
+    <button
+        id="rtlToggleBtn"
+        class="nav-icon-btn btn btn-outline-secondary"
+        type="button"
+        title="Toggle Right-to-Left Layout"
+        aria-label="Toggle Right-to-Left Layout"
+    >
+        <i class="bi bi-arrow-left-right"></i>
+    </button>
+
+    <!-- Theme Toggle -->
+    <button
+        id="themeToggleBtn"
+        class="nav-icon-btn btn btn-outline-secondary"
+        type="button"
+        title="Toggle Dark / Light Theme"
+        aria-label="Toggle Dark / Light Theme"
+    >
+        <i id="themeIcon" class="bi bi-sun-fill text-warning"></i>
+    </button>
+
+    <!-- Login -->
+    <a 
+    href="login.html" 
+    class="btn btn-freeway login-btn d-none d-xl-inline-flex"
+>
+    <i class="bi bi-key-fill"></i>
+    <span>Login</span>
+</a>
+
+</div>
         </div>
       </div>
     </nav>
@@ -245,201 +262,733 @@
   <!-- =========================================================================
        6 STEP DETAILED TIMELINE
        ========================================================================= -->
-  <section class="py-5 bg-body">
+  <section class="py-5 bg-body how-it-works-steps">
 
     <style>
-        /* SAME STYLE FOR ALL 1–6 NUMBERS */
-        .step-number {
+
+        /* =========================================================
+           HOW IT WORKS - MAIN SECTION
+        ========================================================= */
+
+        .how-it-works-steps {
+            overflow: hidden;
+        }
+
+
+        /* =========================================================
+           SECTION HEADER
+        ========================================================= */
+
+        .how-it-works-steps .section-description {
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        /* =========================================================
+           STEP CARD
+        ========================================================= */
+
+        .how-it-works-steps .step-card {
+
+            height: 100%;
+            min-height: 300px;
+
+            padding: 34px;
+
+            border: 1px solid var(--bs-border-color);
+            border-radius: 18px;
+
+            background-color: var(--bs-body-bg);
+
+            display: flex;
+            flex-direction: column;
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease,
+                border-color 0.25s ease;
+        }
+
+
+        /* CARD HOVER */
+
+        .how-it-works-steps .step-card:hover {
+
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 12px 30px rgba(0, 0, 0, 0.10);
+
+        }
+
+
+        /* =========================================================
+           TOP AREA
+        ========================================================= */
+
+        .how-it-works-steps .step-top {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 22px;
+
+            min-height: 76px;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* =========================================================
+           STEP NUMBER
+        ========================================================= */
+
+        .how-it-works-steps .step-number {
+
             width: 64px;
             height: 64px;
+
             min-width: 64px;
+
             border-radius: 50%;
 
             background-color: #ffb800 !important;
+
             color: #111111 !important;
 
             display: flex;
+
             align-items: center;
+
             justify-content: center;
 
-            font-size: 1.5rem;
+            font-size: 1.4rem;
+
             font-weight: 700;
+
+            flex-shrink: 0;
+
+            box-shadow:
+                0 4px 10px rgba(255, 184, 0, 0.20);
         }
+
+
+        /* =========================================================
+           HEADING AREA
+        ========================================================= */
+
+        .how-it-works-steps .step-heading {
+
+            flex: 1;
+
+            min-width: 0;
+        }
+
+
+        /* =========================================================
+           BADGE
+        ========================================================= */
+
+        .how-it-works-steps .step-badge {
+
+            display: inline-block;
+
+            font-size: 0.70rem;
+
+            font-weight: 700;
+
+            line-height: 1;
+
+            padding: 7px 11px;
+
+            border-radius: 6px;
+
+            margin-bottom: 9px;
+
+            white-space: nowrap;
+        }
+
+
+        /* BLUE BADGE */
+
+        .how-it-works-steps .badge-blue {
+
+            background-color: rgba(13, 110, 253, 0.12);
+
+            color: #0d6efd;
+        }
+
+
+        /* FREEWAY YELLOW BADGE */
+
+        .how-it-works-steps .badge-freeway {
+
+            background-color: rgba(255, 184, 0, 0.15);
+
+            color: #c58c00;
+        }
+
+
+        /* GREEN BADGE */
+
+        .how-it-works-steps .badge-green {
+
+            background-color: rgba(25, 135, 84, 0.12);
+
+            color: #198754;
+        }
+
+
+        /* DARK BADGE */
+
+        .how-it-works-steps .badge-dark {
+
+            background-color: rgba(108, 117, 125, 0.15);
+
+            color: #6c757d;
+        }
+
+
+        /* =========================================================
+           STEP HEADING
+        ========================================================= */
+
+        .how-it-works-steps .step-title {
+
+            font-size: 1.08rem;
+
+            font-weight: 700;
+
+            line-height: 1.3;
+
+            margin: 0;
+
+            color: var(--bs-body-color);
+
+            /*
+             * Keeps all descriptions starting
+             * at approximately the same height.
+             */
+
+            min-height: 44px;
+
+            display: flex;
+
+            align-items: flex-start;
+        }
+
+
+        /* =========================================================
+           DESCRIPTION
+        ========================================================= */
+
+        .how-it-works-steps .step-description {
+
+            font-size: 0.91rem;
+
+            line-height: 1.75;
+
+            margin: 0;
+
+            padding-top: 2px;
+
+            color: var(--bs-secondary-color);
+        }
+
+
+        /* =========================================================
+           CARD GRID SPACING
+        ========================================================= */
+
+        .how-it-works-steps .steps-grid {
+
+            --bs-gutter-x: 2rem;
+
+            --bs-gutter-y: 2.5rem;
+        }
+
+
+        /* =========================================================
+           DARK MODE
+        ========================================================= */
+
+        [data-bs-theme="dark"]
+        .how-it-works-steps .step-card,
+
+        .dark-mode
+        .how-it-works-steps .step-card,
+
+        body.dark
+        .how-it-works-steps .step-card,
+
+        [data-theme="dark"]
+        .how-it-works-steps .step-card {
+
+            background-color: #171c23;
+
+            border-color: #303842;
+        }
+
+
+        [data-bs-theme="dark"]
+        .how-it-works-steps .step-card:hover,
+
+        .dark-mode
+        .how-it-works-steps .step-card:hover,
+
+        body.dark
+        .how-it-works-steps .step-card:hover,
+
+        [data-theme="dark"]
+        .how-it-works-steps .step-card:hover {
+
+            box-shadow:
+                0 12px 30px rgba(0, 0, 0, 0.30);
+        }
+
+
+        /* =========================================================
+           MOBILE
+        ========================================================= */
+
+        @media (max-width: 768px) {
+
+            .how-it-works-steps .step-card {
+
+                min-height: 280px;
+
+                padding: 26px;
+            }
+
+
+            .how-it-works-steps .step-top {
+
+                gap: 18px;
+
+                margin-bottom: 24px;
+            }
+
+
+            .how-it-works-steps .step-number {
+
+                width: 58px;
+
+                height: 58px;
+
+                min-width: 58px;
+
+                font-size: 1.25rem;
+            }
+
+
+            .how-it-works-steps .step-title {
+
+                font-size: 1rem;
+
+                min-height: 42px;
+            }
+
+
+            .how-it-works-steps .step-description {
+
+                font-size: 0.88rem;
+
+                line-height: 1.65;
+            }
+
+        }
+
+
+        /* =========================================================
+           SMALL MOBILE
+        ========================================================= */
+
+        @media (max-width: 480px) {
+
+            .how-it-works-steps .step-card {
+
+                min-height: auto;
+
+                padding: 24px;
+            }
+
+
+            .how-it-works-steps .step-top {
+
+                align-items: flex-start;
+
+                gap: 15px;
+
+                margin-bottom: 22px;
+            }
+
+
+            .how-it-works-steps .step-number {
+
+                width: 52px;
+
+                height: 52px;
+
+                min-width: 52px;
+
+                font-size: 1.15rem;
+            }
+
+
+            .how-it-works-steps .step-badge {
+
+                font-size: 0.62rem;
+
+                padding: 6px 9px;
+            }
+
+
+            .how-it-works-steps .step-title {
+
+                font-size: 0.98rem;
+
+                min-height: auto;
+            }
+
+        }
+
     </style>
+
 
     <div class="container">
 
+
+        <!-- =====================================================
+             SECTION HEADER
+        ====================================================== -->
+
         <div class="text-center mb-5">
-            <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill fw-semibold mb-2">
-                Step-by-Step Flow
+
+            <span
+                class="badge px-3 py-2 rounded-pill fw-semibold mb-3"
+                style="
+                    background: rgba(255,184,0,0.15);
+                    color: #ffb800;
+                    border: 1px solid rgba(255,184,0,0.25);
+                "
+            >
+                STEP-BY-STEP FLOW
             </span>
 
-            <h2 class="fw-bold text-body">
-                From Booking to Driving in Under 3 Minutes
+
+            <h2 class="fw-bold text-body mb-3">
+
+                From Booking to Driving
+                in Under 3 Minutes
+
             </h2>
+
+
+            <p class="text-body-secondary section-description mb-0">
+
+                Follow these simple steps to choose your car,
+                unlock it with your phone and start your journey.
+
+            </p>
+
         </div>
 
-        <div class="row g-4">
 
-            <!-- Step 1 -->
+        <!-- =====================================================
+             STEP CARDS
+        ====================================================== -->
+
+        <div class="row steps-grid">
+
+
+            <!-- =================================================
+                 STEP 1
+            ================================================== -->
+
             <div class="col-md-6 col-lg-4">
-                <div class="card h-100 border-body bg-body p-4 shadow-sm hover-lift">
-                    <div class="d-flex align-items-center gap-3 mb-3">
 
-                        <div class="step-number">1</div>
+                <div class="step-card">
 
-                        <div>
-                            <span class="badge bg-primary bg-opacity-10 text-primary">
+                    <div class="step-top">
+
+
+                        <div class="step-number">
+                            1
+                        </div>
+
+
+                        <div class="step-heading">
+
+                            <span class="step-badge badge-blue">
                                 60 Seconds
                             </span>
-                            <h5 class="fw-bold mb-0 text-body">
+
+
+                            <h5 class="step-title">
                                 AI KYC Verification
                             </h5>
+
                         </div>
 
                     </div>
 
-                    <p class="small text-body-secondary mb-0">
-                        Snap a clear photo of your Driver's License and take a quick selfie.
-                        Our automated AI system validates identity and driving history instantly.
-                        Once verified, you never have to re-upload again.
+
+                    <p class="step-description">
+
+                        Snap a clear photo of your Driver's License
+                        and take a quick selfie. Our automated AI
+                        system validates your identity and driving
+                        history instantly. Once verified, you never
+                        have to re-upload your documents again.
+
                     </p>
+
                 </div>
+
             </div>
 
-            <!-- Step 2 -->
+
+            <!-- =================================================
+                 STEP 2
+            ================================================== -->
+
             <div class="col-md-6 col-lg-4">
-                <div class="card h-100 border-body bg-body p-4 shadow-sm hover-lift">
-                    <div class="d-flex align-items-center gap-3 mb-3">
 
-                        <div class="step-number">2</div>
+                <div class="step-card">
 
-                        <div>
-                            <span class="badge bg-freeway bg-opacity-10 text-freeway">
+                    <div class="step-top">
+
+
+                        <div class="step-number">
+                            2
+                        </div>
+
+
+                        <div class="step-heading">
+
+                            <span class="step-badge badge-freeway">
                                 Instant Pick
                             </span>
-                            <h5 class="fw-bold mb-0 text-body">
-                                Choose Car & Hub
+
+
+                            <h5 class="step-title">
+                                Choose Car &amp; Hub
                             </h5>
+
                         </div>
 
                     </div>
 
-                    <p class="small text-body-secondary mb-0">
-                        Select your pickup station (airport terminal, downtown station,
-                        or beachside hub). Pick your preferred vehicle category, trip dates,
-                        and protection tier with transparent rates.
+
+                    <p class="step-description">
+
+                        Select your pickup station such as an
+                        airport terminal, downtown station or
+                        beachside hub. Choose your preferred vehicle
+                        category, trip dates and protection tier
+                        with transparent rates.
+
                     </p>
+
                 </div>
+
             </div>
 
-            <!-- Step 3 -->
+
+            <!-- =================================================
+                 STEP 3
+            ================================================== -->
+
             <div class="col-md-6 col-lg-4">
-                <div class="card h-100 border-body bg-body p-4 shadow-sm hover-lift">
-                    <div class="d-flex align-items-center gap-3 mb-3">
 
-                        <div class="step-number">3</div>
+                <div class="step-card">
 
-                        <div>
-                            <span class="badge bg-success bg-opacity-10 text-success">
+                    <div class="step-top">
+
+
+                        <div class="step-number">
+                            3
+                        </div>
+
+
+                        <div class="step-heading">
+
+                            <span class="step-badge badge-green">
                                 Contactless
                             </span>
-                            <h5 class="fw-bold mb-0 text-body">
+
+
+                            <h5 class="step-title">
                                 Phone Smart Unlock
                             </h5>
+
                         </div>
 
                     </div>
 
-                    <p class="small text-body-secondary mb-0">
-                        Walk directly to the assigned parking bay at your scheduled time.
-                        Open your Freeway Dashboard on your smartphone and tap "Unlock Doors".
-                        Bluetooth proximity opens the car automatically.
+
+                    <p class="step-description">
+
+                        Walk directly to your assigned parking bay
+                        at your scheduled time. Open your Freeway
+                        Dashboard and tap "Unlock Doors". Bluetooth
+                        proximity allows you to access the vehicle
+                        without a physical key.
+
                     </p>
+
                 </div>
+
             </div>
 
-            <!-- Step 4 -->
+
+            <!-- =================================================
+                 STEP 4
+            ================================================== -->
+
             <div class="col-md-6 col-lg-4">
-                <div class="card h-100 border-body bg-body p-4 shadow-sm hover-lift">
-                    <div class="d-flex align-items-center gap-3 mb-3">
 
-                        <div class="step-number">4</div>
+                <div class="step-card">
 
-                        <div>
-                           <span class="badge bg-success bg-opacity-10 text-success">
+                    <div class="step-top">
+
+
+                        <div class="step-number">
+                            4
+                        </div>
+
+
+                        <div class="step-heading">
+
+                            <span class="step-badge badge-green">
                                 Peace of Mind
                             </span>
-                            <h5 class="fw-bold mb-0 text-body">
+
+
+                            <h5 class="step-title">
                                 Digital Walkaround
                             </h5>
+
                         </div>
 
                     </div>
 
-                    <p class="small text-body-secondary mb-0">
-                        Review existing micro-scratches on your app's interactive 3D diagram.
-                        If you see any unrecorded marks, snap a quick photo in the app before
-                        setting off. You are 100% shielded from prior damage.
+
+                    <p class="step-description">
+
+                        Review existing scratches and vehicle
+                        condition through your app. If you notice
+                        any unrecorded marks, take a photo before
+                        starting your journey. This helps protect
+                        you from responsibility for previous damage.
+
                     </p>
+
                 </div>
+
             </div>
 
-            <!-- Step 5 -->
+
+            <!-- =================================================
+                 STEP 5
+            ================================================== -->
+
             <div class="col-md-6 col-lg-4">
-                <div class="card h-100 border-body bg-body p-4 shadow-sm hover-lift">
-                    <div class="d-flex align-items-center gap-3 mb-3">
 
-                        <div class="step-number">5</div>
+                <div class="step-card">
 
-                        <div>
-                            <span class="badge bg-info bg-opacity-10 text-info">
+                    <div class="step-top">
+
+
+                        <div class="step-number">
+                            5
+                        </div>
+
+
+                        <div class="step-heading">
+
+                            <span class="step-badge badge-blue">
                                 Push to Start
                             </span>
-                            <h5 class="fw-bold mb-0 text-body">
+
+
+                            <h5 class="step-title">
                                 Drive Pure Freedom
                             </h5>
+
                         </div>
 
                     </div>
 
-                    <p class="small text-body-secondary mb-0">
-                        Push the start button and hit the open highway! Enjoy 250 free
-                        kilometers every day, automatic electronic toll lane access,
-                        Apple CarPlay / Android Auto, and 24/7 roadside assist.
+
+                    <p class="step-description">
+
+                        Start the vehicle and hit the open road.
+                        Enjoy included mileage, electronic toll
+                        access, Apple CarPlay or Android Auto and
+                        24/7 roadside assistance throughout your trip.
+
                     </p>
+
                 </div>
+
             </div>
 
-            <!-- Step 6 -->
+
+            <!-- =================================================
+                 STEP 6
+            ================================================== -->
+
             <div class="col-md-6 col-lg-4">
-                <div class="card h-100 border-body bg-body p-4 shadow-sm hover-lift">
-                    <div class="d-flex align-items-center gap-3 mb-3">
 
-                        <div class="step-number">6</div>
+                <div class="step-card">
 
-                        <div>
-                            <span class="badge bg-dark bg-opacity-10 text-body">
+                    <div class="step-top">
+
+
+                        <div class="step-number">
+                            6
+                        </div>
+
+
+                        <div class="step-heading">
+
+                            <span class="step-badge badge-dark">
                                 Automated
                             </span>
-                            <h5 class="fw-bold mb-0 text-body">
+
+
+                            <h5 class="step-title">
                                 Easy Hub Drop-off
                             </h5>
+
                         </div>
 
                     </div>
 
-                    <p class="small text-body-secondary mb-0">
-                        Park back at any Freeway bay, turn off the engine, tap
-                        "Lock & End Trip" in your app. Smart sensors record fuel and
-                        odometer reading automatically. Your tax receipt is emailed
-                        in 60 seconds.
+
+                    <p class="step-description">
+
+                        Return the car to the designated Freeway
+                        bay, switch off the engine and tap
+                        "Lock &amp; End Trip" in the app. Fuel and
+                        odometer readings are recorded automatically
+                        and your receipt is sent digitally.
+
                     </p>
+
                 </div>
+
             </div>
 
+
         </div>
+
     </div>
+
 </section>
 
   <!-- =========================================================================

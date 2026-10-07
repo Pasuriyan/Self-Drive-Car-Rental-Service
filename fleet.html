@@ -46,8 +46,8 @@
 
         <div class="collapse navbar-collapse" id="navbarMain">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-medium">
-            <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door me-1"></i>Home</a></li>
-            <li class="nav-item"><a class="nav-link active" href="fleet.html"><i class="bi bi-grid me-1"></i>Fleet</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html"></i>Home</a></li>
+            <li class="nav-item"><a class="nav-link active" href="fleet.html"></i>Fleet</a></li>
                   <!-- SERVICES -->
           <li class="nav-item">
 
@@ -55,13 +55,13 @@
               class="nav-link active"
               href="services.html"
             >
-              <i class="bi bi-gear me-1"></i>
+             
               Services
             </a>
 
           </li>
-            <li class="nav-item"><a class="nav-link" href="pricing.html"><i class="bi bi-tags me-1"></i>Pricing & Plans</a></li>
-            <li class="nav-item"><a class="nav-link" href="how-it-works.html"><i class="bi bi-compass me-1"></i>How It Works</a></li>
+            <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing & Plans</a></li>
+            <li class="nav-item"><a class="nav-link" href="how-it-works.html"></i>How It Works</a></li>
                          <!-- BLOG -->
 
           <li class="nav-item">
@@ -71,7 +71,7 @@
               href="blog.html"
             >
 
-              <i class="bi bi-journal-text me-1"></i>
+        
 
               Blog
 
@@ -88,7 +88,7 @@
               href="contact.html"
             >
 
-              <i class="bi bi-envelope me-1"></i>
+          
 
               Contact
 
@@ -97,25 +97,45 @@
           </li>
       <li class="nav-item">
     <a class="nav-link dashboard-nav-link" href="dashboard.html">
-        <i class="bi bi-speedometer2 me-1"></i>Dashboard
+       Dashboard
     </a>
 </li>
            </ul>
 
-          <div class="d-flex align-items-center gap-2 mt-2 mt-lg-0">
-            <button id="rtlToggleBtn" class="btn btn-outline-secondary btn-sm d-flex align-items-center">
-              <i class="bi bi-arrow-left-right me-1"></i><span id="rtlLabel" class="fw-semibold">RTL</span>
-            </button>
-            <button id="themeToggleBtn" class="btn btn-outline-secondary btn-sm d-flex align-items-center">
-              <i id="themeIcon" class="bi bi-sun-fill text-warning me-1"></i><span id="themeLabel" class="fw-semibold">Light</span>
-            </button>
-             <a
-                href="login.html"
-                class="btn btn-freeway btn-sm px-3 shadow-sm d-none d-xl-inline-block"
-              >
-                <i class="bi bi-key-fill me-1"></i>Login
-              </a>
-          </div>
+       <div class="nav-actions d-flex align-items-center gap-3 ms-auto mt-2 mt-lg-0">
+
+    <!-- RTL Toggle -->
+    <button
+        id="rtlToggleBtn"
+        class="nav-icon-btn btn btn-outline-secondary"
+        type="button"
+        title="Toggle Right-to-Left Layout"
+        aria-label="Toggle Right-to-Left Layout"
+    >
+        <i class="bi bi-arrow-left-right"></i>
+    </button>
+
+    <!-- Theme Toggle -->
+    <button
+        id="themeToggleBtn"
+        class="nav-icon-btn btn btn-outline-secondary"
+        type="button"
+        title="Toggle Dark / Light Theme"
+        aria-label="Toggle Dark / Light Theme"
+    >
+        <i id="themeIcon" class="bi bi-sun-fill text-warning"></i>
+    </button>
+
+    <!-- Login -->
+    <a 
+    href="login.html" 
+    class="btn btn-freeway login-btn d-none d-xl-inline-flex"
+>
+    <i class="bi bi-key-fill"></i>
+    <span>Login</span>
+</a>
+
+</div>
         </div>
       </div>
     </nav>
@@ -142,61 +162,75 @@
       overflow: hidden;
     }
 
-    /* BACKGROUND IMAGE */
+
+    /* =========================================
+       BACKGROUND IMAGE
+    ========================================= */
 
     .fleet-hero .hero-bg {
       position: absolute;
       inset: 0;
+
       width: 100%;
       height: 100%;
+
       object-fit: cover;
+      object-position: center;
+
       z-index: 0;
     }
 
-    /* IMAGE OVERLAY */
+
+    /* =========================================
+       IMAGE OVERLAY
+    ========================================= */
 
     .fleet-hero .hero-overlay {
       position: absolute;
       inset: 0;
+
       background: rgba(0, 0, 0, 0.50);
+
       z-index: 1;
     }
 
-    /* CONTENT ABOVE IMAGE */
+
+    /* =========================================
+       CONTENT
+    ========================================= */
 
     .fleet-hero .container {
       position: relative;
       z-index: 2;
+
+      width: 100%;
     }
 
-
-    /* =========================================
-       CENTER CONTENT
-    ========================================= */
 
     .fleet-hero .fleet-content {
       width: 100%;
-      text-align: center;
-    }
 
-    .fleet-hero .fleet-description {
-      max-width: 650px;
-      margin-left: auto;
-      margin-right: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      padding: 25px 20px;
     }
 
 
     /* =========================================
-       TEXT
+       MAIN CONTENT WIDTH
     ========================================= */
 
-    .fleet-hero h1 {
-      color: #ffffff !important;
-    }
+    .fleet-hero .fleet-content > div:first-child {
+      width: 100%;
+      max-width: 850px;
 
-    .fleet-hero p {
-      color: #f1f1f1 !important;
-      opacity: 1 !important;
+      margin-left: auto;
+      margin-right: auto;
     }
 
 
@@ -205,36 +239,104 @@
     ========================================= */
 
     .fleet-hero .bg-freeway {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
       background-color: #ffb800 !important;
       color: #111111 !important;
+
       border: 1px solid #ffb800 !important;
+
+      white-space: nowrap;
+
+      padding: 8px 18px !important;
     }
 
 
     /* =========================================
-       SUCCESS BADGE
+       HEADING
     ========================================= */
 
-    .fleet-hero .bg-success {
-      background-color: #198754 !important;
+    .fleet-hero h1 {
+      width: 100%;
+
+      max-width: 850px;
+
+      margin-left: auto;
+      margin-right: auto;
+
       color: #ffffff !important;
 
-      /* Prevent truncation */
-      white-space: normal !important;
-      overflow: visible !important;
-      text-overflow: unset !important;
+      text-align: center;
 
+      line-height: 1.15;
+
+      overflow-wrap: break-word;
+    }
+
+
+    /* =========================================
+       DESCRIPTION
+    ========================================= */
+
+    .fleet-hero .fleet-description {
+      width: 100%;
+
+      max-width: 680px;
+
+      margin-left: auto;
+      margin-right: auto;
+
+      color: #f1f1f1 !important;
+
+      opacity: 1 !important;
+
+      text-align: center;
+
+      line-height: 1.6;
+    }
+
+
+    .fleet-hero p {
+      color: #f1f1f1 !important;
+      opacity: 1 !important;
+    }
+
+
+    /* =========================================
+       READY BADGE
+    ========================================= */
+
+    .fleet-hero .ready-badge {
       display: inline-flex;
+
       align-items: center;
       justify-content: center;
 
-      text-align: center;
+      gap: 5px;
+
       max-width: 100%;
+
+      padding: 9px 18px !important;
+
+      background-color: #198754 !important;
+      color: #ffffff !important;
+
+      text-align: center;
+
       line-height: 1.4;
+
+      white-space: nowrap;
+
+      overflow: visible;
     }
 
-    .fleet-hero .bg-success i {
+
+    .fleet-hero .ready-badge i {
       color: #ffffff !important;
+
       flex-shrink: 0;
     }
 
@@ -247,42 +349,51 @@
     .dark-mode .fleet-hero .hero-overlay,
     body.dark .fleet-hero .hero-overlay,
     [data-theme="dark"] .fleet-hero .hero-overlay {
+
       background: rgba(0, 0, 0, 0.70);
     }
+
 
     [data-bs-theme="dark"] .fleet-hero h1,
     .dark-mode .fleet-hero h1,
     body.dark .fleet-hero h1,
     [data-theme="dark"] .fleet-hero h1 {
+
       color: #ffffff !important;
     }
+
 
     [data-bs-theme="dark"] .fleet-hero p,
     .dark-mode .fleet-hero p,
     body.dark .fleet-hero p,
     [data-theme="dark"] .fleet-hero p {
+
       color: #f1f1f1 !important;
     }
+
 
     [data-bs-theme="dark"] .fleet-hero .bg-freeway,
     .dark-mode .fleet-hero .bg-freeway,
     body.dark .fleet-hero .bg-freeway,
     [data-theme="dark"] .fleet-hero .bg-freeway {
+
       background-color: #ffb800 !important;
       color: #111111 !important;
     }
 
-    [data-bs-theme="dark"] .fleet-hero .bg-success,
-    .dark-mode .fleet-hero .bg-success,
-    body.dark .fleet-hero .bg-success,
-    [data-theme="dark"] .fleet-hero .bg-success {
+
+    [data-bs-theme="dark"] .fleet-hero .ready-badge,
+    .dark-mode .fleet-hero .ready-badge,
+    body.dark .fleet-hero .ready-badge,
+    [data-theme="dark"] .fleet-hero .ready-badge {
+
       background-color: #198754 !important;
       color: #ffffff !important;
     }
 
 
     /* =========================================
-       MOBILE
+       TABLET
     ========================================= */
 
     @media (max-width: 768px) {
@@ -291,30 +402,40 @@
         min-height: 320px;
       }
 
-      .fleet-hero h1 {
-        font-size: 2rem;
+
+      .fleet-hero .fleet-content {
+        padding-left: 15px;
+        padding-right: 15px;
       }
 
-      .fleet-hero p {
+
+      .fleet-hero h1 {
+        font-size: 2rem;
+
+        max-width: 700px;
+      }
+
+
+      .fleet-hero .fleet-description {
+        max-width: 600px;
+
         font-size: 1rem;
       }
 
-      .fleet-hero .fleet-content {
-        padding-left: 10px;
-        padding-right: 10px;
-      }
 
-      .fleet-hero .bg-success {
+      .fleet-hero .ready-badge {
         font-size: 0.85rem !important;
+
         padding: 8px 12px !important;
-        max-width: 100%;
+
+        white-space: normal;
       }
 
     }
 
 
     /* =========================================
-       SMALL MOBILE - 360px
+       SMALL MOBILE
     ========================================= */
 
     @media (max-width: 400px) {
@@ -323,20 +444,43 @@
         min-height: 350px;
       }
 
+
+      .fleet-hero .fleet-content {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+
       .fleet-hero h1 {
         font-size: 1.8rem;
       }
 
-      .fleet-hero p {
+
+      .fleet-hero .fleet-description {
         font-size: 0.95rem;
       }
 
-      .fleet-hero .bg-success {
+
+      .fleet-hero .bg-freeway {
+        font-size: 0.78rem;
+
+        padding: 7px 12px !important;
+      }
+
+
+      .fleet-hero .ready-badge {
         display: flex;
+
         width: 100%;
+
+        max-width: 100%;
+
         font-size: 0.78rem !important;
+
         padding: 8px 10px !important;
-        white-space: normal !important;
+
+        white-space: normal;
+
         line-height: 1.35;
       }
 
@@ -345,7 +489,9 @@
   </style>
 
 
-  <!-- BACKGROUND IMAGE -->
+  <!-- =========================================
+       BACKGROUND IMAGE
+  ========================================= -->
 
   <img
     src="assets/images/car bg1.jpg"
@@ -354,29 +500,34 @@
   >
 
 
-  <!-- DARK OVERLAY -->
+  <!-- =========================================
+       DARK OVERLAY
+  ========================================= -->
 
   <div class="hero-overlay"></div>
 
 
-  <!-- CONTENT -->
+  <!-- =========================================
+       CONTENT
+  ========================================= -->
 
   <div class="container py-3">
 
     <div class="fleet-content">
 
-      <!-- LEFT CONTENT -->
+
+      <!-- MAIN CONTENT -->
 
       <div>
 
         <span
-          class="badge bg-freeway px-3 py-2 rounded-pill fw-bold text-uppercase mb-2"
+          class="badge bg-freeway rounded-pill fw-bold text-uppercase mb-3"
         >
           Our Entire Lineup
         </span>
 
 
-        <h1 class="display-5 fw-bold mb-2">
+        <h1 class="display-5 fw-bold mb-3">
           The Freedom Fleet
         </h1>
 
@@ -393,15 +544,18 @@
 
       <div>
 
-        <span class="badge bg-success px-3 py-2 fs-6 shadow">
+        <span class="badge ready-badge shadow">
 
-          <i class="bi bi-broadcast me-1"></i>
+          <i class="bi bi-broadcast"></i>
 
-          34 Cars Ready for Instant Unlock Right Now
+          <span>
+            34 Cars Ready for Instant Unlock Right Now
+          </span>
 
         </span>
 
       </div>
+
 
     </div>
 

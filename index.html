@@ -102,7 +102,6 @@
     data-bs-toggle="dropdown"
     aria-expanded="false"
   >
-    <i class="bi bi-house-door me-1"></i>
     Home
   </a>
 
@@ -125,9 +124,7 @@
   </ul>
 </li>
               <li class="nav-item">
-                <a class="nav-link" href="fleet.html">
-                  <i class="bi bi-grid me-1"></i>Fleet
-                </a>
+                <a class="nav-link" href="fleet.html">Fleet</a>
               </li>
               <!-- SERVICES -->
           <li class="nav-item">
@@ -136,19 +133,17 @@
               class="nav-link active"
               href="services.html"
             >
-              <i class="bi bi-gear me-1"></i>
+             
               Services
             </a>
 
           </li>
               <li class="nav-item">
-                <a class="nav-link" href="pricing.html">
-                  <i class="bi bi-tags me-1"></i>Pricing & Plans
-                </a>
+                <a class="nav-link" href="pricing.html">Pricing & Plans</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="how-it-works.html">
-                  <i class="bi bi-compass me-1"></i>How It Works
+                 How It Works
                 </a>
               </li>
                      <!-- BLOG -->
@@ -159,8 +154,6 @@
               class="nav-link active"
               href="blog.html"
             >
-
-              <i class="bi bi-journal-text me-1"></i>
 
               Blog
 
@@ -177,8 +170,7 @@
               href="contact.html"
             >
 
-              <i class="bi bi-envelope me-1"></i>
-
+         
               Contact
 
             </a>
@@ -186,44 +178,47 @@
           </li>
     <li class="nav-item">
     <a class="nav-link dashboard-nav-link" href="dashboard.html">
-        <i class="bi bi-speedometer2 me-1"></i>Dashboard
+       Dashboard
     </a>
 </li>
             </ul>
 
             <!-- Nav Actions: RTL Toggle, Dark Mode Toggle, Account / Login -->
-            <div class="d-flex align-items-center gap-2 mt-2 mt-lg-0">
-              <!-- RTL Toggle Button -->
-              <button
-                id="rtlToggleBtn"
-                class="btn btn-outline-secondary btn-sm d-flex align-items-center"
-                title="Toggle Right-to-Left Layout"
-              >
-                <i class="bi bi-arrow-left-right me-1"></i>
-                <span id="rtlLabel" class="fw-semibold">RTL</span>
-              </button>
+            <!-- Nav Actions: RTL, Theme & Login -->
+<div class="nav-actions d-flex align-items-center gap-3 ms-auto mt-2 mt-lg-0">
 
-              <!-- Dark Mode Toggle Button -->
-              <button
-                id="themeToggleBtn"
-                class="btn btn-outline-secondary btn-sm d-flex align-items-center"
-                title="Toggle Dark / Light Theme"
-              >
-                <i id="themeIcon" class="bi bi-sun-fill text-warning me-1"></i>
-                <span id="themeLabel" class="fw-semibold">Light</span>
-              </button>
+    <!-- RTL Toggle -->
+    <button
+        id="rtlToggleBtn"
+        class="nav-icon-btn btn btn-outline-secondary"
+        type="button"
+        title="Toggle Right-to-Left Layout"
+        aria-label="Toggle Right-to-Left Layout"
+    >
+        <i class="bi bi-arrow-left-right"></i>
+    </button>
 
-              <!-- Login / Account Dropdown -->
-           
+    <!-- Theme Toggle -->
+    <button
+        id="themeToggleBtn"
+        class="nav-icon-btn btn btn-outline-secondary"
+        type="button"
+        title="Toggle Dark / Light Theme"
+        aria-label="Toggle Dark / Light Theme"
+    >
+        <i id="themeIcon" class="bi bi-sun-fill text-warning"></i>
+    </button>
 
-              <!-- Instant Book CTA -->
-              <a
-                href="login.html"
-                class="btn btn-freeway btn-sm px-3 shadow-sm d-none d-xl-inline-block"
-              >
-                <i class="bi bi-key-fill me-1"></i>Login
-              </a>
-            </div>
+    <!-- Login -->
+    <a 
+    href="login.html" 
+    class="btn btn-freeway login-btn d-none d-xl-inline-flex"
+>
+    <i class="bi bi-key-fill"></i>
+    <span>Login</span>
+</a>
+
+</div>
           </div>
         </div>
       </nav>
@@ -236,7 +231,7 @@
 
   <!-- BACKGROUND IMAGE -->
   <img
-    src="assets/images/bg6.jpg"
+    src="assets/images/relevent to hero1.png"
     alt="Self Drive Car Rental"
     class="hero-bg"
   >
@@ -478,106 +473,146 @@
 
 
   <!-- CONTENT -->
-  <div class="container py-5">
-
+ <!-- HERO CONTENT -->
+<div class="container py-5">
     <div class="hero-content">
 
-
-      <!-- BADGE -->
-
-      <span
-        class="badge bg-freeway px-3 py-2 rounded-pill mb-3 text-uppercase fw-bold letter-spacing"
-      >
-        <i class="bi bi-sun me-1"></i>
-        Zero Key Handoffs • Pure Freedom
-      </span>
-
-
-      <!-- HEADING -->
-
-      <h1 class="display-4 fw-bold lh-sm mb-3">
-
-        Drive Your Freedom.<br>
-
-        <span class="text-warning">
-          Anywhere. Anytime.
+        <!-- Badge -->
+        <span class="badge bg-freeway px-3 py-2 rounded-pill mb-3 text-uppercase fw-bold">
+            <i class="bi bi-car-front-fill me-1"></i>
+            Self-Drive Car Rentals
         </span>
 
-      </h1>
+        <!-- Heading -->
+        <h1 class="display-4 fw-bold lh-sm mb-3">
+            Drive Your Freedom.
+            <br>
+            <span class="text-warning">
+                Anywhere. Anytime.
+            </span>
+        </h1>
 
+        <!-- Description -->
+        <p class="lead hero-description mb-4">
+            Choose your car, select your pickup location, and rent your vehicle
+            your way. Enjoy convenient self-drive rentals with transparent pricing
+            and smartphone-powered access.
+        </p>
 
-      <!-- DESCRIPTION -->
+        <!-- Main Buttons -->
+        <div class="d-flex flex-wrap gap-3 justify-content-center mb-4">
 
-      <p class="lead hero-description mb-4">
+            <a href="fleet.html"
+               class="btn btn-freeway btn-lg px-4 py-3 shadow">
+                <i class="bi bi-car-front-fill me-2"></i>
+                Browse Cars
+            </a>
 
-        Experience truly frictionless self-drive car rentals.
-        Unlock premium SUVs, Electric vehicles, and sports convertibles
-        with your smartphone. No paper contracts, zero airport counter
-        queues, and guaranteed transparent pricing.
+            <a href="contact.html"
+               class="btn btn-outline-light btn-lg px-4 py-3">
+                <i class="bi bi-geo-alt me-2"></i>
+                Find a Location
+            </a>
 
-      </p>
-
-
-      <!-- BUTTONS -->
-
-      <div
-        class="d-flex flex-wrap gap-3 justify-content-center"
-      >
-
-        <a
-          href="fleet.html"
-          class="btn btn-freeway btn-lg px-4 py-3 shadow"
-        >
-
-          <i class="bi bi-search me-2"></i>
-
-          Explore 250+ Vehicles
-
-        </a>
-
-
-        <a
-          href="how-it-works.html"
-          class="btn btn-outline-light btn-lg px-4 py-3"
-        >
-
-          <i class="bi bi-play-circle me-2"></i>
-
-          How It Works
-
-        </a>
-
-      </div>
-
-
-      <!-- TRUST BADGES -->
-
-      <div
-        class="trust-badges d-flex flex-wrap gap-4 mt-4 pt-3 border-top border-opacity-25 small"
-      >
-
-        <div>
-          <i class="bi bi-check-circle-fill me-1"></i>
-          Free 250 km/day included
         </div>
 
 
-        <div>
-          <i class="bi bi-check-circle-fill me-1"></i>
-          24/7 Roadside Assistance
+        <!-- RENTAL SERVICE OPTIONS -->
+        <div class="row g-3 hero-service-cards">
+
+            <!-- Available Cars -->
+            <div class="col-md-4">
+                <a href="fleet.html"
+                   class="hero-service-card text-decoration-none">
+
+                    <div class="hero-card-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=700&q=80"
+                            alt="Available rental cars">
+                    </div>
+
+                    <div class="hero-card-content">
+                        <h5>
+                            <i class="bi bi-car-front-fill"></i>
+                            Available Cars
+                        </h5>
+
+                        <p>
+                            EVs, SUVs, sedans and luxury cars
+                        </p>
+
+                        <span>
+                            Explore Fleet →
+                        </span>
+                    </div>
+
+                </a>
+            </div>
+
+
+            <!-- Locations -->
+            <div class="col-md-4">
+                <a href="contact.html"
+                   class="hero-service-card text-decoration-none">
+
+                    <div class="hero-card-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=700&q=80"
+                            alt="Car rental pickup location">
+                    </div>
+
+                    <div class="hero-card-content">
+                        <h5>
+                            <i class="bi bi-geo-alt-fill"></i>
+                            Pickup Locations
+                        </h5>
+
+                        <p>
+                            Convenient city and airport hubs
+                        </p>
+
+                        <span>
+                            View Locations →
+                        </span>
+                    </div>
+
+                </a>
+            </div>
+
+
+            <!-- Rental Options -->
+            <div class="col-md-4">
+                <a href="pricing.html"
+                   class="hero-service-card text-decoration-none">
+
+                    <div class="hero-card-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=700&q=80"
+                            alt="Self drive rental options">
+                    </div>
+
+                    <div class="hero-card-content">
+                        <h5>
+                            <i class="bi bi-calendar-check-fill"></i>
+                            Rental Options
+                        </h5>
+
+                        <p>
+                            Daily, weekly and flexible rental plans
+                        </p>
+
+                        <span>
+                            View Rental Plans →
+                        </span>
+                    </div>
+
+                </a>
+            </div>
+
         </div>
-
-
-        <div>
-          <i class="bi bi-check-circle-fill me-1"></i>
-          Zero Security Deposit with KYC
-        </div>
-
-      </div>
 
     </div>
-
-  </div>
+</div>
 
 </section>
 
@@ -1170,108 +1205,90 @@
     <!-- =========================================================================
        CUSTOMER REVIEWS & STORIES
        ========================================================================= -->
-    <section class="py-5 bg-body-tertiary border-top border-body">
-      <div class="container">
-        <div class="text-center mb-5">
-          <!-- <span
-            class="badge bg-secondary bg-opacity-10 text-secondary px-3 py-2 rounded-pill fw-semibold mb-2"
-            >Real Stories</span
-          > -->
-          <h2 class="fw-bold text-body">Loved by Over 45,000 Adventurers</h2>
-        </div>
+   <section class="py-5 bg-body-tertiary border-top border-secondary-subtle">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-body">Loved by Over 45,000 Adventurers</h2>
+    </div>
 
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div class="card border-body bg-body p-4 h-100 shadow-sm">
-              <div class="d-flex text-warning mb-3">
-                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
-                ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
-                ><i class="bi bi-star-fill"></i>
-              </div>
-              <p class="text-body-secondary mb-4">
-                "Rented a Bronco for our Yosemite weekend. Unlocking straight
-                from my phone at 6 AM with zero counter lines was incredible.
-                The transparent damage inspection report gives total peace of
-                mind."
-              </p>
-              <div class="d-flex align-items-center gap-3 mt-auto">
-                <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80"
-                  class="rounded-circle"
-                  width="46"
-                  height="46"
-                  alt="Marcus Chen"
-                />
-                <div>
-                  <h6 class="fw-bold text-body mb-0">Marcus Chen</h6>
-                  <small class="text-body-secondary"
-                    >San Francisco • 6 Trips</small
-                  >
-                </div>
-              </div>
-            </div>
+    <div class="row g-4">
+      <!-- 1. Alexander Wright -->
+      <div class="col-md-4">
+        <div class="card border border-secondary-subtle bg-body p-4 h-100 shadow-sm rounded-4">
+          <div class="d-flex text-warning mb-3">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
           </div>
-
-          <div class="col-md-4">
-            <div class="card border-body bg-body p-4 h-100 shadow-sm">
-              <div class="d-flex text-warning mb-3">
-                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
-                ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
-                ><i class="bi bi-star-fill"></i>
-              </div>
-              <p class="text-body-secondary mb-4">
-                "The dark mode on the app looks slick at night, and having fuel
-                credits auto-refunded to my card within 10 minutes of drop-off
-                is unrivaled. Freeway is miles ahead of legacy rentals."
-              </p>
-              <div class="d-flex align-items-center gap-3 mt-auto">
-                <img
-                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80"
-                  class="rounded-circle"
-                  width="46"
-                  height="46"
-                  alt="Elena Rostova"
-                />
-                <div>
-                  <h6 class="fw-bold text-body mb-0">Elena Rostova</h6>
-                  <small class="text-body-secondary"
-                    >Los Angeles • 14 Trips</small
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card border-body bg-body p-4 h-100 shadow-sm">
-              <div class="d-flex text-warning mb-3">
-                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
-                ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
-                ><i class="bi bi-star-fill"></i>
-              </div>
-              <p class="text-body-secondary mb-4">
-                "We picked up the Tesla Model 3 at LAX terminal hub. The car was
-                100% charged, pristine, and the interactive damage inspector
-                highlighted an existing rim scuff so we weren't charged a cent."
-              </p>
-              <div class="d-flex align-items-center gap-3 mt-auto">
-                <img
-                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80"
-                  class="rounded-circle"
-                  width="46"
-                  height="46"
-                  alt="David Miller"
-                />
-                <div>
-                  <h6 class="fw-bold text-body mb-0">David Miller</h6>
-                  <small class="text-body-secondary">Austin • 3 Trips</small>
-                </div>
-              </div>
+          <p class="text-body-secondary mb-4">
+            "Rented a Bronco for our Yosemite weekend. Unlocking straight from my phone at 6 AM with zero counter lines was incredible. The transparent damage inspection report gives total peace of mind."
+          </p>
+          <div class="d-flex align-items-center gap-3 mt-auto">
+            <img
+              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80"
+              class="rounded-circle object-fit-cover shadow-sm"
+              width="48"
+              height="48"
+              alt="Alexander Wright"
+            />
+            <div>
+              <h6 class="fw-bold text-body mb-0">Alexander Wright</h6>
+              <small class="text-body-secondary">Seattle • 8 Trips</small>
             </div>
           </div>
         </div>
       </div>
-    </section>
+
+      <!-- 2. Sophia Martinez -->
+      <div class="col-md-4">
+        <div class="card border border-secondary-subtle bg-body p-4 h-100 shadow-sm rounded-4">
+          <div class="d-flex text-warning mb-3">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <p class="text-body-secondary mb-4">
+            "The dark mode on the app looks slick at night, and having fuel credits auto-refunded to my card within 10 minutes of drop-off is unrivaled. Freeway is miles ahead of legacy rentals."
+          </p>
+          <div class="d-flex align-items-center gap-3 mt-auto">
+            <img
+              src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=150&q=80"
+              class="rounded-circle object-fit-cover shadow-sm"
+              width="48"
+              height="48"
+              alt="Sophia Martinez"
+            />
+            <div>
+              <h6 class="fw-bold text-body mb-0">Sophia Martinez</h6>
+              <small class="text-body-secondary">Chicago • 12 Trips</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Arjun Patel -->
+      <div class="col-md-4">
+        <div class="card border border-secondary-subtle bg-body p-4 h-100 shadow-sm rounded-4">
+          <div class="d-flex text-warning mb-3">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <p class="text-body-secondary mb-4">
+            "We picked up the Tesla Model 3 at LAX terminal hub. The car was 100% charged, pristine, and the interactive damage inspector highlighted an existing rim scuff so we weren't charged a cent."
+          </p>
+          <div class="d-flex align-items-center gap-3 mt-auto">
+            <img
+              src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=150&q=80"
+              class="rounded-circle object-fit-cover shadow-sm"
+              width="48"
+              height="48"
+              alt="Arjun Patel"
+            />
+            <div>
+              <h6 class="fw-bold text-body mb-0">Arjun Patel</h6>
+              <small class="text-body-secondary">Denver • 5 Trips</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- =========================================================================
        Shared Modern Freedom Footer

@@ -263,7 +263,6 @@
         data-bs-toggle="dropdown"
         aria-expanded="false"
     >
-        <i class="bi bi-house-door me-1"></i>
         Home
     </a>
 
@@ -273,14 +272,12 @@
     >
         <li>
             <a class="dropdown-item" href="index.html">
-                <i class="bi bi-house-door me-2"></i>
                 Home 1
             </a>
         </li>
 
         <li>
             <a class="dropdown-item" href="index2.html">
-                <i class="bi bi-house-door-fill me-2"></i>
                 Home 2
             </a>
         </li>
@@ -295,7 +292,6 @@
             class="nav-link"
             href="fleet.html"
           >
-            <i class="bi bi-grid me-1"></i>
             Fleet
           </a>
 
@@ -309,7 +305,6 @@
             class="nav-link"
             href="services.html"
           >
-            <i class="bi bi-gear me-1"></i>
             Services
           </a>
 
@@ -323,7 +318,6 @@
             class="nav-link"
             href="pricing.html"
           >
-            <i class="bi bi-tags me-1"></i>
             Pricing & Plans
           </a>
 
@@ -337,7 +331,6 @@
             class="nav-link"
             href="how-it-works.html"
           >
-            <i class="bi bi-compass me-1"></i>
             How It Works
           </a>
 
@@ -351,7 +344,6 @@
             class="nav-link"
             href="blog.html"
           >
-            <i class="bi bi-journal-text me-1"></i>
             Blog
           </a>
 
@@ -365,7 +357,6 @@
             class="nav-link active"
             href="contact.html"
           >
-            <i class="bi bi-envelope me-1"></i>
             Contact
           </a>
 
@@ -379,7 +370,6 @@
             class="nav-link"
             href="dashboard.html"
           >
-            <i class="bi bi-speedometer2 me-1"></i>
             Dashboard
           </a>
 
@@ -389,56 +379,40 @@
 
 
       <!-- Nav Actions -->
-      <div class="d-flex align-items-center gap-2 mt-2 mt-lg-0">
+     <div class="nav-actions d-flex align-items-center gap-3 ms-auto mt-2 mt-lg-0">
 
+    <!-- RTL Toggle -->
+    <button
+        id="rtlToggleBtn"
+        class="nav-icon-btn btn btn-outline-secondary"
+        type="button"
+        title="Toggle Right-to-Left Layout"
+        aria-label="Toggle Right-to-Left Layout"
+    >
+        <i class="bi bi-arrow-left-right"></i>
+    </button>
 
-        <!-- RTL -->
-        <button
-          id="rtlToggleBtn"
-          class="btn btn-outline-secondary btn-sm d-flex align-items-center"
-          title="Toggle Right-to-Left Layout"
-        >
-          <i class="bi bi-arrow-left-right me-1"></i>
+    <!-- Theme Toggle -->
+    <button
+        id="themeToggleBtn"
+        class="nav-icon-btn btn btn-outline-secondary"
+        type="button"
+        title="Toggle Dark / Light Theme"
+        aria-label="Toggle Dark / Light Theme"
+    >
+        <i id="themeIcon" class="bi bi-sun-fill text-warning"></i>
+    </button>
 
-          <span
-            id="rtlLabel"
-            class="fw-semibold"
-          >
-            RTL
-          </span>
-        </button>
+    <!-- Login -->
+    <a 
+    href="login.html" 
+    class="btn btn-freeway login-btn d-none d-xl-inline-flex"
+>
+    <i class="bi bi-key-fill"></i>
+    <span>Login</span>
+</a>
 
-
-        <!-- DARK MODE -->
-        <button
-          id="themeToggleBtn"
-          class="btn btn-outline-secondary btn-sm d-flex align-items-center"
-          title="Toggle Dark / Light Theme"
-        >
-          <i
-            id="themeIcon"
-            class="bi bi-sun-fill text-warning me-1"
-          ></i>
-
-          <span
-            id="themeLabel"
-            class="fw-semibold"
-          >
-            Light
-          </span>
-        </button>
-
-
-        <!-- LOGIN -->
-        <a
-          href="login.html"
-          class="btn btn-freeway btn-sm px-3 shadow-sm d-none d-xl-inline-block"
-        >
-          <i class="bi bi-key-fill me-1"></i>
-          Login
-        </a>
-
-      </div>
+</div>
 
     </div>
 
@@ -453,64 +427,921 @@
 <!-- =====================================================
      CONTACT HERO
 ===================================================== -->
+<!-- =========================================================================
+     CONTACT PAGE - HERO + CONTACT INFORMATION + LOCATION MAP
+     ========================================================================= -->
 
-<section class="contact-hero">
+<section class="contact-page">
 
-  <img
-    src="assets/images/for bg (1).jpg"
-    alt="Freeway road"
-  >
+  <!-- =========================================================
+       HERO SECTION
+       ========================================================= -->
 
-  <div class="contact-hero-overlay"></div>
+  <section class="contact-hero">
 
+    <style>
 
-  <div class="container contact-hero-content">
+      /* =========================================================
+         CONTACT HERO
+      ========================================================= */
 
-    <div class="row justify-content-center text-center">
-
-      <div class="col-lg-8">
-
-
-        <span
-          class="badge px-3 py-2 rounded-pill fw-semibold mb-3"
-          style="
-            background:rgba(255,184,0,0.15);
-            color:#ffb800;
-          "
-        >
-
-          GET IN TOUCH
-
-        </span>
+      .contact-hero {
+        position: relative;
+        min-height: 380px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
 
 
-        <h1 class="display-3 fw-bold text-white mb-3">
+      /* BACKGROUND IMAGE */
 
-          We're Here To
-          <br>
+      .contact-hero > img {
+        position: absolute;
+        inset: 0;
 
-          <span style="color:#ffb800;">
-            Help You Move.
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        object-position: center center;
+
+        z-index: 0;
+      }
+
+
+      /* DARK OVERLAY */
+
+      .contact-hero-overlay {
+        position: absolute;
+        inset: 0;
+
+        background: rgba(0, 0, 0, 0.58);
+
+        z-index: 1;
+      }
+
+
+      /* HERO CONTENT */
+
+      .contact-hero-content {
+        position: relative;
+        z-index: 2;
+
+        padding-top: 35px;
+        padding-bottom: 35px;
+      }
+
+
+      /* BADGE */
+
+      .contact-hero .contact-badge {
+        display: inline-block;
+
+        background: rgba(255, 184, 0, 0.16) !important;
+
+        color: #ffb800 !important;
+
+        border: 1px solid rgba(255, 184, 0, 0.35);
+
+        padding: 8px 16px;
+
+        border-radius: 50px;
+
+        font-size: 0.78rem;
+        font-weight: 700;
+
+        letter-spacing: 0.4px;
+      }
+
+
+      /* HEADING */
+
+      .contact-hero h1 {
+        color: #ffffff !important;
+
+        font-weight: 800;
+
+        text-shadow:
+          0 2px 5px rgba(0, 0, 0, 0.65);
+
+        margin-bottom: 18px;
+      }
+
+
+      /* YELLOW TEXT */
+
+      .contact-hero .highlight {
+        color: #ffb800 !important;
+
+        text-shadow:
+          0 2px 5px rgba(0, 0, 0, 0.7);
+      }
+
+
+      /* DESCRIPTION
+         IMPORTANT:
+         Do NOT use text-white-50 here because it becomes
+         difficult to see against the background.
+      */
+
+      .contact-hero .contact-description {
+        color: #ffffff !important;
+
+        opacity: 1 !important;
+
+        font-size: 1.12rem;
+
+        line-height: 1.7;
+
+        max-width: 720px;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        text-shadow:
+          0 2px 5px rgba(0, 0, 0, 0.8);
+      }
+
+
+      /* =========================================================
+         CONTACT INFORMATION SECTION
+         ========================================================= */
+
+      .contact-info-section {
+        background-color: #f8f9fa;
+      }
+
+
+      .contact-info-card {
+        height: 100%;
+
+        background: #ffffff;
+
+        border: 1px solid #e5e7eb;
+
+        border-radius: 16px;
+
+        padding: 25px;
+
+        transition: all 0.25s ease;
+      }
+
+
+      .contact-info-card:hover {
+        transform: translateY(-4px);
+
+        box-shadow:
+          0 10px 25px rgba(0, 0, 0, 0.08);
+      }
+
+
+      /* ICON */
+
+      .contact-info-icon {
+        width: 50px;
+        height: 50px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 12px;
+
+        background: rgba(255, 184, 0, 0.14);
+
+        color: #ffb800;
+
+        font-size: 22px;
+
+        margin-bottom: 18px;
+      }
+
+
+      .contact-info-card h5 {
+        color: #172033;
+
+        font-weight: 700;
+
+        margin-bottom: 8px;
+      }
+
+
+      .contact-info-card p {
+        color: #5f6875;
+
+        margin-bottom: 0;
+
+        line-height: 1.6;
+      }
+
+
+      .contact-info-card a {
+        color: #5f6875;
+
+        text-decoration: none;
+      }
+
+
+      .contact-info-card a:hover {
+        color: #d99b00;
+      }
+
+
+      /* =========================================================
+         LOCATION SECTION
+         ========================================================= */
+
+      .contact-location-section {
+        background-color: #ffffff;
+      }
+
+
+      .contact-location-content {
+        padding-right: 25px;
+      }
+
+
+      .contact-location-badge {
+        display: inline-block;
+
+        background: rgba(255, 184, 0, 0.12);
+
+        color: #d99b00;
+
+        border: 1px solid rgba(255, 184, 0, 0.25);
+
+        padding: 7px 14px;
+
+        border-radius: 50px;
+
+        font-size: 0.75rem;
+
+        font-weight: 700;
+
+        margin-bottom: 14px;
+      }
+
+
+      .contact-location-content h2 {
+        color: #172033;
+
+        font-weight: 800;
+
+        margin-bottom: 15px;
+      }
+
+
+      .contact-location-content > p {
+        color: #5f6875;
+
+        line-height: 1.7;
+
+        margin-bottom: 25px;
+      }
+
+
+      /* LOCATION LIST */
+
+      .location-detail {
+        display: flex;
+
+        align-items: flex-start;
+
+        gap: 13px;
+
+        margin-bottom: 18px;
+      }
+
+
+      .location-detail-icon {
+        width: 40px;
+        height: 40px;
+
+        min-width: 40px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 10px;
+
+        background: rgba(255, 184, 0, 0.12);
+
+        color: #ffb800;
+
+        font-size: 18px;
+      }
+
+
+      .location-detail h6 {
+        color: #172033;
+
+        font-weight: 700;
+
+        margin-bottom: 3px;
+      }
+
+
+      .location-detail p {
+        color: #5f6875;
+
+        margin: 0;
+
+        font-size: 0.92rem;
+
+        line-height: 1.5;
+      }
+
+
+      /* =========================================================
+         MAP
+         ========================================================= */
+
+      .contact-map-wrapper {
+        width: 100%;
+
+        height: 390px;
+
+        border-radius: 18px;
+
+        overflow: hidden;
+
+        border: 1px solid #dee2e6;
+
+        box-shadow:
+          0 8px 25px rgba(0, 0, 0, 0.08);
+      }
+
+
+      .contact-map-wrapper iframe {
+        width: 100%;
+        height: 100%;
+
+        border: 0;
+      }
+
+
+      /* =========================================================
+         DARK MODE
+         ========================================================= */
+
+      [data-bs-theme="dark"] .contact-info-section,
+      .dark-mode .contact-info-section,
+      body.dark .contact-info-section,
+      [data-theme="dark"] .contact-info-section {
+        background-color: #0b0f14 !important;
+      }
+
+
+      [data-bs-theme="dark"] .contact-info-card,
+      .dark-mode .contact-info-card,
+      body.dark .contact-info-card,
+      [data-theme="dark"] .contact-info-card {
+        background-color: #171c23 !important;
+
+        border-color: #343a40 !important;
+      }
+
+
+      [data-bs-theme="dark"] .contact-info-card h5,
+      .dark-mode .contact-info-card h5,
+      body.dark .contact-info-card h5,
+      [data-theme="dark"] .contact-info-card h5 {
+        color: #ffffff !important;
+      }
+
+
+      [data-bs-theme="dark"] .contact-info-card p,
+      .dark-mode .contact-info-card p,
+      body.dark .contact-info-card p,
+      [data-theme="dark"] .contact-info-card p {
+        color: #b8c0ca !important;
+      }
+
+
+      [data-bs-theme="dark"] .contact-info-card a,
+      .dark-mode .contact-info-card a,
+      body.dark .contact-info-card a,
+      [data-theme="dark"] .contact-info-card a {
+        color: #b8c0ca !important;
+      }
+
+
+      [data-bs-theme="dark"] .contact-location-section,
+      .dark-mode .contact-location-section,
+      body.dark .contact-location-section,
+      [data-theme="dark"] .contact-location-section {
+        background-color: #10151b !important;
+      }
+
+
+      [data-bs-theme="dark"] .contact-location-content h2,
+      .dark-mode .contact-location-content h2,
+      body.dark .contact-location-content h2,
+      [data-theme="dark"] .contact-location-content h2 {
+        color: #ffffff !important;
+      }
+
+
+      [data-bs-theme="dark"] .contact-location-content > p,
+      .dark-mode .contact-location-content > p,
+      body.dark .contact-location-content > p,
+      [data-theme="dark"] .contact-location-content > p {
+        color: #b8c0ca !important;
+      }
+
+
+      [data-bs-theme="dark"] .location-detail h6,
+      .dark-mode .location-detail h6,
+      body.dark .location-detail h6,
+      [data-theme="dark"] .location-detail h6 {
+        color: #ffffff !important;
+      }
+
+
+      [data-bs-theme="dark"] .location-detail p,
+      .dark-mode .location-detail p,
+      body.dark .location-detail p,
+      [data-theme="dark"] .location-detail p {
+        color: #b8c0ca !important;
+      }
+
+
+      /* =========================================================
+         TABLET
+         ========================================================= */
+
+      @media (max-width: 991px) {
+
+        .contact-location-content {
+          padding-right: 0;
+        }
+
+        .contact-map-wrapper {
+          height: 350px;
+        }
+
+      }
+
+
+      /* =========================================================
+         MOBILE
+         ========================================================= */
+
+      @media (max-width: 768px) {
+
+        .contact-hero {
+          min-height: 350px;
+        }
+
+
+        .contact-hero h1 {
+          font-size: 2.3rem;
+        }
+
+
+        .contact-hero .contact-description {
+          font-size: 1rem;
+
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+
+
+        .contact-map-wrapper {
+          height: 300px;
+        }
+
+      }
+
+
+      /* SMALL MOBILE */
+
+      @media (max-width: 400px) {
+
+        .contact-hero {
+          min-height: 360px;
+        }
+
+
+        .contact-hero h1 {
+          font-size: 2rem;
+        }
+
+
+        .contact-hero .contact-description {
+          font-size: 0.92rem;
+        }
+
+
+        .contact-map-wrapper {
+          height: 260px;
+        }
+
+      }
+
+    </style>
+
+
+    <!-- HERO IMAGE -->
+
+    <img
+      src="assets/images/for bg (1).jpg"
+      alt="Freeway self drive car rental"
+    >
+
+
+    <!-- DARK OVERLAY -->
+
+    <div class="contact-hero-overlay"></div>
+
+
+    <!-- HERO CONTENT -->
+
+    <div class="container contact-hero-content">
+
+      <div class="row justify-content-center text-center">
+
+        <div class="col-lg-9">
+
+
+          <!-- BADGE -->
+
+          <span class="contact-badge mb-3">
+
+            GET IN TOUCH
+
           </span>
 
-        </h1>
+
+          <!-- HEADING -->
+
+          <h1 class="display-3 fw-bold">
+
+            We're Here To
+            <br>
+
+            <span class="highlight">
+              Help You Move.
+            </span>
+
+          </h1>
 
 
-        <p class="lead text-white-50 mb-0">
+          <!-- DESCRIPTION -->
 
-          Have a question about your booking, vehicle,
-          account or journey? Our team is ready to help.
+          <p class="contact-description mb-0">
 
-        </p>
+            Have a question about your booking, vehicle, account or journey?
+            Our support team is ready to help you get moving quickly and
+            confidently.
+
+          </p>
+
+
+        </div>
 
       </div>
 
     </div>
 
-  </div>
+  </section>
+
+
+
+  <!-- =========================================================
+       CONTACT INFORMATION
+       ========================================================= -->
+
+  <section class="py-5 contact-info-section">
+
+    <div class="container">
+
+
+      <!-- SECTION HEADING -->
+
+      <div class="text-center mb-5">
+
+        <span
+          class="badge px-3 py-2 rounded-pill fw-semibold mb-2"
+          style="
+            background:rgba(255,184,0,0.12);
+            color:#d99b00;
+            border:1px solid rgba(255,184,0,0.25);
+          "
+        >
+          CONTACT FREEWAY
+        </span>
+
+
+        <h2 class="fw-bold text-body">
+
+          We're Here When You Need Us
+
+        </h2>
+
+
+        <p
+          class="text-body-secondary mx-auto mb-0"
+          style="max-width:650px;"
+        >
+
+          Whether you need help with a booking, vehicle access,
+          payment or roadside assistance, our team is available
+          to support your journey.
+
+        </p>
+
+      </div>
+
+
+      <!-- CONTACT CARDS -->
+
+      <div class="row g-4">
+
+
+        <!-- PHONE -->
+
+        <div class="col-md-6 col-lg-3">
+
+          <div class="contact-info-card">
+
+            <div class="contact-info-icon">
+
+              <i class="bi bi-telephone-fill"></i>
+
+            </div>
+
+            <h5>
+              Call Us
+            </h5>
+
+            <p>
+
+              Speak directly with our support team for
+              booking and rental assistance.
+
+              <br>
+
+              <a href="tel:+919876543210">
+                +91 98765 43210
+              </a>
+
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- EMAIL -->
+
+        <div class="col-md-6 col-lg-3">
+
+          <div class="contact-info-card">
+
+            <div class="contact-info-icon">
+
+              <i class="bi bi-envelope-fill"></i>
+
+            </div>
+
+            <h5>
+              Email Support
+            </h5>
+
+            <p>
+
+              Send us your questions and our team
+              will get back to you.
+
+              <br>
+
+              <a href="mailto:support@freeway.com">
+                support@freeway.com
+              </a>
+
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- HOURS -->
+
+        <div class="col-md-6 col-lg-3">
+
+          <div class="contact-info-card">
+
+            <div class="contact-info-icon">
+
+              <i class="bi bi-clock-fill"></i>
+
+            </div>
+
+            <h5>
+              Support Hours
+            </h5>
+
+            <p>
+
+              Our customer support team is available
+              every day.
+
+              <br>
+
+              24/7 Assistance
+
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- LOCATION -->
+
+        <div class="col-md-6 col-lg-3">
+
+          <div class="contact-info-card">
+
+            <div class="contact-info-icon">
+
+              <i class="bi bi-geo-alt-fill"></i>
+
+            </div>
+
+            <h5>
+              Visit Us
+            </h5>
+
+            <p>
+
+              Visit our Freeway location or
+              choose a convenient pickup hub.
+
+              <br>
+
+              Find us on the map below.
+
+            </p>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================================
+       LOCATION + MAP
+       ========================================================= -->
+
+  <section class="py-5 contact-location-section">
+
+    <div class="container">
+
+      <div class="row align-items-center g-5">
+
+
+        <!-- LEFT CONTENT -->
+
+        <div class="col-lg-5">
+
+          <div class="contact-location-content">
+
+
+            <span class="contact-location-badge">
+
+              OUR LOCATION
+
+            </span>
+
+
+            <h2>
+
+              Find Freeway Near You
+
+            </h2>
+
+
+            <p>
+
+              Looking for your nearest Freeway pickup or support
+              location? Use the map to find us and plan your visit
+              before starting your journey.
+
+            </p>
+
+
+            <!-- ADDRESS -->
+
+            <div class="location-detail">
+
+              <div class="location-detail-icon">
+
+                <i class="bi bi-geo-alt-fill"></i>
+
+              </div>
+
+              <div>
+
+                <h6>
+                  Freeway Location
+                </h6>
+
+                <p>
+                  Your Freeway rental and pickup hub
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <!-- SUPPORT -->
+
+            <div class="location-detail">
+
+              <div class="location-detail-icon">
+
+                <i class="bi bi-headset"></i>
+
+              </div>
+
+              <div>
+
+                <h6>
+                  Customer Support
+                </h6>
+
+                <p>
+                  Available throughout your rental journey
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <!-- DIRECTIONS BUTTON -->
+
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Freeway+Car+Rental"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-freeway fw-bold px-4 py-2 mt-2"
+            >
+
+              <i class="bi bi-map me-2"></i>
+
+              Get Directions
+
+            </a>
+
+
+          </div>
+
+        </div>
+
+
+
+        <!-- RIGHT MAP -->
+
+        <div class="col-lg-7">
+
+          <div class="contact-map-wrapper">
+
+            <iframe
+              src="https://www.google.com/maps?q=Freeway%20Car%20Rental&output=embed"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Freeway location map"
+            >
+            </iframe>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
 
 </section>
-
 
 
 <!-- =====================================================

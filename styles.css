@@ -1,5 +1,3 @@
-
-
 /* =========================================================
    FREEWAY - GLOBAL PREMIUM WEBSITE STYLE
 ========================================================= */
@@ -873,5 +871,1310 @@ section .container .row {
     }
 
 }
+/* =========================================
+   NAVIGATION RIGHT-SIDE CONTROLS
+   ========================================= */
+
+.nav-actions {
+    margin-left: auto !important;
+}
+
+/* RTL + Theme icon buttons */
+.nav-icon-btn {
+    width: 48px;
+    height: 48px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 !important;
+
+    border-radius: 12px;
+
+    font-size: 1.25rem;
+    transition: all 0.2s ease;
+}
+
+/* Icon size */
+.nav-icon-btn i {
+    font-size: 1.25rem;
+}
+
+/* Hover effect */
+.nav-icon-btn:hover {
+    transform: translateY(-1px);
+}
+
+/* Login button */
+.login-btn {
+    height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 12px;
+}
 
 
+/* =========================================
+   DESKTOP NAVBAR
+   ========================================= */
+
+@media (min-width: 992px) {
+
+    .nav-actions {
+        margin-left: auto !important;
+        padding-left: 20px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 991.98px) {
+
+    .nav-actions {
+        margin-left: 0 !important;
+        margin-top: 15px !important;
+        justify-content: flex-start;
+    }
+
+    .nav-icon-btn {
+        width: 44px;
+        height: 44px;
+    }
+
+}
+.login-btn {
+    height: 48px;
+    min-width: 126px;
+
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 0 20px !important;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    line-height: 1;
+
+    border-radius: 12px;
+}
+
+.login-btn i {
+    font-size: 1rem;
+    line-height: 1;
+}
+/* =========================================
+   HERO SERVICE CARDS
+   ========================================= */
+
+.hero-service-cards {
+    width: 100%;
+    max-width: 1050px;
+    margin: 25px auto 0;
+}
+
+.hero-service-card {
+    display: block;
+    height: 100%;
+    overflow: hidden;
+
+    background: rgba(0, 0, 0, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 14px;
+
+    color: #ffffff;
+
+    transition: all 0.25s ease;
+}
+
+.hero-service-card:hover {
+    transform: translateY(-5px);
+    border-color: #ffb800;
+    background: rgba(0, 0, 0, 0.85);
+}
+
+
+/* Card image */
+
+.hero-card-image {
+    width: 100%;
+    height: 130px;
+    overflow: hidden;
+}
+
+.hero-card-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.3s ease;
+}
+
+.hero-service-card:hover .hero-card-image img {
+    transform: scale(1.05);
+}
+
+
+/* Card content */
+
+.hero-card-content {
+    padding: 16px;
+    text-align: left;
+}
+
+.hero-card-content h5 {
+    margin: 0 0 7px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.hero-card-content h5 i {
+    color: #ffb800;
+    margin-right: 7px;
+}
+
+.hero-card-content p {
+    margin: 0 0 10px;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.85rem;
+}
+
+.hero-card-content span {
+    color: #ffb800;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   FIX HERO OVERFLOW
+   ========================================= */
+
+.hero-banner {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.hero-banner .container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 767.98px) {
+
+    .hero-banner {
+        min-height: auto;
+    }
+
+    .hero-banner h1 {
+        font-size: 2.1rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+    }
+
+    .hero-service-cards {
+        margin-top: 20px;
+    }
+
+    .hero-card-image {
+        height: 160px;
+    }
+
+}
+/* =========================================================
+   HOME 2 - HERO TEXT REFINEMENT
+========================================================= */
+
+.freeway-v2-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.hero-v2-text {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 45px 35px;
+}
+
+
+/* Badge spacing */
+
+.hero-v2-text .freeway-v2-badge {
+    display: inline-block;
+    margin-bottom: 22px !important;
+}
+
+
+/* Heading */
+
+.hero-v2-text h1 {
+    margin-left: auto;
+    margin-right: auto;
+
+    max-width: 800px;
+
+    line-height: 1.12 !important;
+}
+
+
+/* Description */
+
+.hero-v2-text .freeway-v2-description {
+    max-width: 680px;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    line-height: 1.7;
+}
+
+
+/* Buttons */
+
+.hero-v2-text .btn {
+    min-height: 54px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Feature row */
+
+.hero-v2-text .freeway-v2-mini {
+    min-height: 42px;
+
+    padding: 8px 12px;
+
+    justify-content: center;
+}
+
+
+/* Prevent text from touching edges */
+
+.hero-v2-text,
+.hero-v2-text h1,
+.hero-v2-text p {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HERO BACKGROUND
+========================================================= */
+
+.freeway-v2-bg {
+    object-fit: cover;
+
+    /* Keep the car/road visible */
+    object-position: center center;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .freeway-v2-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hero-v2-text {
+        max-width: 760px;
+        padding: 40px 25px;
+    }
+
+    .hero-v2-text h1 {
+        font-size: 2.7rem;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
+
+    .freeway-v2-content {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .hero-v2-text {
+        padding: 30px 15px;
+    }
+
+    .hero-v2-text h1 {
+        font-size: 2rem;
+        line-height: 1.15 !important;
+    }
+
+    .hero-v2-text .freeway-v2-description {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .hero-v2-text .btn {
+        width: 100%;
+    }
+
+    .hero-v2-text .freeway-v2-mini {
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+
+}
+/* Home Page 2 - First Section Text Alignment & Padding */
+
+.freeway-v2-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.freeway-v2-content .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.freeway-v2-content .hero-v2-text {
+    padding: 40px 30px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* Heading */
+.freeway-v2-content h1 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Description */
+.freeway-v2-content .freeway-v2-description {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 1.6;
+}
+
+/* Buttons stay centered */
+.freeway-v2-content .d-flex {
+    justify-content: center;
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+
+    .freeway-v2-content {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .freeway-v2-content .hero-v2-text {
+        padding: 30px 15px;
+    }
+
+    .freeway-v2-content h1 {
+        text-align: center;
+    }
+
+    .freeway-v2-content .freeway-v2-description {
+        text-align: center;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+/* =========================================
+   HOME PAGE 2 - HERO ALIGNMENT
+   ========================================= */
+
+.freeway-v2-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+.hero-v2-text {
+    width: 100%;
+    max-width: 950px;
+
+    margin: 0 auto;
+    padding: 55px 30px 45px;
+
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+/* Badge */
+
+.hero-v2-text .freeway-v2-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 28px;
+}
+
+
+/* Main heading */
+
+.hero-v2-text h1 {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto 28px;
+
+    text-align: center;
+
+    line-height: 1.08 !important;
+}
+
+
+/* Description */
+
+.hero-v2-text .freeway-v2-description {
+    width: 100%;
+    max-width: 720px;
+
+    margin: 0 auto 30px !important;
+    padding: 0;
+
+    text-align: center;
+
+    line-height: 1.6;
+}
+
+
+/* Buttons */
+
+.hero-v2-text > .d-flex {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    margin: 0 auto 30px;
+}
+
+.hero-v2-text > .d-flex .btn {
+    min-height: 54px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    white-space: nowrap;
+}
+
+
+/* Bottom features */
+
+.hero-v2-text > .row {
+    width: 100%;
+    max-width: 760px;
+
+    margin: 0 auto !important;
+}
+
+.hero-v2-text .freeway-v2-mini {
+    min-height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 8px 10px;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 991px) {
+
+    .freeway-v2-content {
+        padding: 0 20px;
+    }
+
+    .hero-v2-text {
+        max-width: 850px;
+        padding: 45px 20px 40px;
+    }
+
+    .hero-v2-text h1 {
+        max-width: 800px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 576px) {
+
+    .freeway-v2-content {
+        padding: 0 15px;
+    }
+
+    .hero-v2-text {
+        max-width: 100%;
+        padding: 35px 10px 30px;
+    }
+
+    .hero-v2-text h1 {
+        max-width: 100%;
+        font-size: 2.1rem;
+        line-height: 1.15 !important;
+        margin-bottom: 20px;
+    }
+
+    .hero-v2-text .freeway-v2-description {
+        max-width: 100%;
+        font-size: 0.95rem;
+        line-height: 1.55;
+    }
+
+    .hero-v2-text > .d-flex {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-v2-text > .d-flex .btn {
+        width: 100%;
+    }
+
+    .hero-v2-text > .row {
+        max-width: 100%;
+    }
+
+}
+/* =========================================================
+   DRIVER STORIES
+   ========================================================= */
+
+/* Driver review card */
+
+.freeway-driver-card {
+    border-radius: 16px;
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* Card hover */
+
+.freeway-driver-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.10) !important;
+}
+
+
+/* Rating */
+
+.freeway-rating {
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+}
+
+
+/* Review text */
+
+.freeway-review-text {
+    line-height: 1.7;
+    min-height: 100px;
+}
+
+
+/* =========================================================
+   DRIVER PROFILE IMAGE
+   ========================================================= */
+
+.freeway-avatar {
+    width: 52px;
+    height: 52px;
+
+    min-width: 52px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f1f1f1;
+
+    border: 2px solid rgba(255, 193, 7, 0.6);
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Profile image */
+
+.freeway-avatar img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   DRIVER NAME
+   ========================================================= */
+
+.freeway-driver-card h6 {
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+[data-bs-theme="dark"] .freeway-driver-card {
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-bs-theme="dark"] .freeway-avatar {
+    border-color: rgba(255, 193, 7, 0.7);
+
+    background: #222;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .freeway-review-text {
+        min-height: auto;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .freeway-driver-card {
+        margin-bottom: 10px;
+    }
+
+    .freeway-avatar {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+    }
+
+}
+/* =========================================================
+   FREEWAY DIFFERENCE
+   ========================================================= */
+
+.freeway-difference-badge {
+    background-color: rgba(255, 184, 0, 0.15) !important;
+    color: #ffb800 !important;
+    border: 1px solid rgba(255, 184, 0, 0.35);
+}
+
+
+/* Feature card */
+
+.freeway-feature-card {
+    border-radius: 16px;
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* Card hover */
+
+.freeway-feature-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.10) !important;
+}
+
+
+/* Feature image */
+
+.freeway-feature-image {
+    width: 100%;
+    height: 170px;
+
+    overflow: hidden;
+}
+
+.freeway-feature-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.35s ease;
+}
+
+
+/* Image hover */
+
+.freeway-feature-card:hover .freeway-feature-image img {
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   BOOKING PROCESS
+   ========================================================= */
+
+.freeway-booking-step {
+    background: var(--bs-body-bg);
+
+    border: 1px solid var(--bs-border-color);
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.06);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* Booking card hover */
+
+.freeway-booking-step:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.10);
+}
+
+
+/* Booking image */
+
+.freeway-booking-image {
+    position: relative;
+
+    width: 100%;
+    height: 190px;
+
+    overflow: hidden;
+}
+
+.freeway-booking-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.35s ease;
+}
+
+
+/* Image hover */
+
+.freeway-booking-step:hover .freeway-booking-image img {
+    transform: scale(1.05);
+}
+
+
+/* Step number */
+
+.freeway-step-number {
+    position: absolute;
+
+    left: 15px;
+    bottom: 15px;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #ffb800;
+    color: #111;
+
+    font-size: 0.9rem;
+    font-weight: 800;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Booking heading */
+
+.freeway-booking-step h5 {
+    margin-bottom: 10px;
+}
+
+
+/* Booking description */
+
+.freeway-booking-step p {
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+[data-bs-theme="dark"] .freeway-feature-card,
+[data-bs-theme="dark"] .freeway-booking-step {
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .freeway-feature-image {
+        height: 190px;
+    }
+
+    .freeway-booking-image {
+        height: 210px;
+    }
+
+}
+/* ============================================================
+   DASHBOARD ALIGNMENT FIX
+   ============================================================ */
+
+/* Prevent unwanted large empty space */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-page {
+    min-height: 100vh;
+}
+
+/* Keep every dashboard section aligned to the same width */
+.dashboard-page .container {
+    width: 100%;
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Welcome section */
+.dashboard-page .card {
+    width: 100%;
+}
+
+/* Profile section */
+.dashboard-page section {
+    width: 100%;
+}
+
+/* Dashboard navigation */
+#dashboardTabs {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px !important;
+}
+
+/* Individual tabs */
+#dashboardTabs .nav-item {
+    margin: 0;
+}
+
+#dashboardTabs .nav-link {
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Tab content should occupy full available width */
+#dashboardTabContent {
+    width: 100%;
+}
+
+#dashboardTabContent .tab-pane {
+    width: 100%;
+}
+
+/* Cards inside dashboard */
+#dashboardTabContent .card {
+    width: 100%;
+}
+
+/* Prevent row from becoming narrower than expected */
+#dashboardTabContent .row {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Inspection section */
+.car-inspection-diagram {
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.car-schematic-img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* ============================================================
+   REMOVE UNWANTED LARGE HEIGHTS
+   ============================================================ */
+
+.dashboard-page header,
+.dashboard-page nav,
+.dashboard-page footer {
+    min-height: 0;
+}
+
+/* ============================================================
+   TABLES
+   ============================================================ */
+
+.dashboard-page .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* ============================================================
+   MOBILE / TABLET ALIGNMENT
+   ============================================================ */
+
+@media (max-width: 991.98px) {
+
+    .dashboard-page .container {
+        max-width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    #dashboardTabs {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 10px;
+    }
+
+    #dashboardTabs .nav-link {
+        flex-shrink: 0;
+    }
+
+}
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 767.98px) {
+
+    .dashboard-page .container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    /* Stack dashboard columns */
+    #dashboardTabContent .col-lg-7,
+    #dashboardTabContent .col-lg-5,
+    #dashboardTabContent .col-lg-6 {
+        width: 100%;
+    }
+
+    /* Welcome heading */
+    .dashboard-page h1 {
+        font-size: 2rem;
+    }
+
+    /* KPI cards */
+    .dashboard-page .row {
+        --bs-gutter-x: 1rem;
+        --bs-gutter-y: 1rem;
+    }
+
+    /* Inspection image */
+    .car-schematic-img {
+        width: 100%;
+        height: auto;
+    }
+
+}
+/* ==========================================================================
+   FIX 1: Clean 1024px Navbar Spacing (Prevents Overflow & Premature Hamburger)
+   ========================================================================== */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* 1. Force hide the hamburger toggler button on 1024px */
+  .navbar .navbar-toggler,
+  .navbar-toggler {
+    display: none !important;
+  }
+
+  /* 2. Force the navbar collapse to stay open in a horizontal line */
+  .navbar .navbar-collapse,
+  .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto !important;
+    position: static !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  .navbar .navbar-nav,
+  .navbar-nav {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    gap: 0 !important;
+  }
+
+  /* Reduce nav link padding and font size slightly so all items fit on 1024px */
+  .navbar .navbar-nav .nav-link,
+  .navbar-nav .nav-link {
+    padding: 6px 4px !important;
+    font-size: 13.5px !important;
+    white-space: nowrap !important;
+  }
+  
+  .navbar .navbar-nav .nav-link i,
+  .navbar-nav .nav-link i {
+    font-size: 13.5px !important;
+    margin-right: 2px !important;
+  }
+
+  /* Compact brand logo margin */
+  .navbar-brand {
+    font-size: 21px !important;
+    margin-right: 12px !important;
+  }
+
+  .navbar-brand .badge {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  /* Compact top right buttons */
+  .navbar .d-flex.align-items-center.gap-2,
+  .nav-actions {
+    gap: 4px !important;
+    margin-top: 0 !important;
+    margin-left: auto !important;
+  }
+
+  .nav-icon-btn {
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 1rem !important;
+  }
+
+  .login-btn {
+    height: 38px !important;
+    min-width: auto !important;
+    padding: 0 12px !important;
+    font-size: 0.88rem !important;
+  }
+
+  #rtlToggleBtn,
+  #themeToggleBtn {
+    padding: 5px 8px !important;
+    font-size: 13px !important;
+    min-height: 34px !important;
+  }
+
+  /* Hide verbose text labels on 1024px to save space, keeping clean icons */
+  #rtlLabel,
+  #themeLabel {
+    display: none !important;
+  }
+}
+/* ==========================================================================
+   FIX 2: Dashboard 360px Mobile Alignment & Layout Fix
+   ========================================================================== */
+@media (max-width: 575.98px) {
+  /* 1. Header Profile & Badges */
+  .profile-header-container,
+  section .row.align-items-center.g-3 > .col-md-7 {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.75rem !important;
+  }
+
+  /* Badges wrap naturally */
+  .badge {
+    white-space: normal !important;
+    display: inline-block;
+  }
+
+  /* 2. KPI Cards (Stack cleanly into 1 column on <= 380px or adjust font) */
+  @media (max-width: 380px) {
+    .container .row.g-3.mt-3 > .col-6 {
+      width: 100% !important; /* Stack full width on tiny 360px screens */
+    }
+  }
+
+  .container .row.g-3.mt-3 .card {
+    padding: 0.75rem !important;
+  }
+
+  .container .row.g-3.mt-3 .h4 {
+    font-size: 1.15rem !important;
+  }
+
+  /* 3. Live Trip Telemetry Meters (Fuel, Odometer, Time) */
+  #tab-live .row.g-3.text-center > .col-4 {
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+  }
+
+  #tab-live .row.g-3.text-center .fs-5 {
+    font-size: 0.95rem !important;
+  }
+
+  #tab-live .row.g-3.text-center .small {
+    font-size: 0.7rem !important;
+  }
+
+  /* 4. Remote Key Control Buttons */
+  #tab-live .bg-body-tertiary .d-flex.flex-wrap {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem !important;
+  }
+
+  #tab-live .bg-body-tertiary .d-flex.flex-wrap .btn {
+    width: 100% !important;
+    font-size: 0.78rem !important;
+    padding: 0.4rem 0.25rem !important;
+  }
+
+  /* 5. Dashboard Tab Navigation (Pills scroll horizontally instead of squishing) */
+  #dashboardTabs {
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.5rem !important;
+  }
+
+  #dashboardTabs .nav-item {
+    flex: 0 0 auto !important;
+  }
+
+  #dashboardTabs .nav-link {
+    font-size: 0.85rem !important;
+    white-space: nowrap !important;
+    padding: 0.4rem 0.75rem !important;
+  }
+}

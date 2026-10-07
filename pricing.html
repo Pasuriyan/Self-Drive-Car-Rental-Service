@@ -45,8 +45,8 @@
 
         <div class="collapse navbar-collapse" id="navbarMain">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-medium">
-            <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door me-1"></i>Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="fleet.html"><i class="bi bi-grid me-1"></i>Fleet</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html"></i>Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="fleet.html"></i>Fleet</a></li>
                   <!-- SERVICES -->
           <li class="nav-item">
 
@@ -54,13 +54,12 @@
               class="nav-link active"
               href="services.html"
             >
-              <i class="bi bi-gear me-1"></i>
               Services
             </a>
 
           </li>
-            <li class="nav-item"><a class="nav-link active" href="pricing.html"><i class="bi bi-tags me-1"></i>Pricing & Plans</a></li>
-            <li class="nav-item"><a class="nav-link" href="how-it-works.html"><i class="bi bi-compass me-1"></i>How It Works</a></li>
+            <li class="nav-item"><a class="nav-link active" href="pricing.html"></i>Pricing & Plans</a></li>
+            <li class="nav-item"><a class="nav-link" href="how-it-works.html"></i>How It Works</a></li>
                          <!-- BLOG -->
 
           <li class="nav-item">
@@ -70,7 +69,6 @@
               href="blog.html"
             >
 
-              <i class="bi bi-journal-text me-1"></i>
 
               Blog
 
@@ -87,7 +85,7 @@
               href="contact.html"
             >
 
-              <i class="bi bi-envelope me-1"></i>
+              
 
               Contact
 
@@ -96,26 +94,45 @@
           </li>
       <li class="nav-item">
     <a class="nav-link dashboard-nav-link" href="dashboard.html">
-        <i class="bi bi-speedometer2 me-1"></i>Dashboard
+        Dashboard
     </a>
 </li>
            </ul>
 
-          <div class="d-flex align-items-center gap-2 mt-2 mt-lg-0">
-            <button id="rtlToggleBtn" class="btn btn-outline-secondary btn-sm d-flex align-items-center">
-              <i class="bi bi-arrow-left-right me-1"></i><span id="rtlLabel" class="fw-semibold">RTL</span>
-            </button>
-            <button id="themeToggleBtn" class="btn btn-outline-secondary btn-sm d-flex align-items-center">
-              <i id="themeIcon" class="bi bi-sun-fill text-warning me-1"></i><span id="themeLabel" class="fw-semibold">Light</span>
-            </button>
- <a
-                href="login.html"
-                class="btn btn-freeway btn-sm px-3 shadow-sm d-none d-xl-inline-block"
-              >
-                <i class="bi bi-key-fill me-1"></i>Login
-              </a>
-            </a>
-          </div>
+         <div class="nav-actions d-flex align-items-center gap-3 ms-auto mt-2 mt-lg-0">
+
+    <!-- RTL Toggle -->
+    <button
+        id="rtlToggleBtn"
+        class="nav-icon-btn btn btn-outline-secondary"
+        type="button"
+        title="Toggle Right-to-Left Layout"
+        aria-label="Toggle Right-to-Left Layout"
+    >
+        <i class="bi bi-arrow-left-right"></i>
+    </button>
+
+    <!-- Theme Toggle -->
+    <button
+        id="themeToggleBtn"
+        class="nav-icon-btn btn btn-outline-secondary"
+        type="button"
+        title="Toggle Dark / Light Theme"
+        aria-label="Toggle Dark / Light Theme"
+    >
+        <i id="themeIcon" class="bi bi-sun-fill text-warning"></i>
+    </button>
+
+    <!-- Login -->
+    <a 
+    href="login.html" 
+    class="btn btn-freeway login-btn d-none d-xl-inline-flex"
+>
+    <i class="bi bi-key-fill"></i>
+    <span>Login</span>
+</a>
+
+</div>
         </div>
       </div>
     </nav>
@@ -311,451 +328,215 @@
     </style>
 
 </section>
+<!-- =========================================================================
+     SECTION 1 - FIND THE RIGHT RENTAL PLAN
+     ========================================================================= -->
 
-  <!-- =========================================================================
-       PRICING TIERS
-       ========================================================================= -->
-  <section class="py-5 bg-body">
-    <div class="container">
-      <div class="row g-4 align-items-stretch">
-        <!-- Tier 1: Hourly Flex -->
-        <div class="col-lg-4 col-md-6">
-          <div class="card h-100 border-body bg-body shadow-sm p-4 d-flex flex-column hover-lift">
-            <div class="mb-3">
-              <span class="badge bg-secondary">Urban Errands & Quick Meetings</span>
-              <h4 class="fw-bold text-body mt-2">Hourly Flex</h4>
-              <div class="d-flex align-items-baseline my-3">
-                <span class="display-5 fw-bold text-body">$10</span>
-                <span class="text-body-secondary ms-1">/hour</span>
-              </div>
-              <p class="small text-body-secondary">Ideal for 2 to 6-hour quick errands, lunch meetings, or quick shopping runs.</p>
-            </div>
-            <ul class="list-unstyled small text-body-secondary d-flex flex-column gap-2 mb-4">
-              <li><i class="bi bi-check-circle-fill text-success me-2"></i>25 km per hour included</li>
-              <li><i class="bi bi-check-circle-fill text-success me-2"></i>Fuel included in trip price</li>
-              <li><i class="bi bi-check-circle-fill text-success me-2"></i>Smart phone Bluetooth unlock</li>
-              <li><i class="bi bi-check-circle-fill text-success me-2"></i>Free cancellation up to 1 hr prior</li>
-              <li><i class="bi bi-check-circle-fill text-success me-2"></i>Pay only for hours driven</li>
-            </ul>
-            <a href="fleet.html" class="btn btn-outline-freeway mt-auto w-100 py-2">
-              Book Hourly Vehicle
-            </a>
-          </div>
-        </div>
+<section class="py-5 bg-body pricing-guide-section">
 
-        <!-- Tier 2: Daily Explorer (Highlighted) -->
-        <div class="col-lg-4 col-md-6">
-          <div class="card h-100 border-primary border-2 bg-body shadow-lg p-4 d-flex flex-column position-relative hover-lift">
-            <span class="position-absolute top-0 start-50 translate-middle badge bg-freeway px-3 py-2 rounded-pill shadow-sm">
-              MOST POPULAR
-            </span>
-            <div class="mb-3 mt-2">
-              <span class="badge bg-primary">Weekend & Road Trips</span>
-              <h4 class="fw-bold text-body mt-2">Daily Explorer</h4>
-              <div class="d-flex align-items-baseline my-3">
-                <span class="display-5 fw-bold text-freeway">$68</span>
-                <span class="text-body-secondary ms-1">/day</span>
-              </div>
-              <p class="small text-body-secondary">Our flagship option for day excursions, coastal loops, and weekend getaways.</p>
-            </div>
-            <ul class="list-unstyled small text-body-secondary d-flex flex-column gap-2 mb-4">
-              <li><i class="bi bi-check-circle-fill text-success me-2"></i>Includes 250 km/day (Roll-over)</li>
-              <li><i class="bi bi-check-circle-fill text-success me-2"></i>Zero Security Deposit with KYC</li>
-              <li><i class="bi bi-check-circle-fill text-success me-2"></i>Airport & City hub pickup options</li>
-              <li><i class="bi bi-check-circle-fill text-success me-2"></i>100% Pre-Trip Inspected guarantee</li>
-              <li><i class="bi bi-check-circle-fill text-success me-2"></i>Complimentary 2nd Driver</li>
-            </ul>
-            <a href="fleet.html" class="btn btn-freeway mt-auto w-100 py-2 fw-bold">
-              Rent by the Day
-            </a>
-          </div>
-        </div>
-
-        <!-- Tier 3: Weekend Escape 72h -->
-        <div class="col-lg-4 col-md-6">
-          <div class="card h-100 border-body bg-body shadow-sm p-4 d-flex flex-column hover-lift">
-            <div class="mb-3">
-              <span class="badge bg-warning text-dark">Friday 3PM to Monday 3PM</span>
-              <h4 class="fw-bold text-body mt-2">Weekend Escape (72h)</h4>
-              <div class="d-flex align-items-baseline my-3">
-                <span class="display-5 fw-bold text-body">$189</span>
-                <span class="text-body-secondary ms-1">/weekend flat</span>
-              </div>
-              <p class="small text-body-secondary">Lock in your car for the entire weekend at a bundled flat discount.</p>
-            </div>
-            <ul class="list-unstyled small text-body-secondary d-flex flex-column gap-2 mb-4">
-              <li><i class="bi bi-check-circle-fill text-success me-2"></i>800 km weekend mileage included</li>
-              <li><i class="bi bi-check-circle-fill text-success me-2"></i>Guaranteed preferred model hold</li>
-              <li><i class="bi bi-check-circle-fill text-success me-2"></i>National park pass included in glovebox</li>
-              <li><i class="bi bi-check-circle-fill text-success me-2"></i>Zero Deposit with verified profile</li>
-              <li><i class="bi bi-check-circle-fill text-success me-2"></i>Free wash voucher upon return</li>
-            </ul>
-            <a href="fleet.html" class="btn btn-outline-freeway mt-auto w-100 py-2">
-              Book Weekend Escape
-            </a>
-          </div>
-        </div>
-
-       
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================================
-       FREEDOM SHIELD INSURANCE TABLE
-       ========================================================================= -->
-  <section class="py-5 protection-section border-top border-bottom">
-
-  <!-- INTERNAL CSS -->
   <style>
-    /* =========================================
-       PROTECTION SECTION - LIGHT MODE
-    ========================================= */
-
-    .protection-section {
-      background-color: #f8f9fa !important;
-      color: #172033;
-      border-color: #dee2e6 !important;
+    .pricing-guide-section {
+      overflow: hidden;
     }
 
-    /* Badge */
-    .protection-section .protection-badge {
-      background-color: rgba(13, 110, 253, 0.10) !important;
-      color: #0d6efd !important;
+    .pricing-guide-image {
+      width: 100%;
+      height: 100%;
+      min-height: 360px;
+      object-fit: cover;
+      border-radius: 18px;
     }
 
-    /* Heading */
-    .protection-section h3 {
-      color: #172033 !important;
+    .pricing-guide-content {
+      padding: 25px 20px;
     }
 
-    /* Description */
-    .protection-section .section-description {
-      color: #5f6875 !important;
+    .pricing-guide-badge {
+      display: inline-block;
+      background: rgba(255, 184, 0, 0.12);
+      color: #ffb800;
+      border: 1px solid rgba(255, 184, 0, 0.25);
+      padding: 7px 14px;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-bottom: 15px;
     }
 
-    /* =========================================
-       TABLE - LIGHT MODE
-    ========================================= */
-
-    .protection-section .protection-table {
-      background-color: #ffffff !important;
-      color: #172033 !important;
-      border-color: #dee2e6 !important;
+    .pricing-guide-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 20px;
     }
 
-    .protection-section .protection-table thead {
-      background-color: #e9ecef !important;
+    .pricing-guide-item-icon {
+      min-width: 42px;
+      width: 42px;
+      height: 42px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 10px;
+      background: rgba(255, 184, 0, 0.12);
+      color: #ffb800;
+
+      font-size: 19px;
     }
 
-    .protection-section .protection-table th {
-      color: #172033 !important;
-      background-color: #e9ecef !important;
-      border-color: #dee2e6 !important;
+    .pricing-guide-item h6 {
+      margin-bottom: 4px;
+      font-weight: 700;
     }
 
-    .protection-section .protection-table td {
-      color: #172033 !important;
-      background-color: #ffffff !important;
-      border-color: #dee2e6 !important;
+    .pricing-guide-item p {
+      margin: 0;
+      font-size: 0.9rem;
     }
 
-    /* Green text */
-    .protection-section .text-success {
-      color: #198754 !important;
+    @media (max-width: 768px) {
+
+      .pricing-guide-image {
+        min-height: 260px;
+      }
+
+      .pricing-guide-content {
+        padding: 20px 5px;
+      }
+      
     }
-
-    /* Freedom Shield header */
-    .protection-section .shield-header {
-      background-color: #0d6efd !important;
-      color: #ffffff !important;
-    }
-
-
-    /* =========================================
-       DARK MODE
-    ========================================= */
-
-    [data-bs-theme="dark"] .protection-section,
-    .dark-mode .protection-section,
-    body.dark .protection-section,
-    [data-theme="dark"] .protection-section {
-      background-color: #0b0f14 !important;
-      color: #ffffff !important;
-      border-color: #343a40 !important;
-    }
-
-    /* Badge */
-    [data-bs-theme="dark"] .protection-section .protection-badge,
-    .dark-mode .protection-section .protection-badge,
-    body.dark .protection-section .protection-badge,
-    [data-theme="dark"] .protection-section .protection-badge {
-      background-color: rgba(13, 110, 253, 0.18) !important;
-      color: #6ea8fe !important;
-      border: 1px solid rgba(110, 168, 254, 0.25);
-    }
-
-    /* Heading */
-    [data-bs-theme="dark"] .protection-section h3,
-    .dark-mode .protection-section h3,
-    body.dark .protection-section h3,
-    [data-theme="dark"] .protection-section h3 {
-      color: #ffffff !important;
-    }
-
-    /* Description */
-    [data-bs-theme="dark"] .protection-section .section-description,
-    .dark-mode .protection-section .section-description,
-    body.dark .protection-section .section-description,
-    [data-theme="dark"] .protection-section .section-description {
-      color: #b8c0ca !important;
-    }
-
-
-    /* =========================================
-       TABLE - DARK MODE
-    ========================================= */
-
-    [data-bs-theme="dark"] .protection-section .protection-table,
-    .dark-mode .protection-section .protection-table,
-    body.dark .protection-section .protection-table,
-    [data-theme="dark"] .protection-section .protection-table {
-      background-color: #171c23 !important;
-      color: #ffffff !important;
-      border-color: #3a424c !important;
-    }
-
-    /* Table header */
-    [data-bs-theme="dark"] .protection-section .protection-table thead,
-    .dark-mode .protection-section .protection-table thead,
-    body.dark .protection-section .protection-table thead,
-    [data-theme="dark"] .protection-section .protection-table thead {
-      background-color: #242b34 !important;
-    }
-
-    [data-bs-theme="dark"] .protection-section .protection-table th,
-    .dark-mode .protection-section .protection-table th,
-    body.dark .protection-section .protection-table th,
-    [data-theme="dark"] .protection-section .protection-table th {
-      background-color: #242b34 !important;
-      color: #ffffff !important;
-      border-color: #3a424c !important;
-    }
-
-    /* Table cells */
-    [data-bs-theme="dark"] .protection-section .protection-table td,
-    .dark-mode .protection-section .protection-table td,
-    body.dark .protection-section .protection-table td,
-    [data-theme="dark"] .protection-section .protection-table td {
-      background-color: #171c23 !important;
-      color: #f1f3f5 !important;
-      border-color: #3a424c !important;
-    }
-
-    /* Feature names */
-    [data-bs-theme="dark"] .protection-section .protection-table .fw-semibold,
-    .dark-mode .protection-section .protection-table .fw-semibold,
-    body.dark .protection-section .protection-table .fw-semibold,
-    [data-theme="dark"] .protection-section .protection-table .fw-semibold {
-      color: #ffffff !important;
-    }
-
-    /* Green text */
-    [data-bs-theme="dark"] .protection-section .protection-table .text-success,
-    .dark-mode .protection-section .protection-table .text-success,
-    body.dark .protection-section .protection-table .text-success,
-    [data-theme="dark"] .protection-section .protection-table .text-success {
-      color: #4ade80 !important;
-    }
-
-    /* Freedom Shield header */
-    [data-bs-theme="dark"] .protection-section .shield-header,
-    .dark-mode .protection-section .shield-header,
-    body.dark .protection-section .shield-header,
-    [data-theme="dark"] .protection-section .shield-header {
-      background-color: #0d6efd !important;
-      color: #ffffff !important;
-    }
-
-    /* Hover */
-    [data-bs-theme="dark"] .protection-section .protection-table tbody tr:hover td,
-    .dark-mode .protection-section .protection-table tbody tr:hover td,
-    body.dark .protection-section .protection-table tbody tr:hover td,
-    [data-theme="dark"] .protection-section .protection-table tbody tr:hover td {
-      background-color: #202730 !important;
-      color: #ffffff !important;
-    }
-
   </style>
 
 
   <div class="container">
 
-    <!-- SECTION TITLE -->
-    <div class="text-center mb-5">
+    <div class="row align-items-center g-5">
 
-      <span
-        class="badge protection-badge px-3 py-2 rounded-pill fw-semibold mb-2"
-      >
-        Zero Worry Driving
-      </span>
+      <!-- IMAGE -->
 
-      <h3 class="fw-bold">
-        Protection Packages & Insurance Tiers
-      </h3>
+      <div class="col-lg-6">
 
-      <p class="section-description">
-        Transparent coverage so you are never left with surprise repair bills.
-      </p>
+     <img
+  src="assets/images/pap.jpg"
+  alt="Self drive rental car for road trips"
+  class="pricing-guide-image shadow-sm"
+  style="
+    width: 80%;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 18px;
+    display: block;
+    margin: 0 auto;
+  "
+>
 
-    </div>
+      </div>
 
 
-    <!-- TABLE -->
-    <div class="row justify-content-center">
+      <!-- CONTENT -->
 
-      <div class="col-lg-10">
+      <div class="col-lg-6">
 
-        <div class="table-responsive">
+        <div class="pricing-guide-content">
 
-          <table
-            class="table table-bordered table-hover protection-table align-middle shadow-sm"
+          <span class="pricing-guide-badge">
+            CHOOSE YOUR EXPERIENCE
+          </span>
+
+
+          <h2 class="fw-bold text-body mb-3">
+            A Rental Plan For Every Journey
+          </h2>
+
+
+          <p class="text-body-secondary mb-4">
+            Whether you are running a quick city errand, planning a
+            full-day adventure, or heading away for the weekend,
+            choose a rental duration that matches your journey.
+          </p>
+
+
+          <!-- HOURLY -->
+
+          <div class="pricing-guide-item">
+
+            <div class="pricing-guide-item-icon">
+              <i class="bi bi-clock"></i>
+            </div>
+
+            <div>
+
+              <h6 class="text-body">
+                Need a car for a few hours?
+              </h6>
+
+              <p class="text-body-secondary">
+                Choose <strong>Hourly Flex</strong> for short errands,
+                meetings, shopping trips and quick city travel.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- DAILY -->
+
+          <div class="pricing-guide-item">
+
+            <div class="pricing-guide-item-icon">
+              <i class="bi bi-calendar-check"></i>
+            </div>
+
+            <div>
+
+              <h6 class="text-body">
+                Planning a full-day trip?
+              </h6>
+
+              <p class="text-body-secondary">
+                Choose <strong>Daily Explorer</strong> when you want
+                the freedom to drive throughout the day without
+                worrying about hourly extensions.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- WEEKEND -->
+
+          <div class="pricing-guide-item">
+
+            <div class="pricing-guide-item-icon">
+              <i class="bi bi-sign-turn-right"></i>
+            </div>
+
+            <div>
+
+              <h6 class="text-body">
+                Going on a weekend getaway?
+              </h6>
+
+              <p class="text-body-secondary">
+                Choose <strong>Weekend Escape</strong> for longer
+                road trips and extended driving adventures.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <a
+            href="fleet.html"
+            class="btn btn-freeway px-4 py-2 fw-bold"
           >
-
-            <thead>
-
-              <tr>
-
-                <th class="py-3">
-                  Coverage Feature
-                </th>
-
-                <th class="text-center py-3">
-                  Standard Cover (Included)
-                </th>
-
-                <th class="text-center py-3 shield-header">
-                  Freedom Shield (+$15/day)
-                </th>
-
-                <th class="text-center py-3">
-                  VIP Total Shield (+$28/day)
-                </th>
-
-              </tr>
-
-            </thead>
-
-
-            <tbody>
-
-              <tr>
-
-                <td class="fw-semibold">
-                  Customer Max Collision Liability
-                </td>
-
-                <td class="text-center">
-                  $500 max deductible
-                </td>
-
-                <td class="text-center text-success fw-bold">
-                  $0 ZERO Deductible
-                </td>
-
-                <td class="text-center text-success fw-bold">
-                  $0 ZERO Deductible
-                </td>
-
-              </tr>
-
-
-              <tr>
-
-                <td class="fw-semibold">
-                  Windshield & Window Glass Cracks
-                </td>
-
-                <td class="text-center">
-                  50% Covered
-                </td>
-
-                <td class="text-center text-success fw-bold">
-                  100% Fully Covered
-                </td>
-
-                <td class="text-center text-success fw-bold">
-                  100% Fully Covered
-                </td>
-
-              </tr>
-
-
-              <tr>
-
-                <td class="fw-semibold">
-                  Tire Punctures & Rim Scratches
-                </td>
-
-                <td class="text-center">
-                  User pays replacement
-                </td>
-
-                <td class="text-center text-success fw-bold">
-                  100% Free Replacement
-                </td>
-
-                <td class="text-center text-success fw-bold">
-                  100% Free Replacement
-                </td>
-
-              </tr>
-
-
-              <tr>
-
-                <td class="fw-semibold">
-                  24/7 Roadside Emergency Towing
-                </td>
-
-                <td class="text-center">
-                  Within 50 km
-                </td>
-
-                <td class="text-center text-success fw-bold">
-                  Unlimited Distance
-                </td>
-
-                <td class="text-center text-success fw-bold">
-                  Unlimited Distance + Taxi Credit
-                </td>
-
-              </tr>
-
-
-              <tr>
-
-                <td class="fw-semibold">
-                  Personal Effects & Luggage Theft
-                </td>
-
-                <td class="text-center">
-                  Not covered
-                </td>
-
-                <td class="text-center">
-                  Up to $1,000
-                </td>
-
-                <td class="text-center text-success fw-bold">
-                  Up to $3,500 replacement
-                </td>
-
-              </tr>
-
-            </tbody>
-
-          </table>
+            Explore Available Cars
+          </a>
 
         </div>
 
@@ -767,56 +548,1072 @@
 
 </section>
 
-  <!-- =========================================================================
-       ADD-ONS & GEAR RENTALS
-       ========================================================================= -->
-  <section class="py-5 bg-body">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h3 class="fw-bold text-body">Optional Road Trip Gear & Add-ons</h3>
-        <p class="text-body-secondary">Add during booking checkout to have your vehicle pre-equipped upon arrival.</p>
-      </div>
+   
+<section class="py-5 bg-body pricing-plans-section">
 
-      <div class="row g-4 text-center">
-        <div class="col-6 col-md-3">
-          <div class="card h-100 border-body bg-body p-3 shadow-sm">
-            <i class="bi bi-shield-shaded display-6 text-primary mb-2"></i>
-            <h6 class="fw-bold text-body mb-1">Child Safety Seat</h6>
-            <div class="text-freeway fw-bold mb-1">$8 / day</div>
-            <small class="text-body-secondary">Rear-facing, toddler, or booster seats sanitized and installed.</small>
-          </div>
-        </div>
+  <style>
+    /* =========================================================
+       PRICING PAGE - COMMON STYLES
+    ========================================================= */
 
-        <div class="col-6 col-md-3">
-          <div class="card h-100 border-body bg-body p-3 shadow-sm">
-            <i class="bi bi-box display-6 text-warning mb-2"></i>
-            <h6 class="fw-bold text-body mb-1">Aerodynamic Roof Cargo Box</h6>
-            <div class="text-freeway fw-bold mb-1">$14 / day</div>
-            <small class="text-body-secondary">Extra 450L weatherproof storage for skis, boards, or family luggage.</small>
-          </div>
-        </div>
+    .pricing-plans-section {
+      background-color: var(--bs-body-bg);
+    }
 
-        <div class="col-6 col-md-3">
-          <div class="card h-100 border-body bg-body p-3 shadow-sm">
-            <i class="bi bi-wifi display-6 text-success mb-2"></i>
-            <h6 class="fw-bold text-body mb-1">Starlink Mobile Satellite Wi-Fi</h6>
-            <div class="text-freeway fw-bold mb-1">$15 / day</div>
-            <small class="text-body-secondary">High-speed internet anywhere, even deep inside remote national parks.</small>
-          </div>
-        </div>
+    .pricing-plans-section .pricing-card {
+      border: 1px solid rgba(255, 184, 0, 0.45);
+      border-radius: 16px;
+      transition: all 0.25s ease;
+      overflow: hidden;
+      position: relative;
+      background-color: var(--bs-body-bg);
+    }
 
-        <div class="col-6 col-md-3">
-          <div class="card h-100 border-body bg-body p-3 shadow-sm">
-            <i class="bi bi-tree display-6 text-info mb-2"></i>
-            <h6 class="fw-bold text-body mb-1">Overland Camp Pack</h6>
-            <div class="text-freeway fw-bold mb-1">$25 / day</div>
-            <small class="text-body-secondary">4-person tent, sleeping bags, camp stove, and LED lanterns.</small>
-          </div>
-        </div>
-      </div>
+    .pricing-plans-section .pricing-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10) !important;
+      border-color: #ffb800;
+    }
+
+
+    /* =========================================================
+       CONSISTENT FREEWAY ICON COLOR
+    ========================================================= */
+
+    .pricing-plans-section .pricing-icon,
+    .pricing-plans-section .feature-icon,
+    .pricing-plans-section .addon-icon,
+    .pricing-plans-section i {
+      color: #ffb800 !important;
+    }
+
+    .pricing-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: rgba(255, 184, 0, 0.12);
+      font-size: 25px;
+    }
+
+
+    /* =========================================================
+       PLAN HEADER
+    ========================================================= */
+
+    .pricing-plan-badge {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 50px;
+
+      background: rgba(255, 184, 0, 0.12);
+      color: #ffb800;
+
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    .pricing-price {
+      font-size: 2.7rem;
+      line-height: 1;
+    }
+
+    .pricing-price-period {
+      font-size: 0.9rem;
+    }
+
+
+    /* =========================================================
+       PLAN FEATURES
+    ========================================================= */
+
+    .pricing-feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .pricing-feature-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+
+    .pricing-feature-list li i {
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+
+
+    /* =========================================================
+       POPULAR LABEL
+       Label remains, but card is NOT highlighted
+    ========================================================= */
+
+    .popular-label {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+
+      background: #ffb800;
+      color: #111;
+
+      padding: 6px 12px;
+      border-radius: 50px;
+
+      font-size: 0.7rem;
+      font-weight: 800;
+    }
+
+
+    /* =========================================================
+       PLAN INFO BOX
+    ========================================================= */
+
+    .pricing-info-box {
+      background: rgba(255, 184, 0, 0.07);
+      border: 1px solid rgba(255, 184, 0, 0.20);
+
+      border-radius: 10px;
+      padding: 12px 14px;
+    }
+
+    .pricing-info-box strong {
+      color: #ffb800;
+    }
+
+
+    /* =========================================================
+       PROTECTION SECTION
+    ========================================================= */
+
+    .protection-section {
+      background: var(--bs-tertiary-bg);
+    }
+
+    .protection-badge {
+      background: rgba(255, 184, 0, 0.12) !important;
+      color: #ffb800 !important;
+      border: 1px solid rgba(255, 184, 0, 0.25);
+    }
+
+    .protection-table {
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .protection-table th {
+      background: var(--bs-secondary-bg) !important;
+      color: var(--bs-body-color) !important;
+      vertical-align: middle;
+    }
+
+    .protection-table td {
+      vertical-align: middle;
+    }
+
+    .protection-table .shield-header {
+      background: #ffb800 !important;
+      color: #111 !important;
+    }
+
+    .protection-table .check-icon {
+      color: #ffb800 !important;
+    }
+
+
+    /* =========================================================
+       ADD-ONS
+    ========================================================= */
+
+    .addon-card {
+      height: 100%;
+      border: 1px solid var(--bs-border-color);
+      border-radius: 14px;
+
+      transition: all 0.25s ease;
+    }
+
+    .addon-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .addon-icon {
+      width: 58px;
+      height: 58px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      margin: 0 auto 15px;
+
+      border-radius: 14px;
+      background: rgba(255, 184, 0, 0.12);
+
+      font-size: 26px;
+    }
+
+    .addon-price {
+      color: #ffb800;
+      font-weight: 800;
+      font-size: 1.05rem;
+    }
+
+
+    /* =========================================================
+       DARK MODE
+    ========================================================= */
+
+    [data-bs-theme="dark"] .pricing-info-box,
+    .dark-mode .pricing-info-box,
+    body.dark .pricing-info-box,
+    [data-theme="dark"] .pricing-info-box {
+      background: rgba(255, 184, 0, 0.08);
+    }
+
+    [data-bs-theme="dark"] .pricing-plans-section .pricing-card {
+      border-color: rgba(255, 184, 0, 0.45);
+    }
+
+    [data-bs-theme="dark"] .pricing-plans-section .pricing-card:hover {
+      border-color: #ffb800;
+    }
+
+    [data-bs-theme="dark"] .pricing-plans-section .pricing-card:hover,
+    .dark-mode .pricing-plans-section .pricing-card:hover,
+    body.dark .pricing-plans-section .pricing-card:hover,
+    [data-theme="dark"] .pricing-plans-section .pricing-card:hover {
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35) !important;
+    }
+
+
+    /* =========================================================
+       MOBILE
+    ========================================================= */
+
+    @media (max-width: 768px) {
+
+      .pricing-price {
+        font-size: 2.2rem;
+      }
+
+      .popular-label {
+        position: static;
+        display: inline-block;
+        margin-bottom: 15px;
+      }
+
+      .protection-table {
+        font-size: 0.85rem;
+      }
+
+    }
+
+  </style>
+
+
+  <div class="container">
+
+    <!-- SECTION HEADER -->
+
+    <div class="text-center mb-5">
+
+      <span
+        class="badge px-3 py-2 rounded-pill fw-semibold mb-3"
+        style="
+          background:rgba(255,184,0,0.12);
+          color:#ffb800;
+          border:1px solid rgba(255,184,0,0.25);
+        "
+      >
+        FLEXIBLE RENTAL PLANS
+      </span>
+
+      <h2 class="fw-bold text-body mb-3">
+        Choose the Plan That Fits Your Journey
+      </h2>
+
+      <p
+        class="text-body-secondary mx-auto mb-0"
+        style="max-width:720px;"
+      >
+        Whether you need a car for a few hours, a full day, or an entire
+        weekend, Freeway offers simple self-drive rental plans with
+        transparent pricing and no unnecessary charges.
+      </p>
+
     </div>
-  </section>
 
+
+    <!-- PRICING CARDS -->
+
+    <div class="row g-4 align-items-stretch">
+
+
+      <!-- HOURLY FLEX -->
+
+      <div class="col-lg-4 col-md-6">
+
+        <div class="card pricing-card bg-body shadow-sm h-100">
+
+          <div class="card-body p-4 d-flex flex-column">
+
+            <div class="pricing-icon mb-3">
+              <i class="bi bi-clock"></i>
+            </div>
+
+            <span class="pricing-plan-badge mb-2">
+              SHORT TRIPS
+            </span>
+
+            <h4 class="fw-bold text-body mb-2">
+              Hourly Flex
+            </h4>
+
+            <p class="text-body-secondary">
+              Perfect when you need a car for a few hours instead of
+              paying for an entire day.
+            </p>
+
+            <div class="d-flex align-items-baseline my-3">
+
+              <span class="pricing-price fw-bold text-body">
+                $10
+              </span>
+
+              <span class="pricing-price-period text-body-secondary ms-2">
+                / hour
+              </span>
+
+            </div>
+
+            <div class="pricing-info-box mb-4">
+
+              <small class="text-body-secondary">
+                <strong>Best for:</strong>
+                shopping, meetings, errands and short city trips.
+              </small>
+
+            </div>
+
+            <ul class="pricing-feature-list text-body-secondary small mb-4">
+
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <span>25 km included for every rental hour</span>
+              </li>
+
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Fuel included in the trip price</span>
+              </li>
+
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Contactless smartphone unlock</span>
+              </li>
+
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Free cancellation up to 1 hour before pickup</span>
+              </li>
+
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Pay only for the hours you book</span>
+              </li>
+
+            </ul>
+
+            <a
+              href="fleet.html"
+              class="btn btn-outline-freeway mt-auto w-100 py-2"
+            >
+              Choose Hourly Plan
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- DAILY EXPLORER -->
+
+      <div class="col-lg-4 col-md-6">
+
+        <div class="card pricing-card bg-body shadow-sm h-100">
+
+          <div class="card-body p-4 d-flex flex-column">
+
+            <span class="popular-label">
+              MOST POPULAR
+            </span>
+
+            <div class="pricing-icon mb-3">
+              <i class="bi bi-calendar-check"></i>
+            </div>
+
+            <span class="pricing-plan-badge mb-2">
+              DAY TRIPS & ROAD TRIPS
+            </span>
+
+            <h4 class="fw-bold text-body mb-2">
+              Daily Explorer
+            </h4>
+
+            <p class="text-body-secondary">
+              A flexible full-day rental for sightseeing, road trips,
+              family outings and exploring the city at your own pace.
+            </p>
+
+            <div class="d-flex align-items-baseline my-3">
+
+              <span class="pricing-price fw-bold text-freeway">
+                $68
+              </span>
+
+              <span class="pricing-price-period text-body-secondary ms-2">
+                / day
+              </span>
+
+            </div>
+
+            <div class="pricing-info-box mb-4">
+
+              <small class="text-body-secondary">
+                <strong>Best for:</strong>
+                full-day travel, weekend preparation and long city drives.
+              </small>
+
+            </div>
+
+            <ul class="pricing-feature-list text-body-secondary small mb-4">
+
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <span>250 km included per day</span>
+              </li>
+
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Zero security deposit with verified KYC</span>
+              </li>
+
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Airport and city hub pickup options</span>
+              </li>
+
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Vehicle inspected before every trip</span>
+              </li>
+
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Complimentary second driver</span>
+              </li>
+
+            </ul>
+
+            <a
+              href="fleet.html"
+              class="btn btn-freeway mt-auto w-100 py-2 fw-bold"
+            >
+              Rent by the Day
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- WEEKEND ESCAPE -->
+
+      <div class="col-lg-4 col-md-6">
+
+        <div class="card pricing-card bg-body shadow-sm h-100">
+
+          <div class="card-body p-4 d-flex flex-column">
+
+            <div class="pricing-icon mb-3">
+              <i class="bi bi-map"></i>
+            </div>
+
+            <span class="pricing-plan-badge mb-2">
+              EXTENDED GETAWAYS
+            </span>
+
+            <h4 class="fw-bold text-body mb-2">
+              Weekend Escape
+            </h4>
+
+            <p class="text-body-secondary">
+              Keep your vehicle throughout the weekend and enjoy
+              uninterrupted freedom for longer road trips and getaways.
+            </p>
+
+            <div class="d-flex align-items-baseline my-3">
+
+              <span class="pricing-price fw-bold text-body">
+                $189
+              </span>
+
+              <span class="pricing-price-period text-body-secondary ms-2">
+                / 72 hours
+              </span>
+
+            </div>
+
+            <div class="pricing-info-box mb-4">
+
+              <small class="text-body-secondary">
+                <strong>Best for:</strong>
+                weekend road trips, family travel and extended drives.
+              </small>
+
+            </div>
+
+            <ul class="pricing-feature-list text-body-secondary small mb-4">
+
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <span>800 km weekend mileage included</span>
+              </li>
+
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Preferred vehicle model hold</span>
+              </li>
+
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <span>National park pass included</span>
+              </li>
+
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Zero deposit with verified profile</span>
+              </li>
+
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Free vehicle wash voucher after return</span>
+              </li>
+
+            </ul>
+
+            <a
+              href="fleet.html"
+              class="btn btn-outline-freeway mt-auto w-100 py-2"
+            >
+              Book Weekend Escape
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================================
+     PROTECTION PACKAGES
+     ========================================================================= -->
+
+<section class="py-5 protection-section border-top border-bottom">
+
+  <div class="container">
+
+
+    <!-- HEADER -->
+
+    <div class="text-center mb-5">
+
+      <span
+        class="badge protection-badge px-3 py-2 rounded-pill fw-semibold mb-3"
+      >
+        DRIVE WITH CONFIDENCE
+      </span>
+
+
+      <h3 class="fw-bold text-body mb-3">
+        Protection Packages & Insurance
+      </h3>
+
+
+      <p
+        class="text-body-secondary mx-auto"
+        style="max-width:700px;"
+      >
+        Choose the level of protection that suits your trip.
+        Every package is designed to reduce unexpected costs and
+        give you greater confidence while driving your Freeway rental.
+      </p>
+
+    </div>
+
+
+
+    <!-- TABLE -->
+
+    <div class="table-responsive">
+
+      <table
+        class="table table-bordered protection-table align-middle shadow-sm mb-0"
+      >
+
+        <thead>
+
+          <tr>
+
+            <th class="py-3">
+              Protection Feature
+            </th>
+
+            <th class="text-center py-3">
+              Standard Cover
+            </th>
+
+            <th class="text-center py-3 shield-header">
+              Freedom Shield
+              <br>
+              <small>+$15/day</small>
+            </th>
+
+            <th class="text-center py-3">
+              VIP Total Shield
+              <br>
+              <small>+$28/day</small>
+            </th>
+
+          </tr>
+
+        </thead>
+
+
+        <tbody>
+
+
+          <tr>
+
+            <td class="fw-semibold">
+              Customer Collision Liability
+            </td>
+
+            <td class="text-center">
+              $500 maximum deductible
+            </td>
+
+            <td class="text-center">
+              <i class="bi bi-check-circle-fill check-icon"></i>
+              $0 deductible
+            </td>
+
+            <td class="text-center">
+              <i class="bi bi-check-circle-fill check-icon"></i>
+              $0 deductible
+            </td>
+
+          </tr>
+
+
+          <tr>
+
+            <td class="fw-semibold">
+              Windshield & Window Damage
+            </td>
+
+            <td class="text-center">
+              50% covered
+            </td>
+
+            <td class="text-center">
+              <i class="bi bi-check-circle-fill check-icon"></i>
+              100% covered
+            </td>
+
+            <td class="text-center">
+              <i class="bi bi-check-circle-fill check-icon"></i>
+              100% covered
+            </td>
+
+          </tr>
+
+
+          <tr>
+
+            <td class="fw-semibold">
+              Tire Punctures & Rim Damage
+            </td>
+
+            <td class="text-center">
+              Customer pays replacement
+            </td>
+
+            <td class="text-center">
+              <i class="bi bi-check-circle-fill check-icon"></i>
+              Free replacement
+            </td>
+
+            <td class="text-center">
+              <i class="bi bi-check-circle-fill check-icon"></i>
+              Free replacement
+            </td>
+
+          </tr>
+
+
+          <tr>
+
+            <td class="fw-semibold">
+              24/7 Roadside Assistance
+            </td>
+
+            <td class="text-center">
+              Up to 50 km
+            </td>
+
+            <td class="text-center">
+              <i class="bi bi-check-circle-fill check-icon"></i>
+              Unlimited distance
+            </td>
+
+            <td class="text-center">
+              <i class="bi bi-check-circle-fill check-icon"></i>
+              Unlimited + taxi credit
+            </td>
+
+          </tr>
+
+
+          <tr>
+
+            <td class="fw-semibold">
+              Personal Effects & Luggage
+            </td>
+
+            <td class="text-center">
+              Not covered
+            </td>
+
+            <td class="text-center">
+              Up to $1,000
+            </td>
+
+            <td class="text-center">
+              Up to $3,500 replacement
+            </td>
+
+          </tr>
+
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+
+    <!-- EXPLANATION -->
+
+    <div class="row g-4 mt-4">
+
+      <div class="col-md-4">
+
+        <div class="d-flex gap-3">
+
+          <i class="bi bi-shield-check fs-3 check-icon"></i>
+
+          <div>
+
+            <h6 class="fw-bold text-body">
+              Standard Cover
+            </h6>
+
+            <p class="small text-body-secondary mb-0">
+              Basic protection included with your rental.
+              Suitable for everyday city driving.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-md-4">
+
+        <div class="d-flex gap-3">
+
+          <i class="bi bi-shield-fill-check fs-3 check-icon"></i>
+
+          <div>
+
+            <h6 class="fw-bold text-body">
+              Freedom Shield
+            </h6>
+
+            <p class="small text-body-secondary mb-0">
+              Additional protection for drivers planning
+              longer trips and frequent highway driving.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-md-4">
+
+        <div class="d-flex gap-3">
+
+          <i class="bi bi-stars fs-3 check-icon"></i>
+
+          <div>
+
+            <h6 class="fw-bold text-body">
+              VIP Total Shield
+            </h6>
+
+            <p class="small text-body-secondary mb-0">
+              Maximum protection for customers who want
+              the highest level of coverage during their journey.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================================
+     OPTIONAL ROAD TRIP ADD-ONS
+     ========================================================================= -->
+
+<section class="py-5 bg-body">
+
+  <div class="container">
+
+
+    <!-- HEADER -->
+
+    <div class="text-center mb-5">
+
+      <span
+        class="badge px-3 py-2 rounded-pill fw-semibold mb-3"
+        style="
+          background:rgba(255,184,0,0.12);
+          color:#ffb800;
+          border:1px solid rgba(255,184,0,0.25);
+        "
+      >
+        MAKE YOUR TRIP BETTER
+      </span>
+
+
+      <h3 class="fw-bold text-body mb-3">
+        Optional Road Trip Gear & Add-ons
+      </h3>
+
+
+      <p
+        class="text-body-secondary mx-auto"
+        style="max-width:700px;"
+      >
+        Add useful equipment to your booking and have your vehicle
+        prepared before you arrive. All available add-ons are shown
+        clearly during checkout.
+      </p>
+
+    </div>
+
+
+
+    <!-- ADDON CARDS -->
+
+    <div class="row g-4">
+
+
+      <!-- CHILD SEAT -->
+
+      <div class="col-12 col-sm-6 col-lg-3">
+
+        <div class="card addon-card bg-body shadow-sm text-center">
+
+          <div class="card-body p-4">
+
+            <div class="addon-icon">
+              <i class="bi bi-person-arms-up"></i>
+            </div>
+
+
+            <h6 class="fw-bold text-body">
+              Child Safety Seat
+            </h6>
+
+
+            <div class="addon-price mb-2">
+              $8 / day
+            </div>
+
+
+            <p class="small text-body-secondary mb-0">
+              Rear-facing, toddler and booster seats available.
+              Seats are cleaned and prepared before pickup.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- ROOF BOX -->
+
+      <div class="col-12 col-sm-6 col-lg-3">
+
+        <div class="card addon-card bg-body shadow-sm text-center">
+
+          <div class="card-body p-4">
+
+            <div class="addon-icon">
+              <i class="bi bi-box-seam"></i>
+            </div>
+
+
+            <h6 class="fw-bold text-body">
+              Roof Cargo Box
+            </h6>
+
+
+            <div class="addon-price mb-2">
+              $14 / day
+            </div>
+
+
+            <p class="small text-body-secondary mb-0">
+              Extra weather-resistant storage for luggage,
+              sports equipment and longer road trips.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- WIFI -->
+
+      <div class="col-12 col-sm-6 col-lg-3">
+
+        <div class="card addon-card bg-body shadow-sm text-center">
+
+          <div class="card-body p-4">
+
+            <div class="addon-icon">
+              <i class="bi bi-wifi"></i>
+            </div>
+
+
+            <h6 class="fw-bold text-body">
+              Mobile Wi-Fi
+            </h6>
+
+
+            <div class="addon-price mb-2">
+              $15 / day
+            </div>
+
+
+            <p class="small text-body-secondary mb-0">
+              Stay connected during your trip with portable
+              high-speed internet access.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- CAMPING -->
+
+      <div class="col-12 col-sm-6 col-lg-3">
+
+        <div class="card addon-card bg-body shadow-sm text-center">
+
+          <div class="card-body p-4">
+
+            <div class="addon-icon">
+              <i class="bi bi-tree"></i>
+            </div>
+
+
+            <h6 class="fw-bold text-body">
+              Overland Camp Pack
+            </h6>
+
+
+            <div class="addon-price mb-2">
+              $25 / day
+            </div>
+
+
+            <p class="small text-body-secondary mb-0">
+              Includes camping essentials such as a tent,
+              sleeping bags, camp stove and LED lanterns.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+  
   <!-- =========================================================================
        FOOTER
        ========================================================================= -->
