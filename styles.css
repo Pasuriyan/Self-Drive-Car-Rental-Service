@@ -2178,3 +2178,25 @@ body {
     padding: 0.4rem 0.75rem !important;
   }
 }
+/* Main navbar wrapper */
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: nowrap; /* Prevents unwanted wrapping */
+}
+
+/* Navigation links section */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem; /* Adjust gap to fit nicely at 1024px */
+}
+
+/* Right-side container holding icons + Login button (like image 2) */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Space between icons and login button */
+}
