@@ -33,8 +33,7 @@
       </div>
     </div>
 
-    <nav class="navbar navbar-expand-lg bg-body">
-      <div class="container">
+<nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom fixed-top">      <div class="container">
         <a class="navbar-brand d-flex align-items-center fw-bold fs-4 text-body" href="index.html">
           <span class="badge bg-freeway me-2 p-2 rounded-3"><i class="bi bi-car-front-fill fs-5"></i></span>
           <span>FREEWAY<span class="text-freeway">.</span></span>
@@ -583,145 +582,548 @@
   <!-- =========================================================================
        ALL-INCLUSIVE RENTAL PERKS
        ========================================================================= -->
-  <section class="py-5 bg-body-tertiary border-top border-body">
+  <!-- BOOKING DETAILS SECTION -->
+<section id="bookingDetails" class="py-5 d-none">
     <div class="container">
-      <div class="text-center mb-5">
-        <h3 class="fw-bold text-body">Standard With Every Freeway Rental</h3>
-        <p class="text-body-secondary">No nickel-and-diming. Everything you need for an unforgettable drive.</p>
-      </div>
 
-      <div class="row g-4 text-center">
-        <div class="col-6 col-md-3">
-          <div class="card h-100 border-body bg-body p-4 shadow-sm">
-            <i class="bi bi-speedometer2 display-5 text-freeway mb-3"></i>
-            <h6 class="fw-bold text-body">250 km / Day Free</h6>
-            <p class="small text-body-secondary mb-0">Unused kilometers roll over to subsequent days of your trip.</p>
-          </div>
+        <div class="text-center mb-4">
+            <span class="text-freeway fw-semibold">
+                BOOKING DETAILS
+            </span>
+
+            <h3 class="fw-bold text-body mt-2">
+                Freeway Rental Benefits
+            </h3>
+
+            <p class="text-body-secondary">
+                Everything included with your Freeway self-drive rental.
+            </p>
         </div>
 
-        <div class="col-6 col-md-3">
-          <div class="card h-100 border-body bg-body p-4 shadow-sm">
-            <i class="bi bi-phone-fill display-5 text-primary mb-3"></i>
-            <h6 class="fw-bold text-body">100% Smart Keyless</h6>
-            <p class="small text-body-secondary mb-0">Bluetooth door unlock and engine ignition directly from your phone.</p>
-          </div>
+        <div class="row g-4">
+
+            <!-- KM DETAILS -->
+            <div class="col-md-6">
+                <div class="card h-100 border-body bg-body shadow-sm p-4">
+
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <i class="bi bi-speedometer2 fs-2 text-freeway"></i>
+
+                        <div>
+                            <h5 class="fw-bold text-body mb-1">
+                                250 km / Day Free
+                            </h5>
+
+                            <small class="text-body-secondary">
+                                Included Mileage
+                            </small>
+                        </div>
+                    </div>
+
+                    <p class="text-body-secondary">
+                        Every Freeway rental includes 250 free kilometers per
+                        day. You can use the included kilometers throughout
+                        your trip.
+                    </p>
+
+                    <ul class="text-body-secondary">
+                        <li>250 km included every rental day</li>
+                        <li>Extra kilometers available at additional cost</li>
+                        <li>Suitable for city and long-distance trips</li>
+                    </ul>
+
+                </div>
+            </div>
+
+
+            <!-- KEYLESS DETAILS -->
+            <div class="col-md-6">
+                <div class="card h-100 border-body bg-body shadow-sm p-4">
+
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <i class="bi bi-phone-fill fs-2 text-primary"></i>
+
+                        <div>
+                            <h5 class="fw-bold text-body mb-1">
+                                Smart Keyless Access
+                            </h5>
+
+                            <small class="text-body-secondary">
+                                Phone-Based Vehicle Access
+                            </small>
+                        </div>
+                    </div>
+
+                    <p class="text-body-secondary">
+                        Unlock and start your rental vehicle directly using
+                        your smartphone. No physical key exchange is required.
+                    </p>
+
+                    <ul class="text-body-secondary">
+                        <li>Bluetooth vehicle unlocking</li>
+                        <li>Phone-based engine ignition</li>
+                        <li>Simple contactless pickup</li>
+                    </ul>
+
+                </div>
+            </div>
+
+
+            <!-- DEPOSIT DETAILS -->
+            <div class="col-md-6">
+                <div class="card h-100 border-body bg-body shadow-sm p-4">
+
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <i class="bi bi-shield-check fs-2 text-success"></i>
+
+                        <div>
+                            <h5 class="fw-bold text-body mb-1">
+                                Zero Security Deposit
+                            </h5>
+
+                            <small class="text-body-secondary">
+                                Simple & Transparent Booking
+                            </small>
+                        </div>
+                    </div>
+
+                    <p class="text-body-secondary">
+                        Eligible drivers can enjoy a zero security deposit,
+                        helping you start your trip without unnecessary
+                        payment holds.
+                    </p>
+
+                    <ul class="text-body-secondary">
+                        <li>KYC verification required</li>
+                        <li>No standard security hold</li>
+                        <li>Transparent rental pricing</li>
+                    </ul>
+
+                </div>
+            </div>
+
+
+            <!-- ROADSIDE DETAILS -->
+            <div class="col-md-6">
+                <div class="card h-100 border-body bg-body shadow-sm p-4">
+
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <i class="bi bi-headset fs-2 text-warning"></i>
+
+                        <div>
+                            <h5 class="fw-bold text-body mb-1">
+                                24/7 Roadside Assistance
+                            </h5>
+
+                            <small class="text-body-secondary">
+                                Help When You Need It
+                            </small>
+                        </div>
+                    </div>
+
+                    <p class="text-body-secondary">
+                        Our roadside assistance team is available around the
+                        clock to help you handle unexpected situations.
+                    </p>
+
+                    <ul class="text-body-secondary">
+                        <li>Flat-tire assistance</li>
+                        <li>Emergency towing support</li>
+                        <li>Vehicle lockout assistance</li>
+                    </ul>
+
+                </div>
+            </div>
+
         </div>
 
-        <div class="col-6 col-md-3">
-          <div class="card h-100 border-body bg-body p-4 shadow-sm">
-            <i class="bi bi-shield-check display-5 text-success mb-3"></i>
-            <h6 class="fw-bold text-body">Zero Security Deposit</h6>
-            <p class="small text-body-secondary mb-0">Approved KYC drivers enjoy zero holds or frozen funds on credit cards.</p>
-          </div>
-        </div>
+       
+       <!-- BOOK NOW BUTTON -->
+<div class="text-center mt-5">
 
-        <div class="col-6 col-md-3">
-          <div class="card h-100 border-body bg-body p-4 shadow-sm">
-            <i class="bi bi-headset display-5 text-warning mb-3"></i>
-            <h6 class="fw-bold text-body">24/7 Roadside Rescue</h6>
-            <p class="small text-body-secondary mb-0">Instant dispatch for flat tires, towing, or emergency lockouts.</p>
-          </div>
-        </div>
-      </div>
+    <button
+        type="button"
+        class="btn btn-freeway btn-lg px-5"
+        onclick="startBooking()">
+
+        <i class="bi bi-calendar-check me-2"></i>
+        Continue to Booking
+
+    </button>
+
+</div>
+
     </div>
-  </section>
+</section>
 
   <!-- =========================================================================
        BOOKING MODAL
        ========================================================================= -->
-  <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+   <!-- =========================================================
+     BOOKING MODAL
+========================================================= -->
+
+<div
+    class="modal fade"
+    id="bookingModal"
+    tabindex="-1"
+    aria-labelledby="bookingModalLabel"
+    aria-hidden="true">
+
     <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content bg-body text-body border-body shadow-lg">
-        <div class="modal-header border-body bg-body-tertiary">
-          <h5 class="modal-title fw-bold text-body" id="bookingModalLabel">
-            <i class="bi bi-key-fill text-freeway me-2"></i>Confirm Self-Drive Reservation
-          </h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body p-4">
-          <form id="modalReservationForm">
-            <input type="hidden" id="bookingCarIdHidden">
-            <div class="row g-4">
-              <div class="col-md-5">
-                <img id="modalBookingCarImg" src="" class="img-fluid rounded-3 border border-body object-fit-cover mb-3 w-100" style="height: 180px;" alt="Selected Vehicle">
-                <h5 id="modalBookingCarName" class="fw-bold mb-1 text-body">Car Name</h5>
-                <div id="modalBookingCarCategory" class="small text-body-secondary mb-2">Category</div>
-                <div class="d-flex align-items-baseline mb-3">
-                  <span id="modalBookingPriceDay" class="h3 fw-bold text-freeway me-1">$0</span>
-                  <span class="text-body-secondary small">/day</span>
-                </div>
 
-                <div class="alert alert-success py-2 px-3 small">
-                  <i class="bi bi-shield-check me-1"></i><strong>Zero Deposit:</strong> Your KYC is verified. No security deposit block required on your card.
-                </div>
-              </div>
+        <div class="modal-content bg-body text-body border-body shadow-lg">
 
-              <div class="col-md-7">
-                <div class="mb-3">
-                  <label class="form-label small fw-semibold text-body-secondary">Pickup & Return Station</label>
-                  <select id="bookingPickupStation" class="form-select bg-body text-body border-body">
-                    <option value="Downtown Freedom Station">Downtown Freedom Station (Central Hub)</option>
-                    <option value="LAX International Airport Terminal 2 Hub">LAX Airport Hub (Terminal 2)</option>
-                    <option value="Santa Monica Beach Station">Santa Monica Beach Station</option>
-                  </select>
-                </div>
+            <!-- MODAL HEADER -->
+            <div class="modal-header border-body bg-body-tertiary">
 
-                <div class="row g-2 mb-3">
-                  <div class="col-6">
-                    <label class="form-label small fw-semibold text-body-secondary">Duration (Days)</label>
-                    <select id="bookingDaysSelect" class="form-select bg-body text-body border-body">
-                      <option value="1">1 Day</option>
-                      <option value="2">2 Days</option>
-                      <option value="3" selected>3 Days</option>
-                      <option value="5">5 Days</option>
-                      <option value="7">7 Days (Weekly Special)</option>
-                    </select>
-                  </div>
-                  <div class="col-6">
-                    <label class="form-label small fw-semibold text-body-secondary">Pickup Time</label>
-                    <input type="time" class="form-control bg-body text-body border-body" value="10:00">
-                  </div>
-                </div>
+                <h5
+                    class="modal-title fw-bold text-body"
+                    id="bookingModalLabel">
 
-                <div class="form-check p-3 border border-body rounded-3 bg-body-tertiary mb-3">
-                  <input class="form-check-input" type="checkbox" id="bookingInsuranceCheck" checked>
-                  <label class="form-check-label small fw-semibold text-body ms-1" for="bookingInsuranceCheck">
-                    Add Freedom Shield Zero-Liability Cover (+$15/day)
-                  </label>
-                  <div class="small text-body-secondary ms-1">Eliminate all customer liability for glass, rim scratches, and roadside rescue.</div>
-                </div>
+                    <i class="bi bi-car-front-fill text-freeway me-2"></i>
+                    Confirm Self-Drive Reservation
 
-                <div class="bg-body-tertiary p-3 rounded-3 border border-body small mb-3">
-                  <div class="d-flex justify-content-between mb-1">
-                    <span class="text-body-secondary">Vehicle Rental (<span id="modalSummaryDays">3 Days</span>):</span>
-                    <span id="modalSummarySubtotal" class="fw-semibold text-body">$0.00</span>
-                  </div>
-                  <div class="d-flex justify-content-between mb-1">
-                    <span class="text-body-secondary">Freedom Shield Cover:</span>
-                    <span id="modalSummaryInsurance" class="fw-semibold text-body">$45.00</span>
-                  </div>
-                  <div class="d-flex justify-content-between mb-1">
-                    <span class="text-body-secondary">State Taxes & Toll Surcharge:</span>
-                    <span id="modalSummaryTax" class="fw-semibold text-body">$0.00</span>
-                  </div>
-                  <hr class="my-2 border-body">
-                  <div class="d-flex justify-content-between fs-6 fw-bold">
-                    <span class="text-body">Estimated Total:</span>
-                    <span id="modalSummaryTotal" class="text-freeway">$0.00</span>
-                  </div>
-                </div>
+                </h5>
 
-                <button type="submit" class="btn btn-freeway w-100 py-2 fw-bold">
-                  <i class="bi bi-check2-circle me-1"></i>Confirm & Assign Digital Key
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close">
                 </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
 
+            </div>
+
+
+            <!-- MODAL BODY -->
+            <div class="modal-body p-4">
+
+                <!-- BOOKING CONTENT -->
+                <div id="bookingContent">
+
+                    <div class="row g-4">
+
+                        <!-- =====================================
+                             LEFT SIDE - CAR DETAILS
+                        ====================================== -->
+
+                        <div class="col-md-5">
+
+                            <img
+                                id="modalBookingCarImg"
+                                src=""
+                                class="img-fluid rounded-3 border border-body object-fit-cover mb-3 w-100"
+                                style="height:180px;"
+                                alt="Selected Vehicle">
+
+
+                            <h4
+                                id="modalBookingCarName"
+                                class="fw-bold text-body mb-1">
+
+                                Car Name
+
+                            </h4>
+
+
+                            <div
+                                id="modalBookingCarCategory"
+                                class="small text-body-secondary mb-3">
+
+                                Category • Automatic
+
+                            </div>
+
+
+                            <div class="d-flex align-items-baseline mb-3">
+
+                                <span
+                                    id="modalBookingPriceDay"
+                                    class="h3 fw-bold text-freeway me-1">
+
+                                    $0
+
+                                </span>
+
+                                <span class="text-body-secondary small">
+                                    /day
+                                </span>
+
+                            </div>
+
+
+                            <!-- ZERO DEPOSIT -->
+                            <div class="alert alert-success py-3 px-3 small">
+
+                                <i class="bi bi-shield-check me-1"></i>
+
+                                <strong>Zero Deposit</strong>
+
+                                <div class="mt-1">
+                                    Your KYC is verified.
+                                    No security deposit block is required.
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- =====================================
+                             RIGHT SIDE - BOOKING DETAILS
+                        ====================================== -->
+
+                        <div class="col-md-7">
+
+                            <!-- PICKUP STATION -->
+                            <div class="mb-3">
+
+                                <label
+                                    class="form-label fw-semibold text-body">
+
+                                    Pickup & Return Station
+
+                                </label>
+
+                                <select
+                                    id="bookingPickupStation"
+                                    class="form-select bg-body text-body border-body">
+
+                                    <option value="Downtown Freedom Station">
+                                        Downtown Freedom Station (Central Hub)
+                                    </option>
+
+                                    <option value="LAX International Airport Terminal 2 Hub">
+                                        LAX Airport Hub (Terminal 2)
+                                    </option>
+
+                                    <option value="Santa Monica Beach Station">
+                                        Santa Monica Beach Station
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- DURATION + TIME -->
+                            <div class="row g-3 mb-3">
+
+                                <div class="col-6">
+
+                                    <label
+                                        class="form-label fw-semibold text-body">
+
+                                        Duration
+
+                                    </label>
+
+                                    <select
+                                        id="bookingDaysSelect"
+                                        class="form-select bg-body text-body border-body">
+
+                                        <option value="1">
+                                            1 Day
+                                        </option>
+
+                                        <option value="2">
+                                            2 Days
+                                        </option>
+
+                                        <option value="3" selected>
+                                            3 Days
+                                        </option>
+
+                                        <option value="5">
+                                            5 Days
+                                        </option>
+
+                                        <option value="7">
+                                            7 Days
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <div class="col-6">
+
+                                    <label
+                                        class="form-label fw-semibold text-body">
+
+                                        Pickup Time
+
+                                    </label>
+
+                                    <input
+                                        type="time"
+                                        id="bookingPickupTime"
+                                        class="form-control bg-body text-body border-body"
+                                        value="10:00">
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- INSURANCE -->
+                            <div
+                                class="p-3 border border-body rounded-3 bg-body-tertiary mb-3">
+
+                                <div class="form-check">
+
+                                    <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        id="bookingInsuranceCheck"
+                                        checked>
+
+                                    <label
+                                        class="form-check-label fw-semibold text-body"
+                                        for="bookingInsuranceCheck">
+
+                                        Add Freedom Shield Cover
+                                        (+$15/day)
+
+                                    </label>
+
+                                </div>
+
+                                <div class="small text-body-secondary mt-2">
+
+                                    Extra protection for glass, rim scratches
+                                    and roadside assistance.
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- PRICE SUMMARY -->
+                            <div
+                                class="bg-body-tertiary p-3 rounded-3 border border-body mb-3">
+
+                                <div
+                                    class="d-flex justify-content-between mb-2">
+
+                                    <span class="text-body-secondary">
+                                        Vehicle Rental
+                                    </span>
+
+                                    <span
+                                        id="modalSummarySubtotal"
+                                        class="fw-semibold text-body">
+
+                                        $0.00
+
+                                    </span>
+
+                                </div>
+
+
+                                <div
+                                    class="d-flex justify-content-between mb-2">
+
+                                    <span class="text-body-secondary">
+                                        Freedom Shield
+                                    </span>
+
+                                    <span
+                                        id="modalSummaryInsurance"
+                                        class="fw-semibold text-body">
+
+                                        $45.00
+
+                                    </span>
+
+                                </div>
+
+
+                                <div
+                                    class="d-flex justify-content-between mb-2">
+
+                                    <span class="text-body-secondary">
+                                        Taxes & Charges
+                                    </span>
+
+                                    <span
+                                        id="modalSummaryTax"
+                                        class="fw-semibold text-body">
+
+                                        $0.00
+
+                                    </span>
+
+                                </div>
+
+
+                                <hr class="my-2 border-body">
+
+
+                                <div
+                                    class="d-flex justify-content-between fw-bold">
+
+                                    <span>
+                                        Estimated Total
+                                    </span>
+
+                                    <span
+                                        id="modalSummaryTotal"
+                                        class="text-freeway">
+
+                                        $0.00
+
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- SUCCESS MESSAGE -->
+                            <div
+                                id="bookingSuccessMessage"
+                                class="alert alert-success text-center d-none">
+
+                                <i class="bi bi-check-circle-fill me-2"></i>
+
+                                <strong>Booking Successful!</strong>
+
+                                <div class="small mt-1">
+                                    Your reservation has been confirmed
+                                    successfully.
+                                </div>
+
+                            </div>
+
+
+                            <!-- CONFIRM BUTTON -->
+                            <button
+                                type="button"
+                                id="confirmBookingBtn"
+                                class="btn btn-freeway w-100 py-3 fw-bold">
+
+                                <i class="bi bi-check2-circle me-2"></i>
+
+                                Confirm & Assign Digital Key
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
   <!-- =========================================================================
        FOOTER
        ========================================================================= -->
@@ -1016,7 +1418,54 @@
 
   </div>
 </footer>
+<script>
 
+document.addEventListener("DOMContentLoaded", function () {
+
+    const confirmButton =
+        document.getElementById("confirmBookingBtn");
+
+    const successMessage =
+        document.getElementById("bookingSuccessMessage");
+
+
+    if (!confirmButton) {
+        return;
+    }
+
+
+    confirmButton.addEventListener("click", function (event) {
+
+        // Stop any default action
+        event.preventDefault();
+
+
+        // Show success message
+        successMessage.classList.remove("d-none");
+
+
+        // Change button
+        confirmButton.innerHTML = `
+            <i class="bi bi-check-circle-fill me-2"></i>
+            Booking Confirmed
+        `;
+
+
+        // Disable button
+        confirmButton.disabled = true;
+
+
+        // Scroll to success message
+        successMessage.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+
+    });
+
+});
+
+</script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="app.js"></script>
 </body>

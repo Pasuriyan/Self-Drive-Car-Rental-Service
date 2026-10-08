@@ -2400,3 +2400,12 @@ section {
         padding-right: 15px !important;
     }
 }
+/* =========================================
+   FREEWAY - STICKY NAVBAR
+========================================= */
+
+.navbar.sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
