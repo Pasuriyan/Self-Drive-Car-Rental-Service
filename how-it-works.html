@@ -1155,50 +1155,296 @@
        FOOTER
        ========================================================================= -->
   <footer class="bg-body-tertiary text-body border-top border-body py-5 mt-5">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-lg-4">
-          <a class="d-flex align-items-center fw-bold fs-4 text-body text-decoration-none mb-3" href="index.html">
-            <span class="badge bg-freeway me-2 p-2 rounded-3"><i class="bi bi-car-front-fill fs-5"></i></span>
-            <span>FREEWAY<span class="text-freeway">.</span></span>
-          </a>
-          <p class="small text-body-secondary pe-lg-4">
-            Drive your freedom with 100% contactless self-drive rentals. Instant AI license checks, phone-based smart door unlocks, and guaranteed zero surprise fees.
-          </p>
-        </div>
-        <div class="col-6 col-md-3 col-lg-2">
-          <h6 class="fw-bold text-body mb-3">Vehicle Fleet</h6>
-          <ul class="list-unstyled small text-body-secondary d-flex flex-column gap-2">
-            <li><a href="fleet.html?category=Electric" class="text-body-secondary text-decoration-none">Electric EVs</a></li>
-            <li><a href="fleet.html?category=SUV" class="text-body-secondary text-decoration-none">SUVs & 4x4 Offroad</a></li>
-            <li><a href="fleet.html?category=Sedan" class="text-body-secondary text-decoration-none">Executive Sedans</a></li>
-            <li><a href="fleet.html?category=Convertible" class="text-body-secondary text-decoration-none">Convertibles</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md-3 col-lg-2">
-          <h6 class="fw-bold text-body mb-3">Company & Hubs</h6>
-          <ul class="list-unstyled small text-body-secondary d-flex flex-column gap-2">
-            <li><a href="how-it-works.html" class="text-body-secondary text-decoration-none">How It Works</a></li>
-            <li><a href="pricing.html" class="text-body-secondary text-decoration-none">Pricing & Shield</a></li>
-            <li><a href="locations.html" class="text-body-secondary text-decoration-none">Airport & City Hubs</a></li>
-            <li><a href="dashboard.html" class="text-body-secondary text-decoration-none">Customer Portal</a></li>
-          </ul>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <h6 class="fw-bold text-body mb-3">Join Freedom Club</h6>
-          <p class="small text-body-secondary">Get exclusive weekend promo codes and zero deposit waivers.</p>
-          <form class="d-flex gap-2" onsubmit="event.preventDefault(); showToast('Subscribed to guide updates!', 'success');">
-            <input type="email" class="form-control form-control-sm bg-body text-body border-body" placeholder="Your email" required>
-            <button type="submit" class="btn btn-freeway btn-sm px-3">Join</button>
-          </form>
-        </div>
-      </div>
-      <div class="pt-4 mt-4 border-top border-body small text-body-secondary">
-        &copy; 2026 Freeway Self-Drive Technologies Inc. All rights reserved.
-      </div>
-    </div>
-  </footer>
+  <div class="container">
 
+    <div class="row g-4">
+
+      <!-- BRAND + SOCIAL MEDIA -->
+      <div class="col-lg-4">
+
+        <a
+          class="d-flex align-items-center fw-bold fs-4 text-body text-decoration-none mb-3"
+          href="index.html"
+        >
+          <span class="badge bg-freeway me-2 p-2 rounded-3">
+            <i class="bi bi-car-front-fill fs-5"></i>
+          </span>
+
+          <span>
+            FREEWAY<span class="text-freeway">.</span>
+          </span>
+        </a>
+
+        <p class="small text-body-secondary pe-lg-4">
+          Drive your freedom with 100% contactless self-drive rentals.
+          Instant AI license checks, phone-based smart door unlocks, and
+          guaranteed zero surprise fees.
+        </p>
+
+
+        <!-- SOCIAL MEDIA -->
+        <div class="d-flex gap-3 mt-3">
+
+          <!-- Facebook -->
+          <a
+            href="https://www.facebook.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-sm btn-outline-secondary rounded-circle"
+            aria-label="Facebook"
+          >
+            <i class="bi bi-facebook"></i>
+          </a>
+
+
+          <!-- X / Twitter -->
+          <a
+            href="https://x.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-sm btn-outline-secondary rounded-circle"
+            aria-label="X"
+          >
+            <i class="bi bi-twitter-x"></i>
+          </a>
+
+
+          <!-- Instagram -->
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-sm btn-outline-secondary rounded-circle"
+            aria-label="Instagram"
+          >
+            <i class="bi bi-instagram"></i>
+          </a>
+
+
+          <!-- LinkedIn -->
+          <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-sm btn-outline-secondary rounded-circle"
+            aria-label="LinkedIn"
+          >
+            <i class="bi bi-linkedin"></i>
+          </a>
+
+
+          <!-- YouTube -->
+          <a
+            href="https://www.youtube.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-sm btn-outline-secondary rounded-circle"
+            aria-label="YouTube"
+          >
+            <i class="bi bi-youtube"></i>
+          </a>
+
+
+          <!-- WhatsApp -->
+          <a
+            href="https://wa.me/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-sm btn-outline-secondary rounded-circle"
+            aria-label="WhatsApp"
+          >
+            <i class="bi bi-whatsapp"></i>
+          </a>
+
+        </div>
+      </div>
+
+
+      <!-- VEHICLE FLEET -->
+      <div class="col-6 col-md-3 col-lg-2">
+
+        <h6 class="fw-bold text-body mb-3">
+          Vehicle Fleet
+        </h6>
+
+        <ul
+          class="list-unstyled small text-body-secondary d-flex flex-column gap-2"
+        >
+
+          <li>
+            <a
+              href="fleet.html?category=Electric"
+              class="text-body-secondary text-decoration-none"
+            >
+              Electric EVs
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="fleet.html?category=SUV"
+              class="text-body-secondary text-decoration-none"
+            >
+              SUVs & 4x4 Offroad
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="fleet.html?category=Sedan"
+              class="text-body-secondary text-decoration-none"
+            >
+              Executive Sedans
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="fleet.html?category=Convertible"
+              class="text-body-secondary text-decoration-none"
+            >
+              Convertibles
+            </a>
+          </li>
+
+        </ul>
+      </div>
+
+
+      <!-- COMPANY & HUBS -->
+      <div class="col-6 col-md-3 col-lg-2">
+
+        <h6 class="fw-bold text-body mb-3">
+          Company & Hubs
+        </h6>
+
+        <ul
+          class="list-unstyled small text-body-secondary d-flex flex-column gap-2"
+        >
+
+          <li>
+            <a
+              href="how-it-works.html"
+              class="text-body-secondary text-decoration-none"
+            >
+              How It Works
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="pricing.html"
+              class="text-body-secondary text-decoration-none"
+            >
+              Pricing & Shield
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="locations.html"
+              class="text-body-secondary text-decoration-none"
+            >
+              Airport & City Hubs
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="dashboard.html"
+              class="text-body-secondary text-decoration-none"
+            >
+              Customer Portal
+            </a>
+          </li>
+
+        </ul>
+      </div>
+
+
+      <!-- NEWSLETTER -->
+      <div class="col-md-6 col-lg-4">
+
+        <h6 class="fw-bold text-body mb-3">
+          Get Freedom Perks & Promo Codes
+        </h6>
+
+        <p class="small text-body-secondary">
+          Subscribe for $25 off your first weekend trip, zero-deposit
+          waivers, and seasonal coastal route guides.
+        </p>
+
+        <form
+          class="d-flex gap-2"
+          onsubmit="
+            event.preventDefault();
+            showToast(
+              'Subscribed! $25 promo code sent to your email.',
+              'success'
+            );
+          "
+        >
+
+          <input
+            type="email"
+            class="form-control form-control-sm bg-body text-body border-body"
+            placeholder="Enter your email"
+            required
+          />
+
+          <button
+            type="submit"
+            class="btn btn-freeway btn-sm px-3"
+          >
+            Join
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+
+    <!-- COPYRIGHT + LEGAL LINKS -->
+    <div
+      class="d-flex flex-wrap justify-content-between align-items-center pt-4 mt-4 border-top border-body small text-body-secondary"
+    >
+
+      <div>
+        &copy; 2026 Freeway Self-Drive Technologies Inc.
+        All rights reserved.
+      </div>
+
+      <div class="d-flex gap-3 mt-2 mt-sm-0">
+
+        <a
+          href="#"
+          class="text-body-secondary text-decoration-none"
+        >
+          Terms of Service
+        </a>
+
+        <a
+          href="#"
+          class="text-body-secondary text-decoration-none"
+        >
+          Privacy Policy
+        </a>
+
+        <a
+          href="#"
+          class="text-body-secondary text-decoration-none"
+        >
+          Insurance Disclosure
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+</footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="app.js"></script>
 </body>

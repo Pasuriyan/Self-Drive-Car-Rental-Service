@@ -531,13 +531,7 @@
           </div>
 
 
-          <a
-            href="fleet.html"
-            class="btn btn-freeway px-4 py-2 fw-bold"
-          >
-            Explore Available Cars
-          </a>
-
+          
         </div>
 
       </div>
@@ -552,6 +546,7 @@
 <section class="py-5 bg-body pricing-plans-section">
 
   <style>
+
     /* =========================================================
        PRICING PAGE - COMMON STYLES
     ========================================================= */
@@ -560,6 +555,11 @@
       background-color: var(--bs-body-bg);
     }
 
+
+    /* =========================================================
+       PRICING CARDS
+    ========================================================= */
+
     .pricing-plans-section .pricing-card {
       border: 1px solid rgba(255, 184, 0, 0.45);
       border-radius: 16px;
@@ -567,12 +567,26 @@
       overflow: hidden;
       position: relative;
       background-color: var(--bs-body-bg);
+
+      /* SAME HEIGHT */
+      height: 100%;
     }
 
     .pricing-plans-section .pricing-card:hover {
       transform: translateY(-6px);
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10) !important;
       border-color: #ffb800;
+    }
+
+
+    /* =========================================================
+       CARD BODY - SAME ALIGNMENT
+    ========================================================= */
+
+    .pricing-plans-section .pricing-card .card-body {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
     }
 
 
@@ -586,6 +600,7 @@
     .pricing-plans-section i {
       color: #ffb800 !important;
     }
+
 
     .pricing-icon {
       width: 56px;
@@ -606,7 +621,13 @@
     ========================================================= */
 
     .pricing-plan-badge {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+
+      width: fit-content;
+
+      min-height: 30px;
+
       padding: 6px 12px;
       border-radius: 50px;
 
@@ -617,13 +638,33 @@
       font-weight: 700;
     }
 
+
     .pricing-price {
       font-size: 2.7rem;
       line-height: 1;
     }
 
+
     .pricing-price-period {
       font-size: 0.9rem;
+    }
+
+
+    /* =========================================================
+       CARD DESCRIPTION - SAME HEIGHT
+    ========================================================= */
+
+    .pricing-plans-section .pricing-card .pricing-description {
+      min-height: 72px;
+    }
+
+
+    /* =========================================================
+       PRICE AREA - SAME HEIGHT
+    ========================================================= */
+
+    .pricing-plans-section .pricing-card .pricing-price-row {
+      min-height: 55px;
     }
 
 
@@ -637,6 +678,7 @@
       margin: 0;
     }
 
+
     .pricing-feature-list li {
       display: flex;
       align-items: flex-start;
@@ -644,6 +686,7 @@
       margin-bottom: 12px;
       line-height: 1.5;
     }
+
 
     .pricing-feature-list li i {
       margin-top: 3px;
@@ -653,7 +696,6 @@
 
     /* =========================================================
        POPULAR LABEL
-       Label remains, but card is NOT highlighted
     ========================================================= */
 
     .popular-label {
@@ -682,10 +724,52 @@
 
       border-radius: 10px;
       padding: 12px 14px;
+
+      min-height: 70px;
     }
+
 
     .pricing-info-box strong {
       color: #ffb800;
+    }
+
+
+    /* =========================================================
+       CTA BUTTONS
+    ========================================================= */
+
+    .pricing-plans-section .pricing-card .pricing-cta {
+      min-height: 44px;
+      border-radius: 8px !important;
+      border-width: 1px !important;
+      border-style: solid !important;
+    }
+
+
+    /* OUTLINE CTA */
+
+    .pricing-plans-section .btn-outline-freeway {
+      color: #ffb800 !important;
+      background-color: transparent !important;
+      border: 1px solid #ffb800 !important;
+      border-radius: 8px !important;
+
+      transition: all 0.25s ease;
+    }
+
+
+    .pricing-plans-section .btn-outline-freeway:hover {
+      color: #111 !important;
+      background-color: #ffb800 !important;
+      border-color: #ffb800 !important;
+    }
+
+
+    /* FILLED CTA */
+
+    .pricing-plans-section .btn-freeway {
+      border: 1px solid #ffb800 !important;
+      border-radius: 8px !important;
     }
 
 
@@ -697,16 +781,19 @@
       background: var(--bs-tertiary-bg);
     }
 
+
     .protection-badge {
       background: rgba(255, 184, 0, 0.12) !important;
       color: #ffb800 !important;
       border: 1px solid rgba(255, 184, 0, 0.25);
     }
 
+
     .protection-table {
       border-radius: 12px;
       overflow: hidden;
     }
+
 
     .protection-table th {
       background: var(--bs-secondary-bg) !important;
@@ -714,14 +801,17 @@
       vertical-align: middle;
     }
 
+
     .protection-table td {
       vertical-align: middle;
     }
+
 
     .protection-table .shield-header {
       background: #ffb800 !important;
       color: #111 !important;
     }
+
 
     .protection-table .check-icon {
       color: #ffb800 !important;
@@ -740,10 +830,12 @@
       transition: all 0.25s ease;
     }
 
+
     .addon-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
     }
+
 
     .addon-icon {
       width: 58px;
@@ -760,6 +852,7 @@
 
       font-size: 26px;
     }
+
 
     .addon-price {
       color: #ffb800;
@@ -779,13 +872,16 @@
       background: rgba(255, 184, 0, 0.08);
     }
 
+
     [data-bs-theme="dark"] .pricing-plans-section .pricing-card {
       border-color: rgba(255, 184, 0, 0.45);
     }
 
+
     [data-bs-theme="dark"] .pricing-plans-section .pricing-card:hover {
       border-color: #ffb800;
     }
+
 
     [data-bs-theme="dark"] .pricing-plans-section .pricing-card:hover,
     .dark-mode .pricing-plans-section .pricing-card:hover,
@@ -805,14 +901,26 @@
         font-size: 2.2rem;
       }
 
+
       .popular-label {
         position: static;
         display: inline-block;
         margin-bottom: 15px;
       }
 
+
       .protection-table {
         font-size: 0.85rem;
+      }
+
+
+      .pricing-plans-section .pricing-card .pricing-description {
+        min-height: auto;
+      }
+
+
+      .pricing-plans-section .pricing-card .pricing-price-row {
+        min-height: auto;
       }
 
     }
@@ -822,24 +930,28 @@
 
   <div class="container">
 
-    <!-- SECTION HEADER -->
+    <!-- =====================================================
+         SECTION HEADER
+    ====================================================== -->
 
     <div class="text-center mb-5">
 
       <span
         class="badge px-3 py-2 rounded-pill fw-semibold mb-3"
         style="
-          background:rgba(255,184,0,0.12);
-          color:#ffb800;
-          border:1px solid rgba(255,184,0,0.25);
+          background: rgba(255,184,0,0.12);
+          color: #ffb800;
+          border: 1px solid rgba(255,184,0,0.25);
         "
       >
         FLEXIBLE RENTAL PLANS
       </span>
 
+
       <h2 class="fw-bold text-body mb-3">
         Choose the Plan That Fits Your Journey
       </h2>
+
 
       <p
         class="text-body-secondary mx-auto mb-0"
@@ -853,12 +965,16 @@
     </div>
 
 
-    <!-- PRICING CARDS -->
+    <!-- =====================================================
+         PRICING CARDS
+    ====================================================== -->
 
     <div class="row g-4 align-items-stretch">
 
 
-      <!-- HOURLY FLEX -->
+      <!-- ===================================================
+           HOURLY FLEX
+      ==================================================== -->
 
       <div class="col-lg-4 col-md-6">
 
@@ -870,30 +986,39 @@
               <i class="bi bi-clock"></i>
             </div>
 
+
             <span class="pricing-plan-badge mb-2">
               SHORT TRIPS
             </span>
+
 
             <h4 class="fw-bold text-body mb-2">
               Hourly Flex
             </h4>
 
-            <p class="text-body-secondary">
+
+            <p class="pricing-description text-body-secondary mb-0">
               Perfect when you need a car for a few hours instead of
               paying for an entire day.
             </p>
 
-            <div class="d-flex align-items-baseline my-3">
+
+            <div
+              class="pricing-price-row d-flex align-items-baseline my-3"
+            >
 
               <span class="pricing-price fw-bold text-body">
                 $10
               </span>
 
-              <span class="pricing-price-period text-body-secondary ms-2">
+              <span
+                class="pricing-price-period text-body-secondary ms-2"
+              >
                 / hour
               </span>
 
             </div>
+
 
             <div class="pricing-info-box mb-4">
 
@@ -904,7 +1029,10 @@
 
             </div>
 
-            <ul class="pricing-feature-list text-body-secondary small mb-4">
+
+            <ul
+              class="pricing-feature-list text-body-secondary small mb-4"
+            >
 
               <li>
                 <i class="bi bi-check-circle-fill"></i>
@@ -923,7 +1051,9 @@
 
               <li>
                 <i class="bi bi-check-circle-fill"></i>
-                <span>Free cancellation up to 1 hour before pickup</span>
+                <span>
+                  Free cancellation up to 1 hour before pickup
+                </span>
               </li>
 
               <li>
@@ -933,9 +1063,11 @@
 
             </ul>
 
+
+            <!-- CTA -->
             <a
               href="fleet.html"
-              class="btn btn-outline-freeway mt-auto w-100 py-2"
+              class="btn btn-outline-freeway pricing-cta mt-auto w-100 py-2"
             >
               Choose Hourly Plan
             </a>
@@ -947,7 +1079,10 @@
       </div>
 
 
-      <!-- DAILY EXPLORER -->
+
+      <!-- ===================================================
+           DAILY EXPLORER
+      ==================================================== -->
 
       <div class="col-lg-4 col-md-6">
 
@@ -959,34 +1094,44 @@
               MOST POPULAR
             </span>
 
+
             <div class="pricing-icon mb-3">
               <i class="bi bi-calendar-check"></i>
             </div>
+
 
             <span class="pricing-plan-badge mb-2">
               DAY TRIPS & ROAD TRIPS
             </span>
 
+
             <h4 class="fw-bold text-body mb-2">
               Daily Explorer
             </h4>
 
-            <p class="text-body-secondary">
+
+            <p class="pricing-description text-body-secondary mb-0">
               A flexible full-day rental for sightseeing, road trips,
               family outings and exploring the city at your own pace.
             </p>
 
-            <div class="d-flex align-items-baseline my-3">
+
+            <div
+              class="pricing-price-row d-flex align-items-baseline my-3"
+            >
 
               <span class="pricing-price fw-bold text-freeway">
                 $68
               </span>
 
-              <span class="pricing-price-period text-body-secondary ms-2">
+              <span
+                class="pricing-price-period text-body-secondary ms-2"
+              >
                 / day
               </span>
 
             </div>
+
 
             <div class="pricing-info-box mb-4">
 
@@ -997,7 +1142,10 @@
 
             </div>
 
-            <ul class="pricing-feature-list text-body-secondary small mb-4">
+
+            <ul
+              class="pricing-feature-list text-body-secondary small mb-4"
+            >
 
               <li>
                 <i class="bi bi-check-circle-fill"></i>
@@ -1026,11 +1174,13 @@
 
             </ul>
 
+
+            <!-- CTA -->
             <a
               href="fleet.html"
-              class="btn btn-freeway mt-auto w-100 py-2 fw-bold"
+              class="btn btn-outline-freeway pricing-cta mt-auto w-100 py-2"
             >
-              Rent by the Day
+              Choose Daily plan
             </a>
 
           </div>
@@ -1040,7 +1190,10 @@
       </div>
 
 
-      <!-- WEEKEND ESCAPE -->
+
+      <!-- ===================================================
+           WEEKEND ESCAPE
+      ==================================================== -->
 
       <div class="col-lg-4 col-md-6">
 
@@ -1052,30 +1205,39 @@
               <i class="bi bi-map"></i>
             </div>
 
+
             <span class="pricing-plan-badge mb-2">
               EXTENDED GETAWAYS
             </span>
+
 
             <h4 class="fw-bold text-body mb-2">
               Weekend Escape
             </h4>
 
-            <p class="text-body-secondary">
+
+            <p class="pricing-description text-body-secondary mb-0">
               Keep your vehicle throughout the weekend and enjoy
               uninterrupted freedom for longer road trips and getaways.
             </p>
 
-            <div class="d-flex align-items-baseline my-3">
+
+            <div
+              class="pricing-price-row d-flex align-items-baseline my-3"
+            >
 
               <span class="pricing-price fw-bold text-body">
                 $189
               </span>
 
-              <span class="pricing-price-period text-body-secondary ms-2">
+              <span
+                class="pricing-price-period text-body-secondary ms-2"
+              >
                 / 72 hours
               </span>
 
             </div>
+
 
             <div class="pricing-info-box mb-4">
 
@@ -1086,7 +1248,10 @@
 
             </div>
 
-            <ul class="pricing-feature-list text-body-secondary small mb-4">
+
+            <ul
+              class="pricing-feature-list text-body-secondary small mb-4"
+            >
 
               <li>
                 <i class="bi bi-check-circle-fill"></i>
@@ -1115,9 +1280,11 @@
 
             </ul>
 
+
+            <!-- CTA -->
             <a
               href="fleet.html"
-              class="btn btn-outline-freeway mt-auto w-100 py-2"
+              class="btn btn-outline-freeway pricing-cta mt-auto w-100 py-2"
             >
               Book Weekend Escape
             </a>
@@ -1133,6 +1300,8 @@
   </div>
 
 </section>
+
+
 
 
 
@@ -1614,53 +1783,297 @@
 
 </section>
   
-  <!-- =========================================================================
-       FOOTER
-       ========================================================================= -->
-  <footer class="bg-body-tertiary text-body border-top border-body py-5 mt-5">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-lg-4">
-          <a class="d-flex align-items-center fw-bold fs-4 text-body text-decoration-none mb-3" href="index.html">
-            <span class="badge bg-freeway me-2 p-2 rounded-3"><i class="bi bi-car-front-fill fs-5"></i></span>
-            <span>FREEWAY<span class="text-freeway">.</span></span>
+<footer class="bg-body-tertiary text-body border-top border-body py-5 mt-5">
+  <div class="container">
+
+    <div class="row g-4">
+
+      <!-- BRAND + SOCIAL MEDIA -->
+      <div class="col-lg-4">
+
+        <a
+          class="d-flex align-items-center fw-bold fs-4 text-body text-decoration-none mb-3"
+          href="index.html"
+        >
+          <span class="badge bg-freeway me-2 p-2 rounded-3">
+            <i class="bi bi-car-front-fill fs-5"></i>
+          </span>
+
+          <span>
+            FREEWAY<span class="text-freeway">.</span>
+          </span>
+        </a>
+
+        <p class="small text-body-secondary pe-lg-4">
+          Drive your freedom with 100% contactless self-drive rentals.
+          Instant AI license checks, phone-based smart door unlocks, and
+          guaranteed zero surprise fees.
+        </p>
+
+
+        <!-- SOCIAL MEDIA -->
+        <div class="d-flex gap-3 mt-3">
+
+          <!-- Facebook -->
+          <a
+            href="https://www.facebook.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-sm btn-outline-secondary rounded-circle"
+            aria-label="Facebook"
+          >
+            <i class="bi bi-facebook"></i>
           </a>
-          <p class="small text-body-secondary pe-lg-4">
-            Drive your freedom with 100% contactless self-drive rentals. Instant AI license checks, phone-based smart door unlocks, and guaranteed zero surprise fees.
-          </p>
-        </div>
-        <div class="col-6 col-md-3 col-lg-2">
-          <h6 class="fw-bold text-body mb-3">Vehicle Fleet</h6>
-          <ul class="list-unstyled small text-body-secondary d-flex flex-column gap-2">
-            <li><a href="fleet.html?category=Electric" class="text-body-secondary text-decoration-none">Electric EVs</a></li>
-            <li><a href="fleet.html?category=SUV" class="text-body-secondary text-decoration-none">SUVs & 4x4 Offroad</a></li>
-            <li><a href="fleet.html?category=Sedan" class="text-body-secondary text-decoration-none">Executive Sedans</a></li>
-            <li><a href="fleet.html?category=Convertible" class="text-body-secondary text-decoration-none">Convertibles</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md-3 col-lg-2">
-          <h6 class="fw-bold text-body mb-3">Company & Hubs</h6>
-          <ul class="list-unstyled small text-body-secondary d-flex flex-column gap-2">
-            <li><a href="how-it-works.html" class="text-body-secondary text-decoration-none">How It Works</a></li>
-            <li><a href="pricing.html" class="text-body-secondary text-decoration-none">Pricing & Shield</a></li>
-            <li><a href="locations.html" class="text-body-secondary text-decoration-none">Airport & City Hubs</a></li>
-            <li><a href="dashboard.html" class="text-body-secondary text-decoration-none">Customer Portal</a></li>
-          </ul>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <h6 class="fw-bold text-body mb-3">Join Freedom Club</h6>
-          <p class="small text-body-secondary">Get exclusive weekend promo codes and zero deposit waivers.</p>
-          <form class="d-flex gap-2" onsubmit="event.preventDefault(); showToast('Subscribed to pricing alerts!', 'success');">
-            <input type="email" class="form-control form-control-sm bg-body text-body border-body" placeholder="Your email" required>
-            <button type="submit" class="btn btn-freeway btn-sm px-3">Join</button>
-          </form>
+
+
+          <!-- X / Twitter -->
+          <a
+            href="https://x.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-sm btn-outline-secondary rounded-circle"
+            aria-label="X"
+          >
+            <i class="bi bi-twitter-x"></i>
+          </a>
+
+
+          <!-- Instagram -->
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-sm btn-outline-secondary rounded-circle"
+            aria-label="Instagram"
+          >
+            <i class="bi bi-instagram"></i>
+          </a>
+
+
+          <!-- LinkedIn -->
+          <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-sm btn-outline-secondary rounded-circle"
+            aria-label="LinkedIn"
+          >
+            <i class="bi bi-linkedin"></i>
+          </a>
+
+
+          <!-- YouTube -->
+          <a
+            href="https://www.youtube.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-sm btn-outline-secondary rounded-circle"
+            aria-label="YouTube"
+          >
+            <i class="bi bi-youtube"></i>
+          </a>
+
+
+          <!-- WhatsApp -->
+          <a
+            href="https://wa.me/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-sm btn-outline-secondary rounded-circle"
+            aria-label="WhatsApp"
+          >
+            <i class="bi bi-whatsapp"></i>
+          </a>
+
         </div>
       </div>
-      <div class="pt-4 mt-4 border-top border-body small text-body-secondary">
-        &copy; 2026 Freeway Self-Drive Technologies Inc. All rights reserved.
+
+
+      <!-- VEHICLE FLEET -->
+      <div class="col-6 col-md-3 col-lg-2">
+
+        <h6 class="fw-bold text-body mb-3">
+          Vehicle Fleet
+        </h6>
+
+        <ul
+          class="list-unstyled small text-body-secondary d-flex flex-column gap-2"
+        >
+
+          <li>
+            <a
+              href="fleet.html?category=Electric"
+              class="text-body-secondary text-decoration-none"
+            >
+              Electric EVs
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="fleet.html?category=SUV"
+              class="text-body-secondary text-decoration-none"
+            >
+              SUVs & 4x4 Offroad
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="fleet.html?category=Sedan"
+              class="text-body-secondary text-decoration-none"
+            >
+              Executive Sedans
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="fleet.html?category=Convertible"
+              class="text-body-secondary text-decoration-none"
+            >
+              Convertibles
+            </a>
+          </li>
+
+        </ul>
       </div>
+
+
+      <!-- COMPANY & HUBS -->
+      <div class="col-6 col-md-3 col-lg-2">
+
+        <h6 class="fw-bold text-body mb-3">
+          Company & Hubs
+        </h6>
+
+        <ul
+          class="list-unstyled small text-body-secondary d-flex flex-column gap-2"
+        >
+
+          <li>
+            <a
+              href="how-it-works.html"
+              class="text-body-secondary text-decoration-none"
+            >
+              How It Works
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="pricing.html"
+              class="text-body-secondary text-decoration-none"
+            >
+              Pricing & Shield
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="locations.html"
+              class="text-body-secondary text-decoration-none"
+            >
+              Airport & City Hubs
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="dashboard.html"
+              class="text-body-secondary text-decoration-none"
+            >
+              Customer Portal
+            </a>
+          </li>
+
+        </ul>
+      </div>
+
+
+      <!-- NEWSLETTER -->
+      <div class="col-md-6 col-lg-4">
+
+        <h6 class="fw-bold text-body mb-3">
+          Get Freedom Perks & Promo Codes
+        </h6>
+
+        <p class="small text-body-secondary">
+          Subscribe for $25 off your first weekend trip, zero-deposit
+          waivers, and seasonal coastal route guides.
+        </p>
+
+        <form
+          class="d-flex gap-2"
+          onsubmit="
+            event.preventDefault();
+            showToast(
+              'Subscribed! $25 promo code sent to your email.',
+              'success'
+            );
+          "
+        >
+
+          <input
+            type="email"
+            class="form-control form-control-sm bg-body text-body border-body"
+            placeholder="Enter your email"
+            required
+          />
+
+          <button
+            type="submit"
+            class="btn btn-freeway btn-sm px-3"
+          >
+            Join
+          </button>
+
+        </form>
+
+      </div>
+
     </div>
-  </footer>
+
+
+    <!-- COPYRIGHT + LEGAL LINKS -->
+    <div
+      class="d-flex flex-wrap justify-content-between align-items-center pt-4 mt-4 border-top border-body small text-body-secondary"
+    >
+
+      <div>
+        &copy; 2026 Freeway Self-Drive Technologies Inc.
+        All rights reserved.
+      </div>
+
+      <div class="d-flex gap-3 mt-2 mt-sm-0">
+
+        <a
+          href="#"
+          class="text-body-secondary text-decoration-none"
+        >
+          Terms of Service
+        </a>
+
+        <a
+          href="#"
+          class="text-body-secondary text-decoration-none"
+        >
+          Privacy Policy
+        </a>
+
+        <a
+          href="#"
+          class="text-body-secondary text-decoration-none"
+        >
+          Insurance Disclosure
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+</footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="app.js"></script>
