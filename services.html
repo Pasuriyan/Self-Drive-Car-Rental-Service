@@ -924,802 +924,536 @@
     <!-- =========================================
          SERVICES
     ========================================= -->
+<style>
+/* ==========================================
+   FREEWAY SERVICE CARDS - COMMON STYLES
+========================================== */
 
-    <div class="row g-4">
+.freeway-service-card {
+    height: 100%;
+    min-height: 710px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #dee2e6;
+    border-radius: 24px;
+    overflow: hidden;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
 
-  <!-- =========================
-       SERVICE 1
-  ========================== -->
-  <div class="col-md-6 col-lg-4">
-    <div
-      class="freeway-service-card h-100 d-flex flex-column"
-      style="
-        height: 100%;
-        min-height: 710px;
-        display: flex;
-        flex-direction: column;
-        border: 1px solid #3a424a;
-        border-radius: 24px;
-        overflow: hidden;
-        background: #1b2024;
-      "
-    >
+.freeway-service-image {
+    height: 165px;
+    min-height: 165px;
+    overflow: hidden;
+    position: relative;
+}
 
-      <!-- IMAGE -->
-      <div
-        class="freeway-service-image position-relative"
-        style="height: 275px; min-height: 275px; overflow: hidden;"
-      >
-        <img
-          src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=800&h=500&q=80"
-          alt="Self-drive car rental on scenic highway"
-          loading="lazy"
-          style="
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-          "
-        >
+.freeway-service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
 
-        <span
-          class="freeway-service-number"
-          style="
-            position: absolute;
-            left: 24px;
-            bottom: 20px;
-            width: 52px;
-            height: 52px;
-            border-radius: 50%;
-            background: #ffb900;
-            color: #111;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 16px;
-          "
-        >
-          01
-        </span>
-      </div>
+.freeway-service-number {
+    position: absolute;
+    left: 30px;
+    bottom: 24px;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #ffb900;
+    color: #111111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
 
-      <!-- CONTENT -->
-      <div
-        class="freeway-service-content d-flex flex-column flex-grow-1"
-        style="
-          padding: 30px;
-          display: flex;
-          flex-direction: column;
-          flex: 1;
-        "
-      >
+.freeway-service-content {
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
 
-        <h4
-          style="
-            margin: 0 0 18px;
-            min-height: 30px;
-            font-weight: 700;
-          "
-        >
-          Self-Drive Rentals
-        </h4>
+.freeway-service-content h4 {
+    margin: 0 0 18px;
+    min-height: 30px;
+    font-weight: 700;
+    font-size: 22px;
+}
 
-        <p
-          style="
-            margin: 0 0 22px;
-            min-height: 135px;
-            line-height: 1.65;
-          "
-        >
-          Choose a vehicle that matches your journey and enjoy
-          the freedom to drive without depending on a driver.
-          Our self-drive rentals are designed for short trips,
-          weekend journeys and longer travel plans.
-        </p>
+.freeway-service-content p {
+    margin: 0 0 22px;
+    min-height: 135px;
+    line-height: 1.8;
+    font-size: 15px;
+}
 
-        <ul
-          class="freeway-service-features"
-          style="
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            min-height: 105px;
-          "
-        >
-          <li style="margin-bottom: 14px;">
-            <i class="bi bi-check-circle-fill me-2" style="color:#ffb900;"></i>
-            Flexible rental durations
-          </li>
+.freeway-service-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-height: 105px;
+}
 
-          <li style="margin-bottom: 14px;">
-            <i class="bi bi-check-circle-fill me-2" style="color:#ffb900;"></i>
-            Multiple vehicle categories
-          </li>
+.freeway-service-features li {
+    margin-bottom: 14px;
+    line-height: 1.6;
+    font-size: 15px;
+}
 
-          <li>
-            <i class="bi bi-check-circle-fill me-2" style="color:#ffb900;"></i>
-            No driver required
-          </li>
-        </ul>
+.freeway-service-features li i {
+    color: #ffb900 !important;
+}
 
-        <!-- LINK -->
-        <div style="margin-top:auto; padding-top:25px;">
-          <a
-            href="fleet.html"
-            class="freeway-service-link"
-            style="
-              display: inline-flex;
-              align-items: center;
-              gap: 8px;
-              text-decoration: none;
-              font-weight: 700;
-              color: #ffb900;
-            "
-          >
-            Explore Fleet
-            <i class="bi bi-arrow-right"></i>
-          </a>
+.freeway-service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: gap 0.2s ease;
+}
+
+.freeway-service-link:hover {
+    gap: 13px;
+}
+
+.freeway-service-button {
+    margin-top: auto;
+    padding-top: 25px;
+}
+
+/* ==========================================
+   LIGHT MODE
+========================================== */
+
+[data-bs-theme="light"] .freeway-service-card,
+body:not([data-bs-theme="dark"]) .freeway-service-card {
+    background: #ffffff !important;
+    border-color: #dee2e6 !important;
+    color: #212529 !important;
+}
+
+[data-bs-theme="light"] .freeway-service-card h4,
+body:not([data-bs-theme="dark"]) .freeway-service-card h4 {
+    color: #212529 !important;
+}
+
+[data-bs-theme="light"] .freeway-service-card p,
+body:not([data-bs-theme="dark"]) .freeway-service-card p {
+    color: #555555 !important;
+}
+
+[data-bs-theme="light"] .freeway-service-card .freeway-service-features li,
+body:not([data-bs-theme="dark"]) .freeway-service-card .freeway-service-features li {
+    color: #495057 !important;
+}
+
+[data-bs-theme="light"] .freeway-service-link,
+body:not([data-bs-theme="dark"]) .freeway-service-link {
+    color: #d99a00 !important;
+}
+
+/* ==========================================
+   DARK MODE
+========================================== */
+
+[data-bs-theme="dark"] .freeway-service-card {
+    background: #1b2024 !important;
+    border-color: #3a424a !important;
+    color: #f1f3f5 !important;
+}
+
+[data-bs-theme="dark"] .freeway-service-card h4 {
+    color: #f8f9fa !important;
+}
+
+[data-bs-theme="dark"] .freeway-service-card p {
+    color: #ced4da !important;
+}
+
+[data-bs-theme="dark"] .freeway-service-card .freeway-service-features li {
+    color: #dee2e6 !important;
+}
+
+[data-bs-theme="dark"] .freeway-service-link {
+    color: #ffb900 !important;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 991.98px) {
+    .freeway-service-card {
+        min-height: 680px;
+    }
+
+    .freeway-service-content {
+        padding: 28px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .freeway-service-card {
+        min-height: auto;
+    }
+
+    .freeway-service-content {
+        padding: 24px;
+    }
+
+    .freeway-service-content h4 {
+        font-size: 20px;
+    }
+
+    .freeway-service-content p {
+        min-height: auto;
+    }
+
+    .freeway-service-features {
+        min-height: auto;
+    }
+}
+</style>
+
+
+<!-- ==========================================
+     FREEWAY SERVICES SECTION
+========================================== -->
+
+<section class="py-5">
+    <div class="container">
+
+        <div class="row g-4">
+
+            <!-- SERVICE 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="freeway-service-card h-100">
+
+                    <div class="freeway-service-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=800&h=500&q=80"
+                            alt="Self-drive car rental"
+                            loading="lazy"
+                        >
+
+                        <span class="freeway-service-number">01</span>
+                    </div>
+
+                    <div class="freeway-service-content">
+
+                        <h4>Self-Drive Rentals</h4>
+
+                        <p>
+                            Choose a vehicle that matches your journey and enjoy
+                            the freedom to drive without depending on a driver.
+                            Our self-drive rentals are designed for short trips,
+                            weekend journeys and longer travel plans.
+                        </p>
+
+                        <ul class="freeway-service-features">
+                            <li>
+                                <i class="bi bi-check-circle-fill me-2"></i>
+                                Flexible rental durations
+                            </li>
+
+                            <li>
+                                <i class="bi bi-check-circle-fill me-2"></i>
+                                Multiple vehicle categories
+                            </li>
+
+                            <li>
+                                <i class="bi bi-check-circle-fill me-2"></i>
+                                No driver required
+                            </li>
+                        </ul>
+
+                        <div class="freeway-service-button">
+                            <a href="fleet.html" class="freeway-service-link">
+                                Explore Fleet
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- SERVICE 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="freeway-service-card h-100">
+
+                    <div class="freeway-service-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&h=500&q=80"
+                            alt="Smartphone vehicle unlock"
+                            loading="lazy"
+                        >
+
+                        <span class="freeway-service-number">02</span>
+                    </div>
+
+                    <div class="freeway-service-content">
+
+                        <h4>Smartphone Unlock</h4>
+
+                        <p>
+                            Forget physical key handovers. Once your booking is
+                            confirmed, your smartphone can be used to access your
+                            vehicle and begin your journey with a contactless
+                            experience.
+                        </p>
+
+                        <ul class="freeway-service-features">
+                            <li>
+                                <i class="bi bi-check-circle-fill me-2"></i>
+                                Contactless vehicle access
+                            </li>
+
+                            <li>
+                                <i class="bi bi-check-circle-fill me-2"></i>
+                                No physical key handover
+                            </li>
+
+                            <li>
+                                <i class="bi bi-check-circle-fill me-2"></i>
+                                Secure digital access
+                            </li>
+                        </ul>
+
+                        <div class="freeway-service-button">
+                            <a href="how-it-works.html" class="freeway-service-link">
+                                See How It Works
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- SERVICE 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="freeway-service-card h-100">
+
+                    <div class="freeway-service-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&h=500&q=80"
+                            alt="Online car rental booking"
+                            loading="lazy"
+                        >
+
+                        <span class="freeway-service-number">03</span>
+                    </div>
+
+                    <div class="freeway-service-content">
+
+                        <h4>Easy Online Booking</h4>
+
+                        <p>
+                            Search available vehicles, select your preferred dates,
+                            choose a convenient location and complete your rental
+                            booking online without standing in a counter queue.
+                        </p>
+
+                        <ul class="freeway-service-features">
+                            <li>
+                                <i class="bi bi-check-circle-fill me-2"></i>
+                                Book anytime, anywhere
+                            </li>
+
+                            <li>
+                                <i class="bi bi-check-circle-fill me-2"></i>
+                                Clear rental information
+                            </li>
+
+                            <li>
+                                <i class="bi bi-check-circle-fill me-2"></i>
+                                Online booking confirmation
+                            </li>
+                        </ul>
+
+                        <div class="freeway-service-button">
+                            <a href="fleet.html" class="freeway-service-link">
+                                Book Your Car
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- SERVICE 4 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="freeway-service-card h-100">
+
+                    <div class="freeway-service-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&h=500&q=80"
+                            alt="Prepared and inspected rental vehicle"
+                            loading="lazy"
+                        >
+
+                        <span class="freeway-service-number">04</span>
+                    </div>
+
+                    <div class="freeway-service-content">
+
+                        <h4>Secure Rentals</h4>
+
+                        <p>
+                            Every rental is designed with customer and vehicle
+                            security in mind. Vehicles are prepared before pickup,
+                            while digital verification helps keep the rental
+                            process straightforward and secure.
+                        </p>
+
+                        <ul class="freeway-service-features">
+                            <li>
+                                <i class="bi bi-check-circle-fill me-2"></i>
+                                Verified customer booking
+                            </li>
+
+                            <li>
+                                <i class="bi bi-check-circle-fill me-2"></i>
+                                Prepared and inspected vehicles
+                            </li>
+
+                            <li>
+                                <i class="bi bi-check-circle-fill me-2"></i>
+                                Secure vehicle access
+                            </li>
+                        </ul>
+
+                        <div class="freeway-service-button">
+                            <a href="how-it-works.html" class="freeway-service-link">
+                                Learn More
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- SERVICE 5 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="freeway-service-card h-100">
+
+                    <div class="freeway-service-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1615906655593-ad0386982a0f?auto=format&fit=crop&w=800&h=500&q=80"
+                            alt="Roadside assistance"
+                            loading="lazy"
+                        >
+
+                        <span class="freeway-service-number">05</span>
+                    </div>
+
+                    <div class="freeway-service-content">
+
+                        <h4>24/7 Roadside Assistance</h4>
+
+                        <p>
+                            If something unexpected happens during your trip,
+                            roadside assistance is available to help you get
+                            support and continue your journey safely.
+                        </p>
+
+                        <ul class="freeway-service-features">
+                            <li>
+                                <i class="bi bi-check-circle-fill me-2"></i>
+                                24/7 assistance availability
+                            </li>
+
+                            <li>
+                                <i class="bi bi-check-circle-fill me-2"></i>
+                                Roadside support
+                            </li>
+
+                            <li>
+                                <i class="bi bi-check-circle-fill me-2"></i>
+                                Customer support during your trip
+                            </li>
+                        </ul>
+
+                        <div class="freeway-service-button">
+                            <a href="contact.html" class="freeway-service-link">
+                                Get Support
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- SERVICE 6 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="freeway-service-card h-100">
+
+                    <div class="freeway-service-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=800&h=500&q=80"
+                            alt="Digital payments and invoices"
+                            loading="lazy"
+                        >
+
+                        <span class="freeway-service-number">06</span>
+                    </div>
+
+                    <div class="freeway-service-content">
+
+                        <h4>Digital Payments &amp; Invoices</h4>
+
+                        <p>
+                            Keep your rental experience paperless with digital
+                            payment options and electronic invoices. Review your
+                            rental information and charges conveniently online.
+                        </p>
+
+                        <ul class="freeway-service-features">
+                            <li>
+                                <i class="bi bi-check-circle-fill me-2"></i>
+                                Digital payment options
+                            </li>
+
+                            <li>
+                                <i class="bi bi-check-circle-fill me-2"></i>
+                                Electronic rental invoices
+                            </li>
+
+                            <li>
+                                <i class="bi bi-check-circle-fill me-2"></i>
+                                Transparent rental charges
+                            </li>
+                        </ul>
+
+                        <div class="freeway-service-button">
+                            <a href="dashboard.html" class="freeway-service-link">
+                                Open Dashboard
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
         </div>
-
-      </div>
     </div>
-  </div>
-
-
-  <!-- =========================
-       SERVICE 2
-  ========================== -->
-  <div class="col-md-6 col-lg-4">
-    <div
-      class="freeway-service-card h-100 d-flex flex-column"
-      style="
-        height: 100%;
-        min-height: 710px;
-        display: flex;
-        flex-direction: column;
-        border: 1px solid #3a424a;
-        border-radius: 24px;
-        overflow: hidden;
-        background: #1b2024;
-      "
-    >
-
-      <div
-        class="freeway-service-image position-relative"
-        style="height:275px; min-height:275px; overflow:hidden;"
-      >
-        <img
-          src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&h=500&q=80"
-          alt="Smartphone vehicle unlock"
-          loading="lazy"
-          style="
-            width:100%;
-            height:100%;
-            object-fit:cover;
-            display:block;
-          "
-        >
-
-        <span
-          class="freeway-service-number"
-          style="
-            position:absolute;
-            left:24px;
-            bottom:20px;
-            width:52px;
-            height:52px;
-            border-radius:50%;
-            background:#ffb900;
-            color:#111;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            font-weight:700;
-          "
-        >
-          02
-        </span>
-      </div>
-
-      <div
-        class="freeway-service-content d-flex flex-column flex-grow-1"
-        style="
-          padding:30px;
-          display:flex;
-          flex-direction:column;
-          flex:1;
-        "
-      >
-
-        <h4
-          style="
-            margin:0 0 18px;
-            min-height:30px;
-            font-weight:700;
-          "
-        >
-          Smartphone Unlock
-        </h4>
-
-        <p
-          style="
-            margin:0 0 22px;
-            min-height:135px;
-            line-height:1.65;
-          "
-        >
-          Forget physical key handovers. Once your booking is
-          confirmed, your smartphone can be used to access your
-          vehicle and begin your journey with a contactless
-          experience.
-        </p>
-
-        <ul
-          class="freeway-service-features"
-          style="
-            list-style:none;
-            padding:0;
-            margin:0;
-            min-height:105px;
-          "
-        >
-          <li style="margin-bottom:14px;">
-            <i class="bi bi-check-circle-fill me-2" style="color:#ffb900;"></i>
-            Contactless vehicle access
-          </li>
-
-          <li style="margin-bottom:14px;">
-            <i class="bi bi-check-circle-fill me-2" style="color:#ffb900;"></i>
-            No physical key handover
-          </li>
-
-          <li>
-            <i class="bi bi-check-circle-fill me-2" style="color:#ffb900;"></i>
-            Secure digital access
-          </li>
-        </ul>
-
-        <div style="margin-top:auto; padding-top:25px;">
-          <a
-            href="how-it-works.html"
-            class="freeway-service-link"
-            style="
-              display:inline-flex;
-              align-items:center;
-              gap:8px;
-              text-decoration:none;
-              font-weight:700;
-              color:#ffb900;
-            "
-          >
-            See How It Works
-            <i class="bi bi-arrow-right"></i>
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-
-  <!-- =========================
-       SERVICE 3
-  ========================== -->
-  <div class="col-md-6 col-lg-4">
-    <div
-      class="freeway-service-card h-100 d-flex flex-column"
-      style="
-        height:100%;
-        min-height:710px;
-        display:flex;
-        flex-direction:column;
-        border:1px solid #3a424a;
-        border-radius:24px;
-        overflow:hidden;
-        background:#1b2024;
-      "
-    >
-
-      <div
-        class="freeway-service-image position-relative"
-        style="height:275px; min-height:275px; overflow:hidden;"
-      >
-        <img
-          src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&h=500&q=80"
-          alt="Online car rental booking on laptop"
-          loading="lazy"
-          style="
-            width:100%;
-            height:100%;
-            object-fit:cover;
-            display:block;
-          "
-        >
-
-        <span
-          class="freeway-service-number"
-          style="
-            position:absolute;
-            left:24px;
-            bottom:20px;
-            width:52px;
-            height:52px;
-            border-radius:50%;
-            background:#ffb900;
-            color:#111;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            font-weight:700;
-          "
-        >
-          03
-        </span>
-      </div>
-
-      <div
-        class="freeway-service-content d-flex flex-column flex-grow-1"
-        style="
-          padding:30px;
-          display:flex;
-          flex-direction:column;
-          flex:1;
-        "
-      >
-
-        <h4
-          style="
-            margin:0 0 18px;
-            min-height:30px;
-            font-weight:700;
-          "
-        >
-          Easy Online Booking
-        </h4>
-
-        <p
-          style="
-            margin:0 0 22px;
-            min-height:135px;
-            line-height:1.65;
-          "
-        >
-          Search available vehicles, select your preferred dates,
-          choose a convenient location and complete your rental
-          booking online without standing in a counter queue.
-        </p>
-
-        <ul
-          class="freeway-service-features"
-          style="
-            list-style:none;
-            padding:0;
-            margin:0;
-            min-height:105px;
-          "
-        >
-          <li style="margin-bottom:14px;">
-            <i class="bi bi-check-circle-fill me-2" style="color:#ffb900;"></i>
-            Book anytime, anywhere
-          </li>
-
-          <li style="margin-bottom:14px;">
-            <i class="bi bi-check-circle-fill me-2" style="color:#ffb900;"></i>
-            Clear rental information
-          </li>
-
-          <li>
-            <i class="bi bi-check-circle-fill me-2" style="color:#ffb900;"></i>
-            Online booking confirmation
-          </li>
-        </ul>
-
-        <div style="margin-top:auto; padding-top:25px;">
-          <a
-            href="fleet.html"
-            class="freeway-service-link"
-            style="
-              display:inline-flex;
-              align-items:center;
-              gap:8px;
-              text-decoration:none;
-              font-weight:700;
-              color:#ffb900;
-            "
-          >
-            Book Your Car
-            <i class="bi bi-arrow-right"></i>
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-
-  <!-- =========================
-       SERVICE 4
-  ========================== -->
-  <div class="col-md-6 col-lg-4">
-    <div
-      class="freeway-service-card h-100 d-flex flex-column"
-      style="
-        height:100%;
-        min-height:710px;
-        display:flex;
-        flex-direction:column;
-        border:1px solid #3a424a;
-        border-radius:24px;
-        overflow:hidden;
-        background:#1b2024;
-      "
-    >
-
-      <div
-        class="freeway-service-image position-relative"
-        style="height:275px; min-height:275px; overflow:hidden;"
-      >
-        <img
-          src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&h=500&q=80"
-          alt="Prepared and inspected safe rental vehicle"
-          loading="lazy"
-          style="
-            width:100%;
-            height:100%;
-            object-fit:cover;
-            display:block;
-          "
-        >
-
-        <span
-          class="freeway-service-number"
-          style="
-            position:absolute;
-            left:24px;
-            bottom:20px;
-            width:52px;
-            height:52px;
-            border-radius:50%;
-            background:#ffb900;
-            color:#111;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            font-weight:700;
-          "
-        >
-          04
-        </span>
-      </div>
-
-      <div
-        class="freeway-service-content d-flex flex-column flex-grow-1"
-        style="
-          padding:30px;
-          display:flex;
-          flex-direction:column;
-          flex:1;
-        "
-      >
-
-        <h4 style="margin:0 0 18px; min-height:30px; font-weight:700;">
-          Secure Rentals
-        </h4>
-
-        <p
-          style="
-            margin:0 0 22px;
-            min-height:135px;
-            line-height:1.65;
-          "
-        >
-          Every rental is designed with customer and vehicle
-          security in mind. Vehicles are prepared before pickup,
-          while digital verification helps keep the rental
-          process straightforward and secure.
-        </p>
-
-        <ul
-          style="
-            list-style:none;
-            padding:0;
-            margin:0;
-            min-height:105px;
-          "
-        >
-          <li style="margin-bottom:14px;">
-            <i class="bi bi-check-circle-fill me-2" style="color:#ffb900;"></i>
-            Verified customer booking
-          </li>
-
-          <li style="margin-bottom:14px;">
-            <i class="bi bi-check-circle-fill me-2" style="color:#ffb900;"></i>
-            Prepared and inspected vehicles
-          </li>
-
-          <li>
-            <i class="bi bi-check-circle-fill me-2" style="color:#ffb900;"></i>
-            Secure vehicle access
-          </li>
-        </ul>
-
-        <div style="margin-top:auto; padding-top:25px;">
-          <a
-            href="how-it-works.html"
-            style="
-              display:inline-flex;
-              align-items:center;
-              gap:8px;
-              text-decoration:none;
-              font-weight:700;
-              color:#ffb900;
-            "
-          >
-            Learn More
-            <i class="bi bi-arrow-right"></i>
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-
-  <!-- =========================
-       SERVICE 5
-  ========================== -->
-  <div class="col-md-6 col-lg-4">
-    <div
-      class="freeway-service-card h-100 d-flex flex-column"
-      style="
-        height:100%;
-        min-height:710px;
-        display:flex;
-        flex-direction:column;
-        border:1px solid #3a424a;
-        border-radius:24px;
-        overflow:hidden;
-        background:#1b2024;
-      "
-    >
-
-      <div
-        class="freeway-service-image position-relative"
-        style="height:275px; min-height:275px; overflow:hidden;"
-      >
-        <img
-          src="https://images.unsplash.com/photo-1615906655593-ad0386982a0f?auto=format&fit=crop&w=800&h=500&q=80"
-          alt="Roadside emergency assistance"
-          loading="lazy"
-          style="
-            width:100%;
-            height:100%;
-            object-fit:cover;
-            display:block;
-          "
-        >
-
-        <span
-          class="freeway-service-number"
-          style="
-            position:absolute;
-            left:24px;
-            bottom:20px;
-            width:52px;
-            height:52px;
-            border-radius:50%;
-            background:#ffb900;
-            color:#111;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            font-weight:700;
-          "
-        >
-          05
-        </span>
-      </div>
-
-      <div
-        class="freeway-service-content d-flex flex-column flex-grow-1"
-        style="
-          padding:30px;
-          display:flex;
-          flex-direction:column;
-          flex:1;
-        "
-      >
-
-        <h4 style="margin:0 0 18px; min-height:30px; font-weight:700;">
-          24/7 Roadside Assistance
-        </h4>
-
-        <p
-          style="
-            margin:0 0 22px;
-            min-height:135px;
-            line-height:1.65;
-          "
-        >
-          If something unexpected happens during your trip,
-          roadside assistance is available to help you get
-          support and continue your journey safely.
-        </p>
-
-        <ul
-          style="
-            list-style:none;
-            padding:0;
-            margin:0;
-            min-height:105px;
-          "
-        >
-          <li style="margin-bottom:14px;">
-            <i class="bi bi-check-circle-fill me-2" style="color:#ffb900;"></i>
-            24/7 assistance availability
-          </li>
-
-          <li style="margin-bottom:14px;">
-            <i class="bi bi-check-circle-fill me-2" style="color:#ffb900;"></i>
-            Roadside support
-          </li>
-
-          <li>
-            <i class="bi bi-check-circle-fill me-2" style="color:#ffb900;"></i>
-            Customer support during your trip
-          </li>
-        </ul>
-
-        <div style="margin-top:auto; padding-top:25px;">
-          <a
-            href="contact.html"
-            style="
-              display:inline-flex;
-              align-items:center;
-              gap:8px;
-              text-decoration:none;
-              font-weight:700;
-              color:#ffb900;
-            "
-          >
-            Get Support
-            <i class="bi bi-arrow-right"></i>
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-
-  <!-- =========================
-       SERVICE 6
-  ========================== -->
-  <div class="col-md-6 col-lg-4">
-    <div
-      class="freeway-service-card h-100 d-flex flex-column"
-      style="
-        height:100%;
-        min-height:710px;
-        display:flex;
-        flex-direction:column;
-        border:1px solid #3a424a;
-        border-radius:24px;
-        overflow:hidden;
-        background:#1b2024;
-      "
-    >
-
-      <div
-        class="freeway-service-image position-relative"
-        style="height:275px; min-height:275px; overflow:hidden;"
-      >
-        <img
-          src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=800&h=500&q=80"
-          alt="Contactless electronic digital payment and rental invoice"
-          loading="lazy"
-          style="
-            width:100%;
-            height:100%;
-            object-fit:cover;
-            display:block;
-          "
-        >
-
-        <span
-          class="freeway-service-number"
-          style="
-            position:absolute;
-            left:24px;
-            bottom:20px;
-            width:52px;
-            height:52px;
-            border-radius:50%;
-            background:#ffb900;
-            color:#111;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            font-weight:700;
-          "
-        >
-          06
-        </span>
-      </div>
-
-      <div
-        class="freeway-service-content d-flex flex-column flex-grow-1"
-        style="
-          padding:30px;
-          display:flex;
-          flex-direction:column;
-          flex:1;
-        "
-      >
-
-        <h4 style="margin:0 0 18px; min-height:30px; font-weight:700;">
-          Digital Payments & Invoices
-        </h4>
-
-        <p
-          style="
-            margin:0 0 22px;
-            min-height:135px;
-            line-height:1.65;
-          "
-        >
-          Keep your rental experience paperless with digital
-          payment options and electronic invoices. Review your
-          rental information and charges conveniently online.
-        </p>
-
-        <ul
-          style="
-            list-style:none;
-            padding:0;
-            margin:0;
-            min-height:105px;
-          "
-        >
-          <li style="margin-bottom:14px;">
-            <i class="bi bi-check-circle-fill me-2" style="color:#ffb900;"></i>
-            Digital payment options
-          </li>
-
-          <li style="margin-bottom:14px;">
-            <i class="bi bi-check-circle-fill me-2" style="color:#ffb900;"></i>
-            Electronic rental invoices
-          </li>
-
-          <li>
-            <i class="bi bi-check-circle-fill me-2" style="color:#ffb900;"></i>
-            Transparent rental charges
-          </li>
-        </ul>
-
-        <div style="margin-top:auto; padding-top:25px;">
-          <a
-            href="dashboard.html"
-            style="
-              display:inline-flex;
-              align-items:center;
-              gap:8px;
-              text-decoration:none;
-              font-weight:700;
-              color:#ffb900;
-            "
-          >
-            Open Dashboard
-            <i class="bi bi-arrow-right"></i>
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-</div>
+</section>
 
   </div>
 
